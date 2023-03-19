@@ -18,12 +18,15 @@ http://www.templatemo.com/tm-498-stimulus
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/templatemo-style.css">
+<link rel="stylesheet" href="css.swiper/swiper-bundle.min.css">
 
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+
 
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
+<script src="css.swiper/swiper-bundle.min.js"></script>
 
 <!-- PRE LOADER -->
 
@@ -46,15 +49,16 @@ http://www.templatemo.com/tm-498-stimulus
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                </button>
-               <a href="#" class="navbar-brand">Stimulus</a>
+               <a href="#" class="navbar-brand"></a>
           </div>
 
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
                     <li><a href="#home" class="smoothScroll">Home</a></li>
-                    <li><a href="#about" class="smoothScroll">About Me</a></li>
-                    <li><a href="#experience" class="smoothScroll">Experiences</a></li>
-                    <li><a href="#quotes" class="smoothScroll">Testimonial</a></li>
+                    <li><a href="#about" class="smoothScroll">Research</a></li>
+                    <li><a href="#teaching" class="smoothScroll">Teaching</a></li>
+                    <li><a href="#experience" class="smoothScroll">Education</a></li>
+			  <li><a href="#quotes" class="smoothScroll">BLOG</a></li>
                     <li><a href="#contact" class="smoothScroll">Contact</a></li>
                </ul>
           </div>
@@ -76,11 +80,11 @@ http://www.templatemo.com/tm-498-stimulus
                <div class="col-md-6 col-sm-6">
                     <div class="home-thumb">
                          <div class="section-title">
-                              <h4 class="wow fadeInUp" data-wow-delay="0.3s">welcome to my website</h4>
-                              <h1 class="wow fadeInUp" data-wow-delay="0.6s">I am Wangsheng Zhu, currently a Ph.D. candidate in Naveen Jindal School of Management at University of Texas at Dallas.</h1>
-                              <p class="wow fadeInUp" data-wow-delay="0.9s"> My research interests are to [page under construction]. </p>
+                              <h4 class="wow fadeInUp" data-wow-delay="0s" style="color:#000">welcome to my website</h4>
+                              <h1 class="wow fadeInUp" data-wow-delay="0s"><strong>Wangsheng Zhu</strong></h1>
+                              <p class="wow fadeInUp" data-wow-delay="0s" style="color:#000"> Hi, I am Wangsheng Zhu. I am currently a Ph.D. candidate in Naveen Jindal School of Management at University of Texas at Dallas. My research interest is to leverage economic models and/or data analytical techniques to improve business efficiency in markets like digital advertising, crowdsourcing and trip planning.</p>
                               
-                              <a href="#about" class="wow fadeInUp smoothScroll section-btn btn btn-success" data-wow-delay="1.4s">Get Started</a>
+                              <!-- <a href="#about" class="wow fadeInUp smoothScroll section-btn btn btn-success" data-wow-delay="1.4s">Get Started</a> -->
                               
                          </div>
                     </div>
@@ -197,46 +201,73 @@ http://www.templatemo.com/tm-498-stimulus
 
 <section id="experience" class="parallax-section">
      <div class="container">
-          <div class="row">
+		<div class="row">
 
-               <div class="col-md-6 col-sm-6">
-                    <div class="background-image experience-img"></div>
-               </div>
+			<div class="col-md-6 col-sm-6" style="padding: 0">
+  				
+				<div class="swiper" width="100%" height="100%">
+    					<div class="swiper-wrapper" width="100%" height="100%">
+						<div class="swiper-slide" width="100%" height="100%">
+							<img class="ackground-image" src="images\experience-img.jpg" alt="bs graduation" style="width:100%;height:100%;min-height:90vh;object-fit:cover">
+						</div>
+                        	</div>
+    				<!-- 如果需要分页器 -->
+    				<!-- <div class="swiper-pagination"></div> --!>
+    
+    				<!-- 如果需要导航按钮 -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+    
+				<!-- 如果需要滚动条 -->
+				<!-- <div class="swiper-scrollbar"></div> --!>
+			</div>                        
+		</div>
+
+
 
                <div class="col-md-6 col-sm-6">
                     <div class="color-white experience-thumb">
-                         <div class="wow fadeInUp section-title" data-wow-delay="0.8s">
-                              <h1>My Experiences</h1>
-                              <p class="color-white">Previous companies and my tasks</p>
+                         <div class="wow fadeInUp section-title" data-wow-delay="0s">
+                              <h1>My Experiences<a href="#home" class="wow fadeInUp section-btn btn btn-success ctr" data-wow-delay="0s" display="inline-block" style="float:right;margin-right:0px;margin-top:0px;width:15%;font-size:25%;letter-spacing:0;padding:1% 0">Back to Home</a></h1>
+                              <!--<p class="color-white"></p>-->
                          </div>
 
-                         <div class="wow fadeInUp color-white media" data-wow-delay="1.2s">
+                         <div class="wow fadeInUp color-white media" data-wow-delay="0s">
                               <div class="media-object media-left">
                                    <i class="fa fa-laptop"></i>
                               </div>
                               <div class="media-body">
-                                   <h3 class="media-heading">Graphic Designer <small>2014 Jul - 2015 Sep</small></h3>
-                                   <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                   <h3 class="media-heading">School of Management, University of Texas at Dallas</h3>
+                                   <p class="color-white">Ph.D. Candidate in Information Systems, 2018 - present</p>
                               </div>
                          </div>
 
-                         <div class="wow fadeInUp color-white media" data-wow-delay="1.6s">
+                         <div class="wow fadeInUp color-white media" data-wow-delay="0s">
                               <div class="media-object media-left">
                                    <i class="fa fa-laptop"></i>
                               </div>
                               <div class="media-body">
-                                   <h3 class="media-heading">Web Designer <small>2015 Oct - 2017 Jan</small></h3>
-                                   <p class="color-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                   <h3 class="media-heading">Renmin Business School, Renmin University</h3>
+                                   <p class="color-white">M.S. in Management Science, 2015 - 2018</p>
                               </div>
                          </div>
 
+                         <div class="wow fadeInUp color-white media" data-wow-delay="0s">
+                              <div class="media-object media-left">
+                                   <i class="fa fa-laptop"></i>
+                              </div>
+                              <div class="media-body">
+                                   <h3 class="media-heading">Renmin Business School, Renmin University</h3>
+                                   <p class="color-white">B.S. in Management Science, 2011 - 2015</p>
+                              </div>
+                         </div>
                     </div>
+			  
                </div>
 
           </div>
      </div>
 </section>
-
 
 <!-- Education Section -->
 
@@ -311,11 +342,11 @@ http://www.templatemo.com/tm-498-stimulus
                     <div class="contact-form">
                          <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
                               <h1 class="color-white">Say hello..</h1>
-                              <p class="color-white">Integer ut consectetur est. In cursus orci non ipsum gravida dignissim.</p>
+                              <!--<p class="color-white">Integer ut consectetur est. In cursus orci non ipsum gravida dignissim.</p>-->
                          </div>
 
                          <div id="contact-form">
-                              <form action="#template-mo" method="post">
+                              <form action="email.php" method="post">
                                    <div class="wow fadeInUp" data-wow-delay="1s">
                                         <input name="fullname" type="text" class="form-control" id="fullname" placeholder="Your Name">
                                    </div>
@@ -393,6 +424,27 @@ http://www.templatemo.com/tm-498-stimulus
 <script src="js/smoothscroll.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/custom.js"></script>
-
+<script>        
+  var mySwiper = new Swiper ('.swiper', {
+    direction: 'horizontal', // 垂直切换选项
+    loop: true, // 循环模式选项
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })        
+  </script>
 </body>
 </html>
