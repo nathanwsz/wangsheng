@@ -1,0 +1,546 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blugoon HTML Bootstrap 4 Template</title>
+    <meta name="description" content="">
+    <meta name="author" content="Tooplate">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/tooplate-style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="css.swiper/swiper-bundle.min.css">
+
+    <style>
+
+        .main-nav li a.menu-item {
+          height: 7.5vh;
+          line-height: 7.5vh;
+          display: inline-block;
+          font-size: 2.5vh;
+          font-weight: 700;
+          width: 100%;
+          transition: all 0.5s;
+          border-top: 1px solid #69C;
+        }
+        .menu .social-network ul li{
+          margin: 0vh;
+          padding: 0vh;
+          height: 100%;
+          width: 10%;
+        }
+        .menu .social-network ul li a.social-network-here {
+          display: inline-block;
+          text-align: center;
+          line-height: 0vh;
+          background-color: rgba(0, 0, 0, 0.2);
+          color: #fff;
+          font-size: 14px;
+          transition: all 0.5s;
+          height: 100%;
+          width: 7vh;
+        }
+        .menu .social-network ul li a i.social-network-icon-here {
+          padding: 0vh;
+          margin: 0vh;
+        }
+        .copy-right-text-here{
+            padding: 0vh;
+            margin: 0vh;
+            border: 0vh;
+            margin-bottom: 0vh;
+            display: inline-block;
+            width: 100%;
+            font-size: 2vh;
+        }
+
+        .other {
+            display:none;
+        }
+        .about-me {
+            padding-left:5%;padding-top: 3%;
+        }
+        .section {
+            margin-left: 5vw;
+            margin-top: 10vh;
+            width: 70vw;
+            margin-right: 0;
+            padding: 0;
+            left:22vw;
+            right:3vw;
+            min-height:90vh;
+        }
+        .section-heading-first {
+            width: 90%;
+            font-size: 30px;
+            padding:0vh;
+        }
+        .menu {
+            left: 0%;
+            -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
+            -webkit-overflow-scrolling: touch;
+            background-color: #2279BD;
+            box-sizing: border-box;
+            height: 100vh;
+            outline: none;
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            padding: 0;
+            position: fixed !important;
+            top: calc(0px);
+            width: 20vw;
+            will-change: transform;
+            z-index: 9999 !important;
+            margin-left:5vw;
+        }
+        .normal-text {
+            font-size: 20px !important;
+        }
+        .section-heading h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .boldf {
+            font-weight: bold;
+        }
+        .italicf {
+            font-style:italic;
+        }
+    </style>
+</head>
+
+
+<!--Tooplate 2116 Blugoon https://www.tooplate.com/view/2116-blugoon-->
+<body>
+<script src="css.swiper/swiper-bundle.min.js"></script>
+<div id="page-wraper" style="width:100vw;position:absolute">
+    <!-- Sidebar Menu -->
+    <div class="responsive-nav" style="width:20%;margin-right:10%;display:block;height:0px;">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+            <i class="fa fa-times" id="menu-close"></i>
+            <div class="container">
+                <div class="image" style="margin-top: 7vh;">
+                    <a href="#">
+                        <div style="background-image: url('./assets/images/logo-image.jpg');height: 25vh;width: 70%;background-size: cover;background-position: 50% 50%;margin-left: 15%;border-radius: 10px;"></div>
+                    </a>
+                </div>
+                <div class="author-content" style="margin-bottom:2vh;">
+                    <h4 style="font-size: 3vh;">Wangsheng Zhu</h4>
+                </div>
+                <div class="social-network"
+                     style="margin: 0vh;padding: 0vh;height: 0vh;padding-bottom: 7vh;margin-top: 0vh;">
+                    <ul class="soial-icons" style="margin: 0vh;padding: 0vh;height: 100%;">
+                        <li style="margin: 0vh;padding: 0vh;height: 100%;">
+                            <a class="social-network-here" href="#">
+                                <i class="fa fa-facebook social-network-icon-here"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-network-here" href="#">
+                                <i class="fa fa-twitter social-network-icon-here"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-network-here" href="#">
+                                <i class="fa fa-linkedin social-network-icon-here"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-network-here" href="#">
+                                <i class="fa fa-dribbble social-network-icon-here"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-network-here" href="#">
+                                <i class="fa fa-rss social-network-icon-here"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="main-nav" role="navigation">
+                    <ul class="main-menu">
+                        <li class="active"><a href="#section1" class="menu-item" goto="about-me">Intro</a></li>
+                        <li class=""><a href="#section2" class="menu-item" sp=20 goto="my-work">Research</a></li>
+                        <li class=""><a href="#section3" class="menu-item" goto="teaching">Teaching</a></li>
+                        <li class=""><a href="#section4" class="menu-item" goto="education">Education</a></li>
+                    </ul>
+                </nav>
+
+                <div class="copyright-here"
+                     style="margin: 0vh;padding: 0vh;margin-top: 10vh;margin-bottom: 2vh;height: 10vh;position: relative;">
+                    <p class="copy-right-text-here">Copyright © 2023 by Wangsheng</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section empty-section" current-section="about-me"
+             style="padding:0%;margin:0%;height:0%;min-height:0%;border:none;">
+    </section>
+
+    <section class="section about-me" data-section="section1">
+        <div class="container">
+            <div class="top-header">
+                <!-- <img src="assets/images/aerobic-girls.jpg" alt="aerobic girls"> -->
+            </div>
+            <div class="section-heading section-heading-first">
+                <h2>Welcome to my website</h2>
+                <div class="line-dec"></div>
+                <span class="normal-text">
+            Hi, I am Wangsheng Zhu. I am currently a Ph.D. candidate in Naveen Jindal School of Management at University of Texas at Dallas. My research interest is to leverage economic models and/or data analytical techniques to improve business efficiency in markets like digital advertising, crowdsourcing and trip planning.
+          </span>
+            </div>
+
+            <div class="section-heading" style="width: 90%;font-size: 30px;padding-top: 10%;">
+                <h2>Contact Info</h2>
+                <div class="line-dec"></div>
+                <span style="font-size: 20px;">Email: wangsheng.zhu@utdallas.edu</span>
+            </div>
+            <!-- <div class="right-image-post">
+              <div class="row">
+
+                <div class="col-md-8">
+                  <div class="left-text">
+                    <h4>Modern Web Design</h4>
+                    <p>You are allowed to use this template for commercial or personal websites. You are NOT allowed to redistribute this on template collection website. You can feature this template on your blog post.</p>
+                    <p>All photos in this template are from <a rel="nofollow" href="https://www.pexels.com">Pexels</a> website. Blugoon HTML Template is provided by Tooplate. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    <div class="white-button">
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="right-image">
+                    <img src="assets/images/mountain-reflection.jpg" alt="Mountain Reflection">
+                  </div>
+                </div>
+
+              </div>
+            </div> -->
+            <!-- <div class="left-image-post">
+              <div class="row">
+
+                <div class="col-md-4">
+                  <div class="left-image">
+                    <img src="assets/images/girl-nature.jpg" alt="Nature Girl">
+                  </div>
+                </div>
+
+                <div class="col-md-8">
+                  <div class="right-text">
+                    <h4>Best Template for you!</h4>
+                    <p>Quisque feugiat nisl at lacus condimentum, eu suscipit odio fringilla. Mauris eu est vitae erat condimentum pellentesque. Fusce vehicula nunc at augue sagittis tristique.</p>
+                    <p>Ut imperdiet massa at enim tempus volutpat. Nullam gravida augue quis facilisis commodo. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                    <div class="white-button">
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="section my-work other" data-section="section2">
+        <div class="container">
+<!--            <div class="section-heading section-heading-first">-->
+<!--                <h2>Research Interest</h2>-->
+<!--                <div class="line-dec"></div>-->
+<!--                <div><span class="normal-text"><h style="font-weight: bold;">Applications</h>: Digital Advertising, Recommendation Systems</span>-->
+<!--                </div>-->
+<!--                <div style="margin-top:1vh"><span class="normal-text"><h style="font-weight: bold;">Methodologies</h>: Game Theory, Optimization, Control Theory, Structural Modeling</span>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="section-heading  section-heading-first">
+                <h2>Research</h2>
+                <div class="line-dec"></div>
+            </div>
+            <div class="row">
+                <div class="isotope-wrapper">
+                    <form class="isotope-toolbar">
+                        <label><input class="myint" type="radio" data-type="inte" name="isotope-filter" checked="">
+                            <span><i class="fa fa-arrow-right"></i>&nbsp Research Interest</span></label>
+                        <label><input class="mypaper" type="radio" data-type="paper" name="isotope-filter">
+                            <span><i class="fa fa-arrow-right"></i>&nbsp Projects</span></label>
+                        <label><input class="myconf" type="radio" data-type="conference" name="isotope-filter">
+                            <span><i class="fa fa-arrow-right"></i>&nbsp Conference Presentations</span></label>
+                    </form>
+                    <div class="isotope-box" style="position: relative; height: 616.354px;">
+                        <div class="isotope-item" data-type="inte" style="width:100%;min-height:5vh;">
+                            <div style="width:100%;display:block;font-size:20px">
+                                <div><span class="normal-text">My research interest mainly focuses on --</span>
+                                </div>
+                                <div style="margin-top:1vh"><span class="normal-text"><h style="font-weight: bold;">Applications</h>: Digital Advertising, Recommendation Systems</span>
+                                </div>
+                                <div style="margin-top:1vh"><span class="normal-text"><h style="font-weight: bold;">Methodologies</h>: Game Theory, Optimization, Control Theory, Structural Modeling</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="isotope-item" data-type="paper" style="width:100%;min-height:5vh;">
+                            <div style="width:100%;display:block;font-size:20px">
+                                <i class="fa fa-hand-o-right"></i>&nbsp<span class="boldf italicf">Wangsheng Zhu</span>, Subodha Kumar and
+                                Vijay Mookerjee. A Coordination in Multibrand Multichannel Advertising: Is it Always a
+                                Good Thing? <span class="italicf">(2nd round review, ISR)</span>
+                            </div>
+                        </div>
+                        <div class="isotope-item" data-type="paper" style="width:100%;">
+                            <div style="width:100%;display:block;font-size:20px">
+                                <i class="fa fa-hand-o-right"></i>&nbsp<span class="boldf italicf">Wangsheng Zhu</span>, Syam Menon and Sumit Sarkar. A Recommendation Framework for Crowdsourcing Contest Design <span class="italicf">(Reject and Resubmit, MS)</span>
+                            </div>
+                        </div>
+                        <div class="isotope-item" data-type="paper" style="width:100%;">
+                            <div style="width:100%;display:block;font-size:20px">
+                                <i class="fa fa-hand-o-right"></i>&nbsp<span class="boldf italicf">Wangsheng Zhu</span>, Shaojie Tang and Vijay Mookerjee. Should Ad-Exchanges Subsidize the Acquisition of Targeting Data in Ad Auctions? <span class="italicf">(1st round review, ISR)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section teaching other" data-section="section3">
+        <div class="container">
+            <div class="top-header">
+                <!-- <img src="assets/images/aerobic-girls.jpg" alt="aerobic girls"> -->
+            </div>
+            <div class="section-heading section-heading-first">
+                <h2>Teaching Experiences</h2>
+                <div class="line-dec"></div>
+                <span class="normal-text" style="font-size:18px">
+                <ul>
+                    <li style="font-size:24px"><i class="fa fa-laptop"></i>&nbsp Object Oriented Programming with Python, Spring 2023</li><br>
+                    <br>
+                    <li style="font-size:24px"><i class="fa fa-laptop"></i>&nbsp Introduction to Programming in Java, Fall 2022 & Fall 2021</li><br>
+                </ul>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section education other" data-section="section4">
+        <div class="container">
+            <div class="top-header">
+                <!-- <img src="assets/images/aerobic-girls.jpg" alt="aerobic girls"> -->
+            </div>
+            <div class="section-heading section-heading-first">
+                <h2>Education</h2>
+                <div class="line-dec"></div>
+                <span class="normal-text" style="font-size:18px">
+                <ul>
+                    <li style="font-size:24px"><i class="fa fa-laptop"></i>&nbsp School of Management, University of Texas at Dallas</li><br>
+                    <li>Ph.D. Candidate in Information Systems, 2018 - present</li><br>
+                    <br>
+                    <li style="font-size:24px"><i class="fa fa-laptop"></i>&nbsp Renmin Business School, Renmin University</li><br>
+                    <li>M.S. in Management Science, 2015 - 2018</li><br>
+                    <br>
+                    <li style="font-size:24px"><i class="fa fa-laptop"></i>&nbsp Renmin Business School, Renmin University</li><br>
+                    <li>B.S. in Management Science, 2011 - 2015</li>
+                </ul>
+                </span>
+            </div>
+            <!--
+            <div class="section-heading">
+                <h2>Photos</h2>
+                <div class="line-dec"></div>
+                <div class="swiper" style="width:70vh;height:70vh;margin-top:2vh;margin-left:10vw;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="ackground-image" src="images/experience-img.jpg" alt="bs graduation"
+                                 style="width:100%;height:100%;min-height:30vh;object-fit:cover">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="ackground-image" src="images/MS G.jpg" alt="bs graduation"
+                                 style="width:100%;height:100%;min-height:30vh;object-fit:cover">
+                        </div>
+                    </div>-->
+            <!-- 如果需要分页器 -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- 如果需要导航按钮 -->
+            <!-- <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+                 aria-controls="swiper-wrapper-c305ea901c43878d"></div>
+            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+                 aria-controls="swiper-wrapper-c305ea901c43878d"></div>-->
+
+            <!-- 如果需要滚动条 -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+            <!-- <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    </div>-->
+        </div>
+    </section>
+
+    <!--<section class="section contact-me" data-section="section4">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Contact</h2>
+                <div class="line-dec"></div>
+                <span>Aenean a consectetur mi, sit amet consequat velit. Mauris vitae nunc viverra, mattis arcu quis, vestibulum eros. </span>
+            </div>
+            <div class="row">
+                <div class="right-content">
+                    <div class="container">
+                        <form id="contact" action="" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name"
+                                               placeholder="Your name..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="email" type="text" class="form-control" id="email"
+                                               placeholder="Your email..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <input name="subject" type="text" class="form-control" id="subject"
+                                               placeholder="Subject..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message"
+                                                  placeholder="Your message..." required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="button">
+                                            Send Message
+                                        </button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+</div>
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/lightbox.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    //according to loftblog tut
+    $(".main-menu li:first").addClass("active");
+    var showSection = function showSection(section, isAnimate) {
+      var direction = section.replace(/#/, ""),
+        reqSection = $(".section").filter(
+          '[data-section="' + direction + '"]'
+        ),
+        reqSectionPos = reqSection.offset().top - 0;
+
+      if (isAnimate) {
+        $("body, html").animate(
+          {
+            scrollTop: reqSectionPos
+          },
+          800
+        );
+      } else {
+        $("body, html").scrollTop(reqSectionPos);
+      }
+    };
+
+    var checkSection = function checkSection() {
+      $(".section").each(function() {
+        var $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+        if (topEdge < wScroll && bottomEdge > wScroll) {
+          var currentId = $this.data("section"),
+            reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+          reqLink
+            .closest("li")
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+        }
+      });
+    };
+
+    $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        if ($(this).attr("sp") == 0) {
+            e.preventDefault();
+        }
+        var crtsec = "."+$(".empty-section").attr("current-section")
+        $(crtsec).attr("style", "display:none;")
+        var nextsec = "."+$(this).attr("goto")
+        $(nextsec).attr("style", "display:block;")
+        $(".empty-section").attr("current-section",$(this).attr("goto"))
+<!--        showSection($(this).attr("href"), true);-->
+        var currentId = $(nextsec).attr("data-section")
+        $(".empty-section").attr("currentttt-section",currentId)
+        reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+        reqLink
+            .closest("li")
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+    });
+
+    $(window).scroll(function() {
+<!--      checkSection();-->
+    });
+
+    var mySwiper = new Swiper ('.swiper', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      })
+
+
+</script>
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div>
+<div id="lightbox" class="lightbox" style="display: none;">
+    <div class="lb-outerContainer">
+        <div class="lb-container"><img class="lb-image"
+                                       src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+            <div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div>
+            <div class="lb-loader"><a class="lb-cancel"></a></div>
+        </div>
+    </div>
+    <div class="lb-dataContainer">
+        <div class="lb-data">
+            <div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div>
+            <div class="lb-closeContainer"><a class="lb-close"></a></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
