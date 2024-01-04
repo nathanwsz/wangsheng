@@ -1,0 +1,106 @@
+<!Doctype html>
+<html>
+<head>
+	<title>ECharts 地图数据在线生成工具</title>
+	<meta charset="utf-8" />
+	<script src="echarts-5.4.3/dist/echarts.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+	<div id="main2" style="height: 1600px;top: -450px;left:0px;position: relative;"></div>
+	<script>
+		window.onload=function(){
+			const XHR = new XMLHttpRequest();
+			XHR.open("get","world.json",true)
+			XHR.onload=function(){
+				const jsondata=XHR.response;
+				echarts.registerMap("world",jsondata);
+				var myChart = echarts.init(document.getElementById('main2'));
+
+				var option = {
+					radius:'100%',
+					grid: {
+						zlevel:0,
+						z:0,
+						left: '0%',
+						right: '0%',
+						top: 'bottom',
+						bottom: '0%',
+						containLabel:false,
+						height:10000,
+					},
+					geo:{
+						silent: false,
+						map:"world",
+						regions: buildHighlightAreaObjList(['China', 'United States', 'Singapore', 'Malaysia']),
+						emphasis:{
+							label:{
+								show: false,
+							},
+						},
+					},
+					tooltip:{
+						trigger: 'item',
+					},
+					series:[{
+						data: [
+								{name: "Beijing", value: [116.3917, 39.906666]},
+								{name: "Singapore", value: [103.8198, 1.3521]},
+								{name: "Dallas", value: [-96.7970, 32.7767]},
+								{name: "Langkawi", value: [99.7311, 6.3424]},
+								{name: "Phoenix", value: [-112.0740, 33.4484]},
+								{name: "San Francisco", value: [-122.4194, 37.7749]},
+								{name: "Austin", value: [-97.7431, 30.2672]},
+								{name: "Orlando", value: [-81.3789, 28.5384]},
+								{name: "Xi'an", value: [108.9541, 34.2658]},
+								{name: "Linhai (临海)", value: [121.1449, 28.8584]},
+								{name: "Shanghai", value: [121.4737, 31.2304]},
+								{name: "Hong Kong", value: [114.1694, 22.3193]},
+								],
+						type: 'scatter',
+						coordinateSystem: 'geo',
+						symbolSize: 8,
+						emphasis:{
+							itemStyle: {
+								color: 'rgb(252, 1, 26)',
+							}
+						},
+						tooltip: {
+							formatter: function (params) {
+								return params.name
+							},
+						},
+					},
+					]
+				};
+				myChart.setOption(option);
+				myChart.on('click', function(params) {
+					console.log(params);
+					window.open(
+							'https://www.google.com/search?q=' + encodeURIComponent(params.name)
+					);
+				});
+			}
+			XHR.send();
+		}
+
+		function buildHighlightAreaObjList(highlightAreaList){
+			objList = [];
+			if(Array.isArray(highlightAreaList)) {
+				highlightAreaList.forEach(item => {
+					objList.push({
+						name: item,
+						itemStyle: {
+							color: 'red',
+							areaColor: 'rgb(122,223,51)'
+						}
+					})
+				})
+			}
+			return objList;
+		}
+	</script>
+</body>
+</html>
