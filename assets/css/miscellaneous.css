@@ -6,8 +6,8 @@
 
 		.photo.miscellaneous{
 			width: 100%; 
-			height: min(80vh,700px);
-			background-size: cover;
+			height: min(90vh,700px);
+			background-size:contain;
 			background-repeat: no-repeat;
 			background-position: center center;
 		}
