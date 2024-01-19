@@ -1,0 +1,47 @@
+.miscellaneous .card-body {
+	padding: 0;
+	height: fit-content;
+	align-items: center;
+}
+
+.miscellaneous .photo{
+	width: 100%;
+	height: min(90vh,700px);
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.miscellaneous .subcard{
+	display: flex !important;
+	padding: 2vh;
+}
+
+
+.miscellaneous .flaticon{
+	font-size: min(9vh, 60px);
+	color: #1e7e34;
+	display: flex;
+}
+
+.miscellaneous .text{
+	flex:1;
+	padding-left: min(3vh,20px);
+}
+
+.miscellaneous .subcard-title{
+	font-size: 20px;
+	font-weight: 500;
+	font-family: 'Roboto', Arial, sans-serif;
+	margin-bottom: 0.5vh;
+}
+
+.miscellaneous .subcard-subtitle{
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: min(2.5vh, 18px);
+	line-height: 1.5;
+	font-weight: 400;
+	color: #999999;
+	margin-bottom: 0px;
+}
+
