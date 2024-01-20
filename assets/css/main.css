@@ -1,0 +1,185 @@
+#header-bar {
+    display: flex;
+    position: fixed;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.section {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 10vh auto;
+}
+
+.section-container {
+    width: min(1300px, 80%);
+    height: auto;
+    margin: 0 auto;
+}
+
+.section-heading {
+    padding-bottom: 3vh;
+    font-family: math;
+}
+
+.section-heading h1 {
+    font-size: 35pt;
+    font-weight: bold;
+}
+
+.home {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: fit-content !important;
+    margin: 0 !important;
+}
+
+.home .fa {
+    margin-left: min(2%, 15px);
+}
+
+.home a {
+    color: white;
+}
+
+.home a:hover {
+    text-decoration: none;
+}
+
+#welcome-background {
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+}
+
+#welcome-content-container {
+    width: 60%;
+    min-width: fit-content;
+    height: 100%;
+    min-height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#welcome-picture {
+    width: 416px;
+    min-width: 416px;
+    height: 304px;
+    margin-right: 60px
+}
+
+.welcome-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: solid white thick;
+    border-bottom: solid white 16px;
+}
+
+#welcome-text {
+    height: 100%;
+    max-width: 700px;
+    min-height: fit-content;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.welcome-title {
+    font-size: 40pt;
+    font-family: fantasy;
+    display: inline-block;
+    color: white;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        filter: blur(4px);
+    }
+    15% {
+        opacity: 1;
+        filter: blur(0);
+    }
+    95% {
+        opacity: 1;
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(4px);
+    }
+}
+
+.welcome-title:nth-child(1) {
+    animation: fade-in 16s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    /*-webkit-animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);*/
+    /*-moz-animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);*/
+    /*-o-animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);*/
+    /*-ms-animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);*/
+    animation-iteration-count: infinite;
+}
+
+.welcome-title:nth-child(2) {
+    animation: fade-in 16s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation-iteration-count: infinite;
+}
+
+.welcome-title:nth-child(3) {
+    animation: fade-in 16s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation-iteration-count: infinite;
+}
+
+.welcome-title:nth-child(4) {
+    animation: fade-in 16s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation-iteration-count: infinite;
+}
+
+@keyframes swiper-fade-in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    color: white;
+    background: lightgray;
+    opacity: 0.3;
+    padding: min(5vh, 50px) 0.2vw;
+    border-radius: 2pt;
+    animation: swiper-fade-in 5s 0.1s forwards;
+    animation-iteration-count: infinite;
+}
+
+.swiper-button-prev:after:hover, .swiper-button-next:after:hover {
+    color: white;
+    background: lightgray;
+    opacity: 1;
+}
+
+.swiper, .swiper-wrapper, .swiper-slide {
+    height: 100%;
+}
+
+.home .swiper-pagination {
+    position: relative;
+    top: -16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-items: right;
+    justify-content: center;
+}

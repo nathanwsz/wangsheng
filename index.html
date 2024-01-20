@@ -4,480 +4,633 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="information" content="Wangsheng Zhu's personal website;Wangsheng Zhu' Blog;UTD;JSOM">
-	<title>Wangsheng Zhu's Website</title>
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<link rel="stylesheet" href="assets/css/fontawesome.css">
-	<link rel="stylesheet" href="assets/css/flaticon.css">
-	<link rel="stylesheet" href="assets/css/sec-paper.css">
-	<link rel="stylesheet" href="assets/css/card.css">
-	<link rel="stylesheet" href="assets/css/sec-awards.css">
-	<link rel="stylesheet" href="assets/css/sec-miscellaneous.css">
-	<meta name="google-site-verification" content="f6OyFRI7CZWfPjeGdGiErVrEjCtym-wy7ZJt9mOlfzA" />
+    <meta name="information" content="Wangsheng Zhu's personal website;Wangsheng Zhu' Blog;UTD;JSOM">
+    <title>Wangsheng Zhu's Website</title>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/css.swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css.swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css.fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/css.fontawesome/css/v4-shims.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/sec-paper.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/sec-awards.css">
+    <link rel="stylesheet" href="assets/css/sec-miscellaneous.css">
+    <meta name="google-site-verification" content="f6OyFRI7CZWfPjeGdGiErVrEjCtym-wy7ZJt9mOlfzA"/>
     <style>
         html, body {
-            height:100%;
-            width:100%;
-            margin:0;
-            padding:0;
-        }
-        ul{
-            list-style-type: none;    /* Remove the bullets from a list */
-        }
-        .nav-link{
-          color:white;
-          font-weight: bold;
-          font-family: sans-serif;
-          padding: 15pt;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
-		.nav-item{
-			position:relative; /* This is used for the ::after effect; otherwise, the position of triangle may get messed */
-		}
-
-        .active{
-        	background-color: #0db2fd;
+        ul {
+            list-style-type: none; /* Remove the bullets from a list */
         }
 
-		.active::after{
-			content: '';
-			position: absolute;
-			left: 42%;
-			top: 100%;
-			width: 0;
-			height: 0;
-			border-left: 10px solid transparent;
-			border-right: 10px solid transparent;
-			border-top: 10px solid #0db2fd;
-			clear: both;
-		}
-
-        .never-active{
-        	background-color: transparent!important;
+        .nav-link {
+            color: white;
+            font-weight: bold;
+            font-family: sans-serif;
+            padding: 15pt;
         }
 
-        .never-active::after{
-        	border-top: 10px solid transparent!important;
+        .nav-item {
+            position: relative; /* This is used for the ::after effect; otherwise, the position of triangle may get messed */
         }
 
-		.about-me-item::after{
-			content: '';
-			position: absolute;
-			left: 20%;
-			top: 100%;
-			width: 0;
-			height: 0;
-			border-left: 10px solid transparent;
-			border-right: 10px solid transparent;
-			border-top: 10px solid #fd2b0d8a;
-			clear: both;
-		}
+        .active {
+            background-color: #0db2fd;
+        }
+
+        .active::after {
+            content: '';
+            position: absolute;
+            left: 42%;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #0db2fd;
+            clear: both;
+        }
+
+        .never-active {
+            background-color: transparent !important;
+        }
+
+        .never-active::after {
+            border-top: 10px solid transparent !important;
+        }
+
+        .about-me-item::after {
+            content: '';
+            position: absolute;
+            left: 20%;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #fd2b0d8a;
+            clear: both;
+        }
 
         bf {
             font-weight: bold;
         }
 
         if {
-            font-style:italic;
+            font-style: italic;
         }
 
         bif {
             font-weight: bold;
-	    	font-style:italic;
+            font-style: italic;
         }
 
-		.container-side-by-side {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
+        .container-side-by-side {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
 
-        .section {
-            width:100%;
-            height:auto;
+
+        .about .about-me-item {
             position: relative;
-            margin: 10vh auto;
+            background-color: #fd2b0d8a;
+            border-radius: 5px;
+            height: fit-content;
+            width: fit-content;
+            padding: 10px;
         }
 
-        .surface {
-            width:100%!important;
-            height:100%!important;
-			min-height:fit-content!important;
-            margin: 0vh!important;
+        .about .subtitle {
+            position: relative;
+            color: white;
+            padding: 0px 30px;
         }
 
-        .section-container {
-            width:min(1300px,80%);
-            height:auto;
-            margin:0 auto;
+        .about .progress-bar {
+            background-color: #fd2b0d8a;
         }
 
-        .section-heading {
-            padding-bottom: 3vh;
-            font-family: math;
+        .middot-divider::after {
+            content: '\00B7';
         }
 
-        .section-heading h1{
-            font-size:35pt;
-            font-weight: bold;
+        .middot-divider {
+            padding-right: 0.45em;
+            padding-left: 0.45em;
+            font-size: 15px;
         }
-
-
-		.about .about-me-item{
-			position:relative;
-			background-color:#fd2b0d8a;
-			border-radius:5px;
-			height:fit-content;
-			width:fit-content;
-			padding:10px;
-		}
-
-		.about .subtitle{
-			position:relative;
-			color:white;
-			padding:0px 30px;
-		}
-
-		.about .progress-bar{
-			background-color:#fd2b0d8a;
-		}
-
-		.middot-divider::after {
-			content: '\00B7';
-		}
-		.middot-divider {
-			padding-right: 0.45em;
-			padding-left: 0.45em;
-			font-size: 15px;
-		}
- 	</style>
+    </style>
 </head>
 <body>
-    <div id="header-bar" class="container justify-content-center align-items-center" style="display:flex;position:fixed;max-width:none;width:100%;margin:0;padding:0;background-color:transparent;z-index:100;">
-      <div class="header-line">
-        <div id="navbarSupportedContent">
+<div id="header-bar" class="container justify-content-center align-items-center">
+    <div id="navbarSupportedContent">
         <ul class="js-navigation-bar nav list-group list-group-horizontal">
             <li class="nav-item never-active"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
-<!--            <li class="nav-item"><a class="nav-link" href="#conferences">Conferences</a></li>-->
             <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
             <li class="nav-item"><a class="nav-link" href="#awards">Awards and Honors</a></li>
             <li class="nav-item"><a class="nav-link" href="#miscellaneous">Miscellaneous</a></li>
             <li class="nav-item"><a class="nav-link" href="#contactme">Contact</a></li>
         </ul>
-        </div>
-    </div></div>
+    </div>
+</div>
 
-	<section class="section surface" data-section="home">
-		<div id="welcome-background" style="width:100%;height:100%;background-image: url('./assets/images/bg.blue.png');background-size: auto;">
-			<div id="welcome-content-container" style="width:60%;min-width:fit-content;height:100%;min-height:fit-content;margin:0 auto;display:flex;align-items:center;flex-wrap:wrap;">
-					<div id="welcome-picture" style="width:416px;min-width:416px;height:304px;margin-right:60px">
-						<img src="./assets/images/wz.photo.2.png" style="width:100%;height:100%;border-radius:20px;border: solid white thick;">
-					</div>
-					<div id="welcome-text" style="height:100%;max-width:700px;min-height:fit-content;margin:0;display:flex;align-items:center;">
-						<a style="color:white">
-							<p style="font-size:40pt;font-family: fantasy;">Welcome to my website!</p>
-							<br>
-							<p style="font-size:16pt;">My name is Wangsheng Zhu (朱旺盛 in Chinese).</p>
-							<p style="font-size:16pt;">In July 2024, I will be an assistant professor from the Department of Information Systems, Business Statistics and Operations Management (ISOM) at the Business School, Hong Kong University of Science and Technology (HKUST). Currently, I am a Ph.D. candidate from the Naveen Jindal School of Management at the University of Texas at Dallas. I received my B.S. and M.S. from the Renmin Business School, Renmin University of China in Beijing.</p>
-						</a>
-					</div>
-			</div>
-		</div>p
-	</section>
-
-	<section class="section about" data-section="about">
-		<div class="section-container about">
-			<div class="section-heading about">
-				<h1>About Me</h1>
-			</div>
-
-			<div class="container about">
-			  <div class="row about">
-				<div class="col-sm about">
-				  <div class="about-me-item about"><bf class="subtitle">Work</bf></div>
-					<div style="margin:20px 0 0 0;">
-						<p style="margin:0;"><bf>Assistant Professor, July 2024 ~</bf></p>
-						<p style="margin:0;">Department of Information Systems, Business Statistics and Operations Management (ISOM), the Business School, Hong Kong Univeristy of Science and Technology, Hong Kong, China</p>
-					</div>
-				</div>
-				<div class="col-sm about">
-					<div class="about-me-item about"><bf class="subtitle">Education</bf></div>
-					<div style="margin:20px 0 0 0;">
-						<p style="margin:0;"><bf>Ph.D. in Management Science, 2024</bf></p>
-						<p style="margin:0;">Naveen Jindal School of Management, University of Texas at Dallas, Texas, US</p>
-						<p><if>Dissertation committee: Vijay Mookerjee (co-chair), Subodha Kumar (co-chair), Shaojie Tang, Ayvaci Mehmet</if></p>
-					</div>
-					<div style="margin:20px 0 0 0;">
-						<p style="margin:0;"><bf>M.S. in Management Science, 2018</bf></p>
-						<p style="margin:0;">Renmin Business School, Renmin University of China, Beijing, China</p>
-						<p><if>Advisor: Kanliang Wang</if></p>
-					</div>
-					<div style="margin:20px 0 0 0;">
-						<p style="margin:0;"><bf>B.S. in Management Science, 2015</bf></p>
-						<p style="margin:0;">Renmin Business School, Renmin University of China, Beijing, China</p>
-						<p><if>Advisor: Ping Li</if></p>
-					</div>
-				</div>
-				<div class="col-sm about">
-					<div class="about-me-item about"><bf class="subtitle">Skills</bf></div>
-					<div class="container-side-by-side" style="margin:20px 0 0 0;">
-						<div style="height:100%;width:35%">
-							<p style="margin:0;"><bf>Python</bf></p>
-						</div>
-						<div class="progress" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-							<div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%;">
-								<span>95%</span>
-							</div>
-						</div>
-					</div>
-					<div class="container-side-by-side about" style="margin:15px 0 0 0;">
-						<div style="height:100%;width:35%"><p style="margin:0;"><bf>Matlab</bf></p></div>
-						<div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-							<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%;">
-								<span>85%</span>
-							</div>
-						</div>
-					</div>
-					<div class="container-side-by-side about" style="margin:15px 0 0 0;">
-						<div style="height:100%;width:35%">
-							<p style="margin:0;"><bf>Java</bf></p>
-						</div>
-						<div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-							<div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%;">
-								<span>95%</span>
-							</div>
-						</div>
-					</div>
-					<div class="container-side-by-side about" style="margin:15px 0 0 0;">
-						<div style="height:100%;width:35%">
-							<p style="margin:0;"><bf>R</bf></p>
-						</div>
-						<div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-							<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%;">
-								<span>85%</span>
-							</div>
-						</div>
-					</div>
-					<div class="container-side-by-side about" style="margin:15px 0 0 0;">
-						<div style="height:100%;width:35%">
-							<p style="margin:0;"><bf>SQL</bf></p>
-						</div>
-						<div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-							<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
-								<span>90%</span>
-							</div>
-						</div>
-					</div>
-			</div>
-			  </div>
-			</div>
-		</div>
-	</section>
-
-    <section class="section research" data-section="research">
-        <div class="section-container research">
-            <div class="section-heading">
-                <h1>Research</h1>
-                <span style="font-size:10pt">* updated at July 2023. </span><br>
-                <span style="font-size:10pt">** click the title to see more information about the paper. </span>
+<section class="section home" data-section="home">
+    <div id="welcome-background" style="background-image: url('./assets/images/bg.blue.png');">
+        <div id="welcome-content-container">
+            <div id="welcome-picture">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="welcome-photo" src="assets/images/wz.photo.selfie.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="welcome-photo" src="./assets/images/wz.photo.2.png">
+                        </div>
+                    </div>
+<!--                    <div class="swiper-button-prev"></div>-->
+<!--                    <div class="swiper-button-next"></div>-->
+                </div>
+                <div class="swiper-pagination"></div>
+           </div>
+            <div id="welcome-text">
+                <div style="color:white;">
+                    <span class="welcome-title">Welcome&nbsp;</span>
+                    <span class="welcome-title">to&nbsp;</span>
+                    <span class="welcome-title">my&nbsp;</span>
+                    <span class="welcome-title">website!</span>
+                    <div style="margin:4% 0 2%;word-wrap: anywhere;text-align: left;font-size:16pt;">
+                        Hi, I am Wangsheng Zhu (朱旺盛 in Chinese). Currently, I am a Ph.D. candidate from
+                        the Naveen Jindal School of Management at the University of Texas at Dallas.
+                        In July 2024, I will join the Department of Information Systems, Business Statistics
+                        and Operations Management (ISOM) at the Business School, Hong Kong University of Science
+                        and Technology (HKUST). I received my B.S. and M.S. from the Renmin Business School,
+                        Renmin University of China in Beijing.
+                    </div>
+                    <hr style="border-width: thin; border-color: antiquewhite">
+                    <div style="text-align: left;font-size: 14pt;">
+                        Curriculum Vitae:
+                        <a class="fa fas fa-newspaper" href="./CV.pdf" target="_blank" title="c.v."></a>
+                        <span style="margin-left:10%;">Media:</span>
+                        <a class="fa fab fa-facebook-square" target="_blank" title="Facebook"
+                           href="https://www.facebook.com/wangsheng.zhu.35"></a>
+                        <a class="fa fas fa-graduation-cap" target="_blank" title="Google Scholar"
+                           href="https://scholar.google.com/citations?user=3dJNG4EAAAAJ&hl=en"></a>
+                        <a class="fa fab fa-orcid" target="_blank" title="ORCiD"
+                           href="https://orcid.org/0000-0002-4478-659X"></a>
+                    </div>
+                </div>
             </div>
-
-			<div class="research" style="width:100%;margin:0 auto;padding-left:0px;">
-				<div class="publications research">
-					<div class="ribbon research" style="font:30px;">
-						Publication
-					</div>
-					<div class="card research">
-						<div class="card-body research">
-							<div class="card-title research" onclick="abs('coordination')"><h4>Coordination in Multibrand Multichannel Advertising: Is it Always a Good Thing?</h4>
-							<div class="card-subtitle research">
-								<bf>Wangsheng Zhu</bf>, Subodha Kumar and Vijay Mookerjee.<a class="status research">Forthcoming at ISR</a>
-							</div></div>
-							<div id="coordination" class="info research">
-								<div class="abstract research"><bf>Abstract:</bf>
-									The growing online retail market has led to the prevalence of multichannel retailing. Meanwhile, retailers are
-									increasingly combining multichannel retailing with a multibranding strategy. While this can further increase
-									the retailer's sales, it brings new advertising challenges. Multibrand, multichannel retailers usually launch
-									advertising campaigns for different brands on multiple media. Thus, the retailer's advertising efforts
-									fall into a set of brand-media units. Each unit's advertising efforts can affect the sales of all brands on all
-									channels. Therefore, retailers need to coordinate the advertising efforts of different units to maximize advertising
-									efficiency in propelling sales. So far, the optimization problem of multibrand, multimedia advertising has not been
-									analyzed in the literature, and our study aims to bridge this gap. We develop a stochastic differential equation
-									model to estimate the impact of multimedia advertising on sales in a multibrand, multichannel context. Using the
-									data from a jewelry retailer in the U.S., we show that our model is effective in predicting future sales driven by
-									advertising. Afterward, we formulate the advertising optimization problems under four coordination strategies:
-									(i) non-coordination, (ii) brand coordination, (iii) media coordination, and (iv) global coordination. By solving
-									the problem for each strategy, the retailers can obtain the optimal expenditure for each unit under that strategy.
-									Finally, we compare the retailer’s profits under four strategies. Interestingly, we find that brand or media
-									coordination may result in a profit lower than non-coordination. Our findings provide insights regarding the
-									selection of coordination strategies for multibrand, multichannel retailers with multimedia advertising campaigns,
-									especially when they cannot do global coordination.
-								</div>
-								<div class="keywords research"><bf>Keywords:</bf>
-									multibrand retailer, multichannel retailer, multimedia advertising, advertising optimization,
-									advertising coordination, stochastic differential equations
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="working-Papers research">
-					<div class="ribbon research" style="font:30px;">
-						Working Paper
-					</div>
-					<div class="card research">
-						<div class="card-body research">
-							<div class="card-title research" onclick="abs('isaa')"><h4>Should Ad-Exchanges Subsidize the Acquisition of Targeting Data in Ad Auctions?</h4>
-							<div class="card-subtitle research">
-								<bf>Wangsheng Zhu</bf>, Shaojie Tang and Vijay Mookerjee.<a class="status research">Major Revision, ISR</a>
-							</div></div>
-							<div id="isaa" class="info research">
-								<div class="abstract research"><bf>Abstract:</bf>
-									Large volumes of online impressions are sold daily via real-time auctions to deliver targeted ads to consumers.
-									Advertisers use data to learn about user preferences and select the most appropriate ad for each user, which
-									also helps them optimize their bids in an ad auction. While ad exchanges may provide some user data to advertisers,
-									it is usually limited, and advertisers often acquire data from various sources to improve targeting performance.
-									The acquisition of such data can significantly influence the revenue of the ad exchange, which has mainly been
-									passive about advertisers' data acquisition process. Previous studies have examined the impact of ad exchanges
-									revealing their data to advertisers, but little attention has been paid to the active role that ad exchanges can
-									play when advertisers acquire data themselves. To address this gap, we propose three subsidy frameworks to increase
-									ad exchange revenue by inducing more advertisers to acquire data: All-subsidized (AS), Winner-subsidized (WS), and
-									Loser-subsidized (LS). Using a stylized game-theoretic model, we analyze the impact of subsidy provisions on the
-									platform's net revenue. Our results show that WS can be better or worse than AS, depending on the cost of data
-									acquisition, its beneficial impact on ad selection, and how impression value is distributed. We also consider an
-									extension of our model wherein advertisers have heterogeneous abilities to leverage data for targeting and analyze
-									how this heterogeneity affects the platform's revenue under the optimal subsidy framework.
-								</div>
-								<div class="keywords research"><bf>Keywords:</bf>
-									targeted advertising, ad auctions, targeting data acquisition, subsidy frameworks
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card research">
-						<div class="card-body research">
-							<div class="card-title research" onclick="abs('cdss')"><h4>A Recommendation Framework for Crowdsourcing Contest Design</h4>
-							<div class="card-subtitle research">
-								<bf>Wangsheng Zhu</bf>, Jiahui Mo, Syam Menon, and Sumit Sarkar.<a class="status research">Reject and Resubmit, Management Science</a>
-							</div></div>
-							<div id="cdss" class="info research">
-								<div class="abstract research"><bf>Abstract:</bf>
-									Crowdsourcing contests are popular mechanisms for firms to obtain solutions to tasks from external
-									sources. Platforms allow firms to select from various features they make available, in addition to
-									setting essential contest attributes like prize amounts and duration. The combination of features
-									selected when posting a contest can have a significant impact on  the probability that it will succeed
-									in attracting acceptable solutions. This study develops a framework that first identifies an effective
-									prediction model, and then incorporates it into an optimization model to maximize the predicted probability
-									that a crowdsourcing contest will succeed. Since the outcome of a contest depends not just on its own design
-									but also on the other contests on the platform, we consider both contest and environmental attributes as inputs
-									to the prediction model, while allowing for interactions among them. Motivated by practices commonly observed
-									on such platforms, we formulate several versions of the contest design problem as variants of the mixed linear
-									and nonlinear knapsack problems. We identify useful analytical properties that help interpret the optimal
-									solution (and thereby, the basis for making the recommendation), and propose solution procedures. We validate
-									our framework using data collected from a leading crowdsourcing contest platform. The results from computational
-									experiments leveraging our findings show that the contest designs recommended by the proposed framework can
-									increase predicted success probabilities significantly relative to seeker-specified designs.
-								</div>
-								<div class="keywords research"><bf>Keywords:</bf>
-									success probability, prediction, optimization, mixed knapsack problem, predict-then-optimize
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card research">
-						<div class="card-body research">
-							<div class="card-title research" onclick="abs('taam')"><h4>Towards Adaptive Ad Sequencing for Markovian Users</h4>
-							<div class="card-subtitle research">
-								<bf>Wangsheng Zhu</bf>, Shaojie Tang and Vijay Mookerjee.<a class="status research"></a>
-							</div></div>
-							<div id="taam" class="info research">
-								<div class="abstract research"><bf>Abstract:</bf>
-									As ad revenue continues to soar, publishers like Google and Amazon face the challenge of
-									optimizing ad selection to maximize their earnings. Previous researches assumed customers
-									click on ads once with decaying possibilities over time. However, it's been observed that
-									repeated exposure to an ad increases interest and potential purchase consideration. To account
-									for this, we generalize the previous model by allowing ads to be repeated in multiple positions.
-									Additionally, existing models assume that users permanently leave the ad session after clicking
-									an ad. Our framework accommodates more complex user behavior, enabling users to return to the
-									previous ad list even after clicking an ad. Our model considers various factors affecting click
-									probabilities, including ad quality, position, and previously displayed ads. We have developed
-									efficient algorithms with guaranteed optimal or approximate solutions.
-								</div>
-								<div class="keywords research"><bf>Keywords:</bf>
-									Internet advertisement, advertisement allocation, dynamic programming, revenue optimization
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="working-Projects research">
-					<div class="ribbon research" style="font:30px;">
-						Working Projects
-					</div>
-					<div class="card research">
-						<div class="card-body research">
-							<div class="card-title research" onclick="abs('mads')"><h4>Managing Ad Campaigns on Digital Billboards under Supply Disruptions</h4>
-							<div class="card-subtitle research">
-								<bf>Wangsheng Zhu</bf>, Shaojie Tang and Vijay Mookerjee.<a class="status research">Work-in-progress</a>
-							</div></div>
-							<div id="mads" class="info research">
-								<div class="abstract research"><bf>Abstract:</bf>
-									The digitization of billboards has facilitated the sale of advertising slots through real-time auctions.
-									Consequently, there has been a rise in the number of agents who assist advertisers in bidding and
-									acquiring these slots. These agents enter into contracts with advertisers to secure a specific number of
-									slots within designated time periods. To fulfill these contracts, agents participate in auctions to win the
-									desired slots. However, accepting numerous contracts may require the agent to place higher bids in auctions,
-									potentially impacting their profitability. Therefore, it is crucial to strike a balance between contract
-									acceptance and the bidding strategy employed.<br>
-									Motivated by these observations, we address two key aspects: (1) identifying the optimal set of advertisers
-									for the agent to contract with, and (2) determining the appropriate bidding strategy based on the contracted
-									advertisers' demands. We formulate a two-stage optimization problem for agents, followed by the proposal of a
-									near-optimal solution to the bidding optimization problem. Through this near-optimal solution, we demonstrate
-									that the objective function in the resulting advertiser selection problem exhibits the properties of a submodular
-									set function. To solve the advertiser selection problem, we introduce a greedy algorithm.
-								</div>
-								<div class="keywords research"><bf>Keywords:</bf>
-									digital billboard, advertiser selection, bidding strategy
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card research">
-						<div class="card-body research">
-							<div class="card-title research" onclick="abs('rstd')"><h4>Recommendation System for Designing Customized Tours</h4>
-							<div class="card-subtitle research">
-								<bf>Wangsheng Zhu</bf>, Syam Menon, and Sumit Sarkar.<a class="status research">Work-in-progress</a>
-							</div></div>
-							<div id="rstd" class="info research">
-								<div class="abstract research"><bf>Abstract:</bf>
-								</div>
-								<div class="keywords research"><bf>Keywords:</bf>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card research">
-						<div class="card-body research">
-							<div class="card-title research" onclick="abs('wsar')"><h4>When should ad-exchanges release user information to advertisers</h4>
-							<div class="card-subtitle research">
-								<bf>Wangsheng Zhu</bf>, Shaojie Tang and Vijay Mookerje.<a class="status research">Work-in-progress</a>
-							</div></div>
-							<div id="wsar" class="info research">
-								<div class="abstract research"><bf>Abstract:</bf>
-								</div>
-								<div class="keywords research"><bf>Keywords:</bf>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section class="section about" data-section="about">
+    <div class="section-container about">
+        <div class="section-heading about">
+            <h1>About Me</h1>
+        </div>
+
+        <div class="container about">
+            <div class="row about">
+                <div class="col-sm about">
+                    <div class="about-me-item about">
+                        <bf class="subtitle">Work</bf>
+                    </div>
+                    <div style="margin:20px 0 0 0;">
+                        <p style="margin:0;">
+                            <bf>Assistant Professor, July 2024 ~</bf>
+                        </p>
+                        <p style="margin:0;">Department of Information Systems, Business Statistics and Operations
+                            Management (ISOM), the Business School, Hong Kong Univeristy of Science and Technology, Hong
+                            Kong, China</p>
+                    </div>
+                </div>
+                <div class="col-sm about">
+                    <div class="about-me-item about">
+                        <bf class="subtitle">Education</bf>
+                    </div>
+                    <div style="margin:20px 0 0 0;">
+                        <p style="margin:0;">
+                            <bf>Ph.D. in Management Science, 2024</bf>
+                        </p>
+                        <p style="margin:0;">Naveen Jindal School of Management, University of Texas at Dallas, Texas,
+                            US</p>
+                        <p>
+                            <if>Dissertation committee: Vijay Mookerjee (co-chair), Subodha Kumar (co-chair), Shaojie
+                                Tang, Ayvaci Mehmet
+                            </if>
+                        </p>
+                    </div>
+                    <div style="margin:20px 0 0 0;">
+                        <p style="margin:0;">
+                            <bf>M.S. in Management Science, 2018</bf>
+                        </p>
+                        <p style="margin:0;">Renmin Business School, Renmin University of China, Beijing, China</p>
+                        <p>
+                            <if>Advisor: Kanliang Wang</if>
+                        </p>
+                    </div>
+                    <div style="margin:20px 0 0 0;">
+                        <p style="margin:0;">
+                            <bf>B.S. in Management Science, 2015</bf>
+                        </p>
+                        <p style="margin:0;">Renmin Business School, Renmin University of China, Beijing, China</p>
+                        <p>
+                            <if>Advisor: Ping Li</if>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm about">
+                    <div class="about-me-item about">
+                        <bf class="subtitle">Skills</bf>
+                    </div>
+                    <div class="container-side-by-side" style="margin:20px 0 0 0;">
+                        <div style="height:100%;width:35%">
+                            <p style="margin:0;">
+                                <bf>Python</bf>
+                            </p>
+                        </div>
+                        <div class="progress" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                 aria-valuemax="100" style="width:95%;">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-side-by-side about" style="margin:15px 0 0 0;">
+                        <div style="height:100%;width:35%">
+                            <p style="margin:0;">
+                                <bf>Matlab</bf>
+                            </p>
+                        </div>
+                        <div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                 aria-valuemax="100" style="width:85%;">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-side-by-side about" style="margin:15px 0 0 0;">
+                        <div style="height:100%;width:35%">
+                            <p style="margin:0;">
+                                <bf>Java</bf>
+                            </p>
+                        </div>
+                        <div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                 aria-valuemax="100" style="width:95%;">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-side-by-side about" style="margin:15px 0 0 0;">
+                        <div style="height:100%;width:35%">
+                            <p style="margin:0;">
+                                <bf>R</bf>
+                            </p>
+                        </div>
+                        <div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                 aria-valuemax="100" style="width:85%;">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-side-by-side about" style="margin:15px 0 0 0;">
+                        <div style="height:100%;width:35%">
+                            <p style="margin:0;">
+                                <bf>SQL</bf>
+                            </p>
+                        </div>
+                        <div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                 aria-valuemax="100" style="width:90%;">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section research" data-section="research">
+    <div class="section-container research">
+        <div class="section-heading">
+            <h1>Research</h1>
+            <span style="font-size:10pt">* updated at July 2023. </span><br>
+            <span style="font-size:10pt">** click the title to see more information about the paper. </span>
+        </div>
+
+        <div class="research" style="width:100%;margin:0 auto;padding-left:0px;">
+            <div class="publications research">
+                <div class="ribbon research" style="font:30px;">
+                    Publication
+                </div>
+                <div class="card research">
+                    <div class="card-body research">
+                        <div class="card-title research" onclick="abs('coordination')"><h4>Coordination in Multibrand
+                            Multichannel Advertising: Is it Always a Good Thing?</h4>
+                            <div class="card-subtitle research">
+                                <bf>Wangsheng Zhu</bf>
+                                , Subodha Kumar and Vijay Mookerjee.<a class="status research">Forthcoming at ISR</a>
+                            </div>
+                        </div>
+                        <div id="coordination" class="info research">
+                            <div class="abstract research">
+                                <bf>Abstract:</bf>
+                                The growing online retail market has led to the prevalence of multichannel retailing.
+                                Meanwhile, retailers are
+                                increasingly combining multichannel retailing with a multibranding strategy. While this
+                                can further increase
+                                the retailer's sales, it brings new advertising challenges. Multibrand, multichannel
+                                retailers usually launch
+                                advertising campaigns for different brands on multiple media. Thus, the retailer's
+                                advertising efforts
+                                fall into a set of brand-media units. Each unit's advertising efforts can affect the
+                                sales of all brands on all
+                                channels. Therefore, retailers need to coordinate the advertising efforts of different
+                                units to maximize advertising
+                                efficiency in propelling sales. So far, the optimization problem of multibrand,
+                                multimedia advertising has not been
+                                analyzed in the literature, and our study aims to bridge this gap. We develop a
+                                stochastic differential equation
+                                model to estimate the impact of multimedia advertising on sales in a multibrand,
+                                multichannel context. Using the
+                                data from a jewelry retailer in the U.S., we show that our model is effective in
+                                predicting future sales driven by
+                                advertising. Afterward, we formulate the advertising optimization problems under four
+                                coordination strategies:
+                                (i) non-coordination, (ii) brand coordination, (iii) media coordination, and (iv) global
+                                coordination. By solving
+                                the problem for each strategy, the retailers can obtain the optimal expenditure for each
+                                unit under that strategy.
+                                Finally, we compare the retailer’s profits under four strategies. Interestingly, we find
+                                that brand or media
+                                coordination may result in a profit lower than non-coordination. Our findings provide
+                                insights regarding the
+                                selection of coordination strategies for multibrand, multichannel retailers with
+                                multimedia advertising campaigns,
+                                especially when they cannot do global coordination.
+                            </div>
+                            <div class="keywords research">
+                                <bf>Keywords:</bf>
+                                multibrand retailer, multichannel retailer, multimedia advertising, advertising
+                                optimization,
+                                advertising coordination, stochastic differential equations
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="working-Papers research">
+                <div class="ribbon research" style="font:30px;">
+                    Working Paper
+                </div>
+                <div class="card research">
+                    <div class="card-body research">
+                        <div class="card-title research" onclick="abs('isaa')"><h4>Should Ad-Exchanges Subsidize the
+                            Acquisition of Targeting Data in Ad Auctions?</h4>
+                            <div class="card-subtitle research">
+                                <bf>Wangsheng Zhu</bf>
+                                , Shaojie Tang and Vijay Mookerjee.<a class="status research">Major Revision, ISR</a>
+                            </div>
+                        </div>
+                        <div id="isaa" class="info research">
+                            <div class="abstract research">
+                                <bf>Abstract:</bf>
+                                Large volumes of online impressions are sold daily via real-time auctions to deliver
+                                targeted ads to consumers.
+                                Advertisers use data to learn about user preferences and select the most appropriate ad
+                                for each user, which
+                                also helps them optimize their bids in an ad auction. While ad exchanges may provide
+                                some user data to advertisers,
+                                it is usually limited, and advertisers often acquire data from various sources to
+                                improve targeting performance.
+                                The acquisition of such data can significantly influence the revenue of the ad exchange,
+                                which has mainly been
+                                passive about advertisers' data acquisition process. Previous studies have examined the
+                                impact of ad exchanges
+                                revealing their data to advertisers, but little attention has been paid to the active
+                                role that ad exchanges can
+                                play when advertisers acquire data themselves. To address this gap, we propose three
+                                subsidy frameworks to increase
+                                ad exchange revenue by inducing more advertisers to acquire data: All-subsidized (AS),
+                                Winner-subsidized (WS), and
+                                Loser-subsidized (LS). Using a stylized game-theoretic model, we analyze the impact of
+                                subsidy provisions on the
+                                platform's net revenue. Our results show that WS can be better or worse than AS,
+                                depending on the cost of data
+                                acquisition, its beneficial impact on ad selection, and how impression value is
+                                distributed. We also consider an
+                                extension of our model wherein advertisers have heterogeneous abilities to leverage data
+                                for targeting and analyze
+                                how this heterogeneity affects the platform's revenue under the optimal subsidy
+                                framework.
+                            </div>
+                            <div class="keywords research">
+                                <bf>Keywords:</bf>
+                                targeted advertising, ad auctions, targeting data acquisition, subsidy frameworks
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card research">
+                    <div class="card-body research">
+                        <div class="card-title research" onclick="abs('cdss')"><h4>A Recommendation Framework for
+                            Crowdsourcing Contest Design</h4>
+                            <div class="card-subtitle research">
+                                <bf>Wangsheng Zhu</bf>
+                                , Jiahui Mo, Syam Menon, and Sumit Sarkar.<a class="status research">Reject and
+                                Resubmit, Management Science</a>
+                            </div>
+                        </div>
+                        <div id="cdss" class="info research">
+                            <div class="abstract research">
+                                <bf>Abstract:</bf>
+                                Crowdsourcing contests are popular mechanisms for firms to obtain solutions to tasks
+                                from external
+                                sources. Platforms allow firms to select from various features they make available, in
+                                addition to
+                                setting essential contest attributes like prize amounts and duration. The combination of
+                                features
+                                selected when posting a contest can have a significant impact on the probability that it
+                                will succeed
+                                in attracting acceptable solutions. This study develops a framework that first
+                                identifies an effective
+                                prediction model, and then incorporates it into an optimization model to maximize the
+                                predicted probability
+                                that a crowdsourcing contest will succeed. Since the outcome of a contest depends not
+                                just on its own design
+                                but also on the other contests on the platform, we consider both contest and
+                                environmental attributes as inputs
+                                to the prediction model, while allowing for interactions among them. Motivated by
+                                practices commonly observed
+                                on such platforms, we formulate several versions of the contest design problem as
+                                variants of the mixed linear
+                                and nonlinear knapsack problems. We identify useful analytical properties that help
+                                interpret the optimal
+                                solution (and thereby, the basis for making the recommendation), and propose solution
+                                procedures. We validate
+                                our framework using data collected from a leading crowdsourcing contest platform. The
+                                results from computational
+                                experiments leveraging our findings show that the contest designs recommended by the
+                                proposed framework can
+                                increase predicted success probabilities significantly relative to seeker-specified
+                                designs.
+                            </div>
+                            <div class="keywords research">
+                                <bf>Keywords:</bf>
+                                success probability, prediction, optimization, mixed knapsack problem,
+                                predict-then-optimize
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card research">
+                    <div class="card-body research">
+                        <div class="card-title research" onclick="abs('taam')"><h4>Towards Adaptive Ad Sequencing for
+                            Markovian Users</h4>
+                            <div class="card-subtitle research">
+                                <bf>Wangsheng Zhu</bf>
+                                , Shaojie Tang and Vijay Mookerjee.<a class="status research"></a>
+                            </div>
+                        </div>
+                        <div id="taam" class="info research">
+                            <div class="abstract research">
+                                <bf>Abstract:</bf>
+                                As ad revenue continues to soar, publishers like Google and Amazon face the challenge of
+                                optimizing ad selection to maximize their earnings. Previous researches assumed
+                                customers
+                                click on ads once with decaying possibilities over time. However, it's been observed
+                                that
+                                repeated exposure to an ad increases interest and potential purchase consideration. To
+                                account
+                                for this, we generalize the previous model by allowing ads to be repeated in multiple
+                                positions.
+                                Additionally, existing models assume that users permanently leave the ad session after
+                                clicking
+                                an ad. Our framework accommodates more complex user behavior, enabling users to return
+                                to the
+                                previous ad list even after clicking an ad. Our model considers various factors
+                                affecting click
+                                probabilities, including ad quality, position, and previously displayed ads. We have
+                                developed
+                                efficient algorithms with guaranteed optimal or approximate solutions.
+                            </div>
+                            <div class="keywords research">
+                                <bf>Keywords:</bf>
+                                Internet advertisement, advertisement allocation, dynamic programming, revenue
+                                optimization
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="working-Projects research">
+                <div class="ribbon research" style="font:30px;">
+                    Working Projects
+                </div>
+                <div class="card research">
+                    <div class="card-body research">
+                        <div class="card-title research" onclick="abs('mads')"><h4>Managing Ad Campaigns on Digital
+                            Billboards under Supply Disruptions</h4>
+                            <div class="card-subtitle research">
+                                <bf>Wangsheng Zhu</bf>
+                                , Shaojie Tang and Vijay Mookerjee.<a class="status research">Work-in-progress</a>
+                            </div>
+                        </div>
+                        <div id="mads" class="info research">
+                            <div class="abstract research">
+                                <bf>Abstract:</bf>
+                                The digitization of billboards has facilitated the sale of advertising slots through
+                                real-time auctions.
+                                Consequently, there has been a rise in the number of agents who assist advertisers in
+                                bidding and
+                                acquiring these slots. These agents enter into contracts with advertisers to secure a
+                                specific number of
+                                slots within designated time periods. To fulfill these contracts, agents participate in
+                                auctions to win the
+                                desired slots. However, accepting numerous contracts may require the agent to place
+                                higher bids in auctions,
+                                potentially impacting their profitability. Therefore, it is crucial to strike a balance
+                                between contract
+                                acceptance and the bidding strategy employed.<br>
+                                Motivated by these observations, we address two key aspects: (1) identifying the optimal
+                                set of advertisers
+                                for the agent to contract with, and (2) determining the appropriate bidding strategy
+                                based on the contracted
+                                advertisers' demands. We formulate a two-stage optimization problem for agents, followed
+                                by the proposal of a
+                                near-optimal solution to the bidding optimization problem. Through this near-optimal
+                                solution, we demonstrate
+                                that the objective function in the resulting advertiser selection problem exhibits the
+                                properties of a submodular
+                                set function. To solve the advertiser selection problem, we introduce a greedy
+                                algorithm.
+                            </div>
+                            <div class="keywords research">
+                                <bf>Keywords:</bf>
+                                digital billboard, advertiser selection, bidding strategy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card research">
+                    <div class="card-body research">
+                        <div class="card-title research" onclick="abs('rstd')"><h4>Recommendation System for Designing
+                            Customized Tours</h4>
+                            <div class="card-subtitle research">
+                                <bf>Wangsheng Zhu</bf>
+                                , Syam Menon, and Sumit Sarkar.<a class="status research">Work-in-progress</a>
+                            </div>
+                        </div>
+                        <div id="rstd" class="info research">
+                            <div class="abstract research">
+                                <bf>Abstract:</bf>
+                            </div>
+                            <div class="keywords research">
+                                <bf>Keywords:</bf>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card research">
+                    <div class="card-body research">
+                        <div class="card-title research" onclick="abs('wsar')"><h4>When should ad-exchanges release user
+                            information to advertisers</h4>
+                            <div class="card-subtitle research">
+                                <bf>Wangsheng Zhu</bf>
+                                , Shaojie Tang and Vijay Mookerje.<a class="status research">Work-in-progress</a>
+                            </div>
+                        </div>
+                        <div id="wsar" class="info research">
+                            <div class="abstract research">
+                                <bf>Abstract:</bf>
+                            </div>
+                            <div class="keywords research">
+                                <bf>Keywords:</bf>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!--	<section class="section" data-section="conferences">-->
 <!--		<div class="section-container">-->
@@ -487,245 +640,280 @@
 <!--		</div>-->
 <!--	</section>-->
 
-	<section class="section" data-section="teaching">
-		<div class="section-container">
-			<div class="section-heading">
-				<h1>Teaching</h1>
-			</div>
-			<div>
-				<div class="card">
-					<div class="card-body">
-						<h4 class="card-title">Introduction to Programming</h4>
-						<div class="card-subtitle">
-							Naveen Jindal School of Management, University of Texas at Dallas<span class="middot-divider"></span>Fall 2021, Fall 2022
-						</div>
-						<div class="card-text">Using the language Java, this course covers fundamental programming concepts including data types, control structures (selections, loops, and methods), objects, classes, iterations, functions, and arrays. Besides, students will learn the mechanics of running, testing, and debugging programs.</div>
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="card">
-					<div class="card-body">
-						<h4 class="card-title">Object-oriented Programming with Python</h4>
-						<div class="card-subtitle">
-							Naveen Jindal School of Management, University of Texas at Dallas<span class="middot-divider"></span>Spring 2023
-						</div>
-						<div class="card-text">This course covers (1) object declaration and inheritance, (2) object-oriented programming (OOP) thinking, (3) exception handling, (4) file input and output, and (5) graphical user interface (GUI). </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<section class="section" data-section="teaching">
+    <div class="section-container">
+        <div class="section-heading">
+            <h1>Teaching</h1>
+        </div>
+        <div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Introduction to Programming</h4>
+                    <div class="card-subtitle">
+                        Naveen Jindal School of Management, University of Texas at Dallas<span
+                            class="middot-divider"></span>Fall 2021, Fall 2022
+                    </div>
+                    <div class="card-text">Using the language Java, this course covers fundamental programming concepts
+                        including data types, control structures (selections, loops, and methods), objects, classes,
+                        iterations, functions, and arrays. Besides, students will learn the mechanics of running,
+                        testing, and debugging programs.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Object-oriented Programming with Python</h4>
+                    <div class="card-subtitle">
+                        Naveen Jindal School of Management, University of Texas at Dallas<span
+                            class="middot-divider"></span>Spring 2023
+                    </div>
+                    <div class="card-text">This course covers (1) object declaration and inheritance, (2)
+                        object-oriented programming (OOP) thinking, (3) exception handling, (4) file input and output,
+                        and (5) graphical user interface (GUI).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-	<section class="section awards" data-section="awards">
-		<div class="section-container">
-			<div class="section-heading"><h1>Awards and Honors</h1></div>
-			<div class="card">
-				<div class="card-body">
-					<h4 class="card-title">Dean's Excellence Scholarship</h4>
-					<div class="card-subtitle">
-						Naveen Jindal School of Management, University of Texas at Dallas
-						<span class="middot-divider"></span>2023
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-					<h4 class="card-title">First-class Scholarship of Outstanding Academic Performance</h4>
-					<div class="card-subtitle">
-						Renmin Business School, Renmin University of China
-						<span class="middot-divider"></span>2016
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-					<h4 class="card-title">Second-class Scholarship of Outstanding Academic Performance</h4>
-					<div class="card-subtitle">
-						Renmin Business School, Renmin University of China
-						<span class="middot-divider"></span>2015
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-					<h4 class="card-title">Outstanding Bachelor Thesis Award</h4>
-					<div class="card-subtitle">
-						Renmin Business School, Renmin University of China
-						<span class="middot-divider"></span>2015
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-					<h4 class="card-title">RUC Scholarship of Outstanding Academic Performance (Top 20%)</h4>
-					<div class="card-subtitle">
-						Renmin Business School, Renmin University of China
-						<span class="middot-divider"></span>2014
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-					<h4 class="card-title">RUC Scholarship of Outstanding Academic Performance (Top 20%)</h4>
-					<div class="card-subtitle">
-						Renmin Business School, Renmin University of China
-						<span class="middot-divider"></span>2012
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<section class="section awards" data-section="awards">
+    <div class="section-container">
+        <div class="section-heading"><h1>Awards and Honors</h1></div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Dean's Excellence Scholarship</h4>
+                <div class="card-subtitle">
+                    Naveen Jindal School of Management, University of Texas at Dallas
+                    <span class="middot-divider"></span>2023
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">First-class Scholarship of Outstanding Academic Performance</h4>
+                <div class="card-subtitle">
+                    Renmin Business School, Renmin University of China
+                    <span class="middot-divider"></span>2016
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Second-class Scholarship of Outstanding Academic Performance</h4>
+                <div class="card-subtitle">
+                    Renmin Business School, Renmin University of China
+                    <span class="middot-divider"></span>2015
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Outstanding Bachelor Thesis Award</h4>
+                <div class="card-subtitle">
+                    Renmin Business School, Renmin University of China
+                    <span class="middot-divider"></span>2015
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">RUC Scholarship of Outstanding Academic Performance (Top 20%)</h4>
+                <div class="card-subtitle">
+                    Renmin Business School, Renmin University of China
+                    <span class="middot-divider"></span>2014
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">RUC Scholarship of Outstanding Academic Performance (Top 20%)</h4>
+                <div class="card-subtitle">
+                    Renmin Business School, Renmin University of China
+                    <span class="middot-divider"></span>2012
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-	<section class="section miscellaneous" data-section="miscellaneous">
-		<div class="section-container">
-			<div class="section-heading"><h1>Miscellaneous</h1></div>
-			<div class="card" style="border: none; box-shadow: none;">
-				<div class="card-body container-side-by-side">
-					<div class="left-side" style="width: 40%;margin: 0;">
-						<div class="photo" style="background-image: url('./assets/images/wz.photo.1.png');"></div>
-					</div>
-					<div class="right-side" style="width:55%;margin-left:5%;">
-						<div class="card">
-							<div class="subcard container-side-by-side">
-								<div class="icon">
-									<span class="flaticon-design flaticon"></span>
-								</div>
-								<div class="text">
-									<h2 class="subcard-title">Blog</h2>
-									<p class="subcard-subtitle">I also do not know what I will write here.</p>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="subcard container-side-by-side">
-								<div class="icon">
-									<span class="flaticon-online-learning flaticon"></span>
-								</div>
-								<div class="text">
-									<h2 class="subcard-title">Gallery</h2>
-									<p class="subcard-subtitle">Photos capturing unforgettable moments in my life</p>
-								</div>
-							</div>
-						</div>
-						<div class="card" onclick="window.open('map.html')" style="cursor: pointer;">
-							<div class="subcard container-side-by-side">
-								<div class="icon">
-									<span class="flaticon-computer-science flaticon"></span>
-								</div>
-								<div class="text">
-									<h2 class="subcard-title">Footprints</h2>
-									<p class="subcard-subtitle">A record of the cities I have been to before </p>
-								</div>
-							</div>
-						</div>
-<!--						<div class="card">-->
-<!--							<div class="miscellaneous subcard container-side-by-side">-->
-<!--								<div class="icon">-->
-<!--									<span class="flaticon-calendar flaticon"></span>-->
-<!--								</div>-->
-<!--								<div class="text">-->
-<!--									<h2 class="subcard-title"></h2>-->
-<!--									<p class="subcard-subtitle"></p>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-						</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<section class="section miscellaneous" data-section="miscellaneous">
+    <div class="section-container">
+        <div class="section-heading"><h1>Miscellaneous</h1></div>
+        <div class="card" style="border: none; box-shadow: none;">
+            <div class="card-body container-side-by-side">
+                <div class="left-side" style="width: 40%;margin: 0;">
+                    <div class="photo" style="background-image: url('./assets/images/wz.photo.1.png');"></div>
+                </div>
+                <div class="right-side" style="width:55%;margin-left:5%;">
+                    <div class="card">
+                        <div class="subcard container-side-by-side">
+                            <div class="icon">
+                                <span class="flaticon-design flaticon"></span>
+                            </div>
+                            <div class="text">
+                                <h2 class="subcard-title">Blog</h2>
+                                <p class="subcard-subtitle">I also do not know what I will write here.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="subcard container-side-by-side">
+                            <div class="icon">
+                                <span class="flaticon-online-learning flaticon"></span>
+                            </div>
+                            <div class="text">
+                                <h2 class="subcard-title">Gallery</h2>
+                                <p class="subcard-subtitle">Photos capturing unforgettable moments in my life</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" onclick="window.open('map.html')" style="cursor: pointer;">
+                        <div class="subcard container-side-by-side">
+                            <div class="icon">
+                                <span class="flaticon-computer-science flaticon"></span>
+                            </div>
+                            <div class="text">
+                                <h2 class="subcard-title">Footprints</h2>
+                                <p class="subcard-subtitle">A record of the cities I have been to before </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--						<div class="card">-->
+                    <!--							<div class="miscellaneous subcard container-side-by-side">-->
+                    <!--								<div class="icon">-->
+                    <!--									<span class="flaticon-calendar flaticon"></span>-->
+                    <!--								</div>-->
+                    <!--								<div class="text">-->
+                    <!--									<h2 class="subcard-title"></h2>-->
+                    <!--									<p class="subcard-subtitle"></p>-->
+                    <!--								</div>-->
+                    <!--							</div>-->
+                    <!--						</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
 
 
-	<section class="section contactme" data-section="contactme">
-		<div class="section-container contactme">
-			<div class="section-heading contactme">
-				<h1>Contact Me</h1>
-			</div>
-			<div>
-				<bf>Email</bf>: Wangsheng.Zhu@utdallas.edu
-			</div>
-		</div>
-	</section>
+<section class="section contactme" data-section="contactme">
+    <div class="section-container contactme">
+        <div class="section-heading contactme">
+            <h1>Contact Me</h1>
+        </div>
+        <div>
+            <bf>Email</bf>
+            : Wangsheng.Zhu@utdallas.edu
+        </div>
+    </div>
+</section>
 
-	<div style="width:100%;height:20%;background-color:rgb(7, 121, 228);display:flex;align-items:center;">
-		<p style="color:white;width:fit-content;height:fit-content;margin:0 auto;">Copyright © 2023 by Wangsheng Zhu</p>
-	</div>
+<div style="width:100%;height:20%;background-color:rgb(7, 121, 228);display:flex;align-items:center;">
+    <p style="color:white;width:fit-content;height:fit-content;margin:0 auto;">Copyright © 2023 by Wangsheng Zhu</p>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
-    <!-- Script 1: used to control the color change of the header bard when scrolling -->
-    <script>
-      const headerbar = document.querySelector('#header-bar')
-      window.addEventListener('scroll', () => {
+<!-- Script 1: used to control the color change of the header bard when scrolling -->
+<script>
+    const headerbar = document.querySelector('#header-bar')
+    window.addEventListener('scroll', () => {
         let y = 0.4 + (window.scrollY || window.pageYOffset) / window.innerHeight
         y = y < 0.5 ? 0 : y
         y = y > 1 ? 1 : y
         headerbar.style.backgroundColor = `rgba(7, 121, 228, ${y})`
-      })
-    </script>
+    })
+</script>
 
-    <!-- Script 2: used to change the display of the abstract -->
-    <script>
-        function abs(title) {
-            var ifdisplay = document.getElementById(title).style.display;
-            if(ifdisplay=="block"){
-                document.getElementById(title).style.display="none";
-            }
-            else{
-                document.getElementById(title).style.display="block";
-            }
+<!-- Script 2: used to change the display of the abstract -->
+<script>
+    function abs(title) {
+        var ifdisplay = document.getElementById(title).style.display;
+        if (ifdisplay == "block") {
+            document.getElementById(title).style.display = "none";
+        } else {
+            document.getElementById(title).style.display = "block";
         }
-    </script>
+    }
+</script>
 
 <script>
-	$(".js-navigation-bar").on("click", "a", function(e) {
-		e.preventDefault();
-		showSection($(this).attr("href"), true);
+    $(".js-navigation-bar").on("click", "a", function (e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
     });
 
     var showSection = function showSection(section, isAnimate) {
-      var direction = section.replace(/#/, ""),
-        reqSection = $(".section").filter(
-          '[data-section="' + direction + '"]'
-        ),
-        reqSectionPos = reqSection.offset().top - 55;
+        var direction = section.replace(/#/, ""),
+            reqSection = $(".section").filter(
+                '[data-section="' + direction + '"]'
+            ),
+            reqSectionPos = reqSection.offset().top - 55;
 
-      if (isAnimate) {
-        $("body, html").animate(
-          {
-            scrollTop: reqSectionPos
-          },
-          800
-        );
-      } else {
-        $("body, html").scrollTop(reqSectionPos);
-      }
+        if (isAnimate) {
+            $("body, html").animate(
+                {
+                    scrollTop: reqSectionPos
+                },
+                800
+            );
+        } else {
+            $("body, html").scrollTop(reqSectionPos);
+        }
     };
 
-    $(window).scroll(function() {
-      checkSection();
+    $(window).scroll(function () {
+        checkSection();
     });
 
     var checkSection = function checkSection() {
-      $(".section").each(function() {
-        var $this = $(this),
-          topEdge = $this.offset().top-60,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var currentId = $this.data("section"),
-          reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-          reqLink
-            .closest("li")
-            .addClass("active")
-            .siblings()
-            .removeClass("active");
-        }
-      });
+        $(".section").each(function () {
+            var $this = $(this),
+                topEdge = $this.offset().top - 60,
+                bottomEdge = topEdge + $this.height(),
+                wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+                var currentId = $this.data("section"),
+                    reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+                reqLink
+                    .closest("li")
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+            }
+        });
     };
+</script>
+
+<script>
+    var mySwiper = new Swiper ('.swiper', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })
 </script>
 
 </body>
