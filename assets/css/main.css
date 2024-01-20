@@ -1,12 +1,25 @@
-#header-bar {
+.container-side-by-side {
     display: flex;
-    position: fixed;
-    max-width: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    z-index: 100;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.h-center { /* horizontally center */
+    display: flex;
+    justify-items: center!important;
+}
+
+.v-center { /* Vertically center */
+    display: flex;
+    align-content: center!important;
+}
+
+.t-center { /* Horizontally and vertically center */
+    display: flex;
+    align-content: center!important;
+    align-items: center!important;
+    justify-content: center!important;
+    justify-items: center!important;
 }
 
 .section {
@@ -32,29 +45,81 @@
     font-weight: bold;
 }
 
-.home {
-    width: 100% !important;
-    height: 100% !important;
-    min-height: fit-content !important;
-    margin: 0 !important;
+
+
+#navbar-main {
+    display: flex;
+    position: fixed;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    z-index: 100;
 }
 
-.home .fa {
-    margin-left: min(2%, 15px);
+#navbar-main ul {
+    list-style-type: none; /* Remove the bullets from a list */
 }
 
-.home a {
+#navbar-main .nav-item {
+    position: relative; /* This is used for the ::after effect; otherwise, the position of triangle may get messed */
+}
+
+#navbar-main .nav-link {
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 15pt;
+}
+
+#navbar-main .active {
+    background-color: #0db2fd;
+}
+
+#navbar-main .active::after {
+    content: '';
+    position: absolute;
+    left: 42%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #0db2fd;
+    clear: both;
+}
+
+#navbar-main .never-active {
+    background-color: transparent !important;
+}
+
+#navbar-main .never-active::after {
+    border-top: 10px solid transparent !important;
+}
+
+#navbar-main .navbar-toggler {
     color: white;
 }
 
-.home a:hover {
-    text-decoration: none;
+.navbar-toggler:focus, .navbar-toggler:hover {
+    outline: none;
+}
+
+#home {
+    width: 100% !important;
+    height: fit-content !important;
+    margin: 0 !important;
+    display: block;
 }
 
 #welcome-background {
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     background-size: auto;
+    display: flex;
+    align-items: center;
 }
 
 #welcome-content-container {
@@ -66,6 +131,8 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    padding-bottom: 10px;
+    padding-left: 30px;
 }
 
 #welcome-picture {
@@ -142,39 +209,23 @@
     animation-iteration-count: infinite;
 }
 
-@keyframes swiper-fade-in {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 0;
-    }
+#home .fa {
+    margin-left: min(2%, 15px);
 }
 
-.swiper-button-prev:after, .swiper-button-next:after {
+#home a {
     color: white;
-    background: lightgray;
-    opacity: 0.3;
-    padding: min(5vh, 50px) 0.2vw;
-    border-radius: 2pt;
-    animation: swiper-fade-in 5s 0.1s forwards;
-    animation-iteration-count: infinite;
 }
 
-.swiper-button-prev:after:hover, .swiper-button-next:after:hover {
-    color: white;
-    background: lightgray;
-    opacity: 1;
+#home a:hover {
+    text-decoration: none;
 }
 
 .swiper, .swiper-wrapper, .swiper-slide {
     height: 100%;
 }
 
-.home .swiper-pagination {
+#home .swiper-pagination {
     position: relative;
     top: -16px;
     height: 16px;
