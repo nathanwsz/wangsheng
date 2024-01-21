@@ -191,11 +191,11 @@
     font-family: fantasy;
     display: inline-block;
     color: white;
-    padding-bottom: 10pt;
+    padding-bottom: 30px;
 }
 
 .welcome-text-main {
-    margin: 4% 0 2%;
+    margin: 0;
     word-wrap: anywhere;
     text-align: left;
     font-size: 16pt;
