@@ -162,6 +162,12 @@
     align-items: center;
 }
 
+@media screen and (max-width: 1200px) {
+    #welcome-text {
+        width: 100%;
+    }
+}
+
 .welcome-title {
     font-size: max(18pt,min(3vw, 40pt));
     font-family: fantasy;
