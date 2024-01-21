@@ -6,20 +6,20 @@
 
 .h-center { /* horizontally center */
     display: flex;
-    justify-items: center!important;
+    justify-items: center !important;
 }
 
 .v-center { /* Vertically center */
     display: flex;
-    align-content: center!important;
+    align-content: center !important;
 }
 
 .t-center { /* Horizontally and vertically center */
     display: flex;
-    align-content: center!important;
-    align-items: center!important;
-    justify-content: center!important;
-    justify-items: center!important;
+    align-content: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    justify-items: center !important;
 }
 
 .section {
@@ -44,7 +44,6 @@
     font-size: 35pt;
     font-weight: bold;
 }
-
 
 
 #navbar-main {
@@ -169,10 +168,37 @@
 }
 
 .welcome-title {
-    font-size: max(18pt,min(3vw, 40pt));
+    font-size: max(18pt, min(3vw, 40pt));
     font-family: fantasy;
     display: inline-block;
     color: white;
+}
+
+.welcome-text-main {
+    margin: 4% 0 2%;
+    word-wrap: anywhere;
+    text-align: left;
+    font-size: 16pt;
+}
+
+.welcome-text-icons {
+    text-align: left;
+    font-size: 14pt;
+}
+
+@media screen and (max-width: 1200px) {
+    .welcome-title {
+        font-size: 18pt;
+    }
+
+    .welcome-text-main {
+        margin: 0;
+        font-size: 14pt;
+    }
+
+    .welcome-text-icons {
+        font-size: 12pt;
+    }
 }
 
 @keyframes fade-in {
