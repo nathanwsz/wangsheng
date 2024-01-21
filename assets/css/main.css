@@ -163,7 +163,7 @@
 }
 
 .welcome-title {
-    font-size: max(2vw,min(3vw, 40pt));
+    font-size: max(18pt,min(3vw, 40pt));
     font-family: fantasy;
     display: inline-block;
     color: white;
