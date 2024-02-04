@@ -1,19 +1,19 @@
-<!Doctype html>
+<!doctype html>
 <html>
 <head>
 	<title>Footprints - Wangsheng's Personal Website</title>
 	<meta charset="utf-8" />
-	<script src="echarts-5.4.3/dist/echarts.js"></script>
+	<script src="assets/echarts-5.4.3/dist/echarts.js"></script>
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-	<div id="main2" style="height: 100vh;left:0px;position: relative;"></div>
+	<div id="main2" style="height: 100vh;left:0;position: relative;"></div>
 	<script>
 		window.onload=function(){
 			const XHR = new XMLHttpRequest();
-			XHR.open("get","world.json",true)
+			XHR.open("get","assets/json.map/world.json",true)
 			XHR.onload=function(){
 				const jsondata=XHR.response;
 				echarts.registerMap("world",jsondata);
