@@ -1,23 +1,26 @@
-		.card {
-			width:100%;
-			margin: 0 auto 1.5rem;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-			transition: all .2s ease-out;
-		}
+.card {
+	width:100%;
+	margin: 0 auto 1.5rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+	transition: all .2s ease-out;
+}
 
+.card-title {
+	margin-bottom: 0.75rem;
+	font-size: 1.5rem;
+}
 
+.card-subtitle {
+	margin-bottom: 8px;
+	font-palette: light;
+	color: darkgray;
+	font-size: 1rem;
+	margin-top:1rem;
+}
 
-		.card-title {
-			margin-bottom: 0.75rem;
-			font-size: 1.5rem;
-		}
-
-		.card-subtitle {
-			margin-bottom: 8px;
-			font-palette: light;
-			color: darkgray;
-			font-size: 1rem;
-			margin-top:1rem;
-		}
+.card-info{
+	padding-top:10pt;
+	font-size:16px;
+}
