@@ -1,0 +1,31 @@
+
+.section {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 10vh auto;
+}
+
+.section-container {
+    width: min(1300px, 80%);
+    height: auto;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .section-container {
+        width: 90%!important;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+.section-heading {
+    padding-bottom: 3vh;
+    font-family: math;
+}
+
+.section-heading h1 {
+    font-size: 35pt;
+    font-weight: bold;
+}

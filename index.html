@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="assets/css.swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css.fontawesome/css/all.css">
     <link rel="stylesheet" href="assets/css.fontawesome/css/v4-shims.css">
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/section.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/compatibility.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/sec-about.css">
     <link rel="stylesheet" href="assets/css/sec-paper.css">
     <link rel="stylesheet" href="assets/css/card.css">
     <link rel="stylesheet" href="assets/css/sec-awards.css">
@@ -29,20 +32,6 @@
             padding: 0;
         }
 
-
-        .about-me-item::after {
-            content: '';
-            position: absolute;
-            left: 20%;
-            top: 100%;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 10px solid #fd2b0d8a;
-            clear: both;
-        }
-
         bf {
             font-weight: bold;
         }
@@ -54,25 +43,6 @@
         bif {
             font-weight: bold;
             font-style: italic;
-        }
-
-        .about .about-me-item {
-            position: relative;
-            background-color: #fd2b0d8a;
-            border-radius: 5px;
-            height: fit-content;
-            width: fit-content;
-            padding: 10px;
-        }
-
-        .about .subtitle {
-            position: relative;
-            color: white;
-            padding: 0px 30px;
-        }
-
-        .about .progress-bar {
-            background-color: #fd2b0d8a;
         }
 
         .middot-divider::after {
@@ -161,132 +131,89 @@
 </section>
 
 <section id="about" class="section about" data-section="about">
-    <div class="section-container about">
-        <div class="section-heading about">
-            <h1>About Me</h1>
-        </div>
-
-        <div class="container about">
-            <div class="row about">
-                <div class="col-sm about">
-                    <div class="about-me-item about">
-                        <bf class="subtitle">Work</bf>
-                    </div>
-<!--                    <div style="margin:20px 0 0 0;">-->
-<!--                        <p style="margin:0;">-->
-<!--                            <bf>Assistant Professor, July 2024 ~</bf>-->
-<!--                        </p>-->
-<!--                        <p style="margin:0;">Department of Information Systems, Business Statistics and Operations-->
-<!--                            Management (ISOM), the Business School, Hong Kong Univeristy of Science and Technology, Hong-->
-<!--                            Kong, China</p>-->
-<!--                    </div>-->
-                </div>
-                <div class="col-sm about">
-                    <div class="about-me-item about">
-                        <bf class="subtitle">Education</bf>
-                    </div>
-                    <div style="margin:20px 0 0 0;">
-                        <p style="margin:0;">
-                            <bf>Ph.D. in Management Science, 2024</bf>
-                        </p>
-                        <p style="margin:0;">Naveen Jindal School of Management, University of Texas at Dallas, Texas,
-                            US</p>
-                        <p>
-                            <if>Dissertation committee: Vijay Mookerjee (co-chair), Subodha Kumar (co-chair), Shaojie
-                                Tang, Ayvaci Mehmet
-                            </if>
-                        </p>
-                    </div>
-                    <div style="margin:20px 0 0 0;">
-                        <p style="margin:0;">
-                            <bf>M.S. in Management Science, 2018</bf>
-                        </p>
-                        <p style="margin:0;">Renmin Business School, Renmin University of China, Beijing, China</p>
-                        <p>
-                            <if>Advisor: Kanliang Wang</if>
-                        </p>
-                    </div>
-                    <div style="margin:20px 0 0 0;">
-                        <p style="margin:0;">
-                            <bf>B.S. in Management Science, 2015</bf>
-                        </p>
-                        <p style="margin:0;">Renmin Business School, Renmin University of China, Beijing, China</p>
-                        <p>
-                            <if>Advisor: Ping Li</if>
-                        </p>
+    <div class="section-container">
+        <div class="section-heading"><h1>About Me</h1></div>
+        <div class="section-body">
+                <div class="col-sm">
+                    <div class="about-me-col-heading bf">Work</div>
+                    <div class="about-me-col-entry">
+                        <p class="bf">Assistant Professor, July 2024 ~</p>
+                        <p>Department of Information Systems, Business Statistics and Operations
+                            Management (ISOM), the Business School, Hong Kong Univeristy of Science and Technology, Hong
+                            Kong, China</p>
                     </div>
                 </div>
-                <div class="col-sm about">
-                    <div class="about-me-item about">
-                        <bf class="subtitle">Skills</bf>
+                <div class="col-sm">
+                    <div class="about-me-col-heading">
+                        <p class="subtitle bf">Education</p>
                     </div>
-                    <div class="container-side-by-side" style="margin:20px 0 0 0;">
-                        <div style="height:100%;width:35%">
-                            <p style="margin:0;">
-                                <bf>Python</bf>
-                            </p>
-                        </div>
-                        <div class="progress" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                    <div class="about-me-col-entry">
+                        <p class="bf">Ph.D. in Management Science, 2024</p>
+                        <p>Naveen Jindal School of Management, University of Texas at Dallas, Texas, US</p>
+                        <p class="if">Dissertation committee: Vijay Mookerjee (co-chair), Subodha Kumar (co-chair), Shaojie
+                                Tang, Ayvaci Mehmet</p>
+                    </div>
+                    <div class="about-me-col-entry">
+                        <p class="bf">M.S. in Management Science, 2018</p>
+                        <p>Renmin Business School, Renmin University of China, Beijing, China</p>
+                        <p class="if">Advisor: Kanliang Wang</p>
+                    </div>
+                    <div class="about-me-col-entry">
+                        <p class="bf">B.S. in Management Science, 2018</p>
+                        <p>Renmin Business School, Renmin University of China, Beijing, China</p>
+                        <p class="if">Advisor: Ping Li</p>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="about-me-col-heading">
+                        <p class="subtitle bf">Skills</p>
+                    </div>
+                    <div class="skill-entry">
+                        <div class="skill-name">Python</div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar skill-progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
                                  aria-valuemax="100" style="width:95%;">
                                 <span>95%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="container-side-by-side about" style="margin:15px 0 0 0;">
-                        <div style="height:100%;width:35%">
-                            <p style="margin:0;">
-                                <bf>Matlab</bf>
-                            </p>
-                        </div>
-                        <div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                    <div class="skill-entry">
+                        <div class="skill-name">Matlab</div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar skill-progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
                                  aria-valuemax="100" style="width:85%;">
                                 <span>85%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="container-side-by-side about" style="margin:15px 0 0 0;">
-                        <div style="height:100%;width:35%">
-                            <p style="margin:0;">
-                                <bf>Java</bf>
-                            </p>
-                        </div>
-                        <div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                    <div class="skill-entry">
+                        <div class="skill-name">Java</div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar skill-progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
                                  aria-valuemax="100" style="width:95%;">
                                 <span>95%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="container-side-by-side about" style="margin:15px 0 0 0;">
-                        <div style="height:100%;width:35%">
-                            <p style="margin:0;">
-                                <bf>R</bf>
-                            </p>
-                        </div>
-                        <div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                    <div class="skill-entry">
+                        <div class="skill-name">R</div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar skill-progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
                                  aria-valuemax="100" style="width:85%;">
                                 <span>85%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="container-side-by-side about" style="margin:15px 0 0 0;">
-                        <div style="height:100%;width:35%">
-                            <p style="margin:0;">
-                                <bf>SQL</bf>
-                            </p>
-                        </div>
-                        <div class="progress about" style="height:100%;width:55%;margin-left:1%;margin-top:1%;">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                    <div class="skill-entry">
+                        <div class="skill-name">SQL</div>
+                        <div class="progress skill-progress">
+                            <div class="progress-bar skill-progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
                                  aria-valuemax="100" style="width:90%;">
                                 <span>90%</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </section>

@@ -1,0 +1,35 @@
+.nomargin{
+    margin: 0;
+}
+
+.bf {
+    font-weight: bold;
+}
+
+.if {
+    font-style: italic;
+}
+
+.container-side-by-side {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.h-center { /* horizontally center */
+    display: flex;
+    justify-items: center !important;
+}
+
+.v-center { /* Vertically center */
+    display: flex;
+    align-content: center !important;
+}
+
+.t-center { /* Horizontally and vertically center */
+    display: flex;
+    align-content: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    justify-items: center !important;
+}

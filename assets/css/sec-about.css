@@ -1,0 +1,84 @@
+.about p{
+    margin: 0;
+}
+
+.about .section-body{
+    margin: 0;
+    padding: 0;
+    width: 100%!important;
+    max-width: 100%!important;
+    display: flex;
+}
+
+.about .col-sm{
+    width: 33%;
+    padding: 0 5% 0 0;
+}
+
+.about .col-sm:last-child {
+    padding: 0;
+}
+
+@media screen and (max-width: 915px) {
+    .about .section-body{
+        display: block;
+    }
+    .about .col-sm{
+        width: 100%;
+        margin-top: 5%;
+    }
+}
+
+.about .about-me-col-heading{
+    width: 100%!important;
+    height: min(50px,10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    background-color: rgba(253, 41, 13, 0.54);
+    border-radius: 5px;
+}
+
+
+/*.about-me-col-heading::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    left: 20%;*/
+/*    top: 100%;*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    border-left: 10px solid transparent;*/
+/*    border-right: 10px solid transparent;*/
+/*    border-top: 10px solid #fd2b0d8a;*/
+/*    clear: both;*/
+/*}*/
+
+.about-me-col-entry{
+    margin:20px 0 0 0;
+}
+
+.skill-entry{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:20px 0 0 0;
+}
+
+.skill-name{
+    height:100%;
+    width:35%;
+    font-weight: bold;
+}
+
+.skill-progress{
+    height:100%;
+    width:63%;
+    margin-left:1%;
+    margin-top:1%;
+}
+
+.skill-progress-bar {
+    background-color: #708790;
+}
