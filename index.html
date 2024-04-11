@@ -222,21 +222,23 @@
     <div class="section-container">
         <div class="section-heading">
             <h1>Research</h1>
-            <span style="font-size:10pt">* updated at July 2023.&nbsp;&nbsp;</span>
-            <span style="font-size:10pt">** click the title to see more information about the paper. </span>
+            <span style="font-size:10pt">* updated at April 2024.&nbsp;&nbsp;</span>
+            <span style="font-size:10pt">** click the research interest to filter the projects.&nbsp;&nbsp;</span>
+            <span style="font-size:10pt">*** click the project title to expand the project details. </span>
         </div>
 
         <div class="section-body">
             <div id="research-interests-box">
+            <div class="research-interests"><div class="bf">Research Interests</div></div>
             <div class="research-interests">
                 <div class="research-interests-left">
-                    <div class="bf">Interests:&nbsp;&nbsp;</div>
-                    <div class="research-i-tag" onclick="disp('ad')">
-                        <i class="fa fa-dot-circle-o research-i-icon"></i>&nbsp;Digital Advertising&nbsp;&nbsp;</div>
+                    <div class="bf">Topics:&nbsp;&nbsp;</div>
                     <div class="research-i-tag" onclick="disp('rl')">
                         <i class="fa fa-dot-circle-o research-i-icon"></i>&nbsp;Reinforcement Learning&nbsp;&nbsp;</div>
                     <div class="research-i-tag" onclick="disp('pa')">
                         <i class="fa fa-dot-circle-o research-i-icon"></i>&nbsp;Prescriptive Anaytics&nbsp;&nbsp;</div>
+                    <div class="research-i-tag" onclick="disp('ad')">
+                        <i class="fa fa-dot-circle-o research-i-icon"></i>&nbsp;Digital Advertising&nbsp;&nbsp;</div>
                     <div class="research-i-tag" onclick="disp('rs')">
                         <i class="fa fa-dot-circle-o research-i-icon"></i>&nbsp;Recommender System</div>
                 </div>
@@ -244,22 +246,31 @@
             </div>
             <div class="research-interests">
                 <div class="research-interests-left">
-                    <div class="bf">Methodology:&nbsp;&nbsp;</div>
+                    <div class="bf">Methods:&nbsp;&nbsp;</div>
+                    <div class="research-i-tag" onclick="disp('sm')">
+                        <i class="fa fa-dot-circle-o research-i-icon"></i>&nbsp;Structural modeling&nbsp;&nbsp;</div>
                     <div class="research-i-tag" onclick="disp('ct')">
                         <i class="fa fa-dot-circle-o research-i-icon"></i>&nbsp;Control Theory&nbsp;&nbsp;</div>
+                    <div class="research-i-tag" onclick="disp('md')">
+                        <i class="fa fa-dot-circle-o research-i-icon"></i>&nbsp;Mechanism design&nbsp;&nbsp;</div>
+                    <div class="research-i-tag" onclick="disp('ml')">
+                        <i class="fa fa-dot-circle-o research-i-icon"></i>&nbsp;Machine learning&nbsp;&nbsp;</div>
                 </div>
                 <div class="research-interests-tag" onclick="disp('all')">[Reset to All]</div>
             </div>
             </div>
             <div class="publications">
                 <div class="ribbon"><i class="fa fa-chevron-circle-right ribbon-icon"></i>&nbsp;Publication</div>
-                <div class="card all ad pa rl ct">
+                <div class="card all ad pa rl ct sm ml">
                     <div class="card-body">
                         <div class="card-title" onclick="abs('coordination')">
                             <h4>Coordination in Multibrand Multichannel Advertising: Is it Always a Good Thing?</h4>
                             <div class="card-subtitle">
-                                <b>Wangsheng Zhu</b>, Subodha Kumar and Vijay Mookerjee.
-                                <a class="status">Forthcoming at ISR</a>
+                                <b>Wangsheng Zhu</b>, Subodha Kumar, and Vijay Mookerjee
+                                <a class="status">Information Systems Research
+                                    <a class="r-link" href="https://doi.org/10.1287/isre.2022.0283"
+                                       target="_blank">[link]</a>
+                                </a>
                             </div>
                         </div>
                         <div class="card-info" id="coordination">
@@ -311,12 +322,12 @@
             </div>
             <div class="working-Papers">
                 <div class="ribbon"><i class="fa fa-chevron-circle-right ribbon-icon"></i>&nbsp;Working Paper</div>
-                <div class="card all ad">
+                <div class="card all ad md">
                     <div class="card-body">
                         <div class="card-title" onclick="abs('isaa')">
                             <h4>Should Ad-Exchanges Subsidize the Acquisition of Targeting Data in Ad Auctions?</h4>
                             <div class="card-subtitle">
-                                <b>Wangsheng Zhu</b>, Shaojie Tang and Vijay Mookerjee.
+                                <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerjee
                                 <a class="status">Major Revision, ISR</a>
                             </div>
                         </div>
@@ -359,14 +370,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="card all rs pa">
+                <div class="card all rs pa ml">
                     <div class="card-body">
-                        <div class="card-title" onclick="abs('cdss')"><h4>A Recommendation Framework for
-                            Crowdsourcing Contest Design</h4>
+                        <div class="card-title" onclick="abs('cdss')">
+                            <h4>A Recommendation Framework for Crowdsourcing Contest Design</h4>
                             <div class="card-subtitle">
-                                <b>Wangsheng Zhu</b>
-                                , Jiahui Mo, Syam Menon, and Sumit Sarkar.<a class="status">Reject and
-                                Resubmit, Management Science</a>
+                                <b>Wangsheng Zhu</b>, Jiahui Mo, Syam Menon, and Sumit Sarkar
+                                <a class="status">Under Review, Management Science</a>
                             </div>
                         </div>
                         <div id="cdss" class="card-info">
@@ -411,55 +421,55 @@
                         </div>
                     </div>
                 </div>
-                <div class="card all ad">
-                    <div class="card-body">
-                        <div class="card-title" onclick="abs('taam')"><h4>Towards Adaptive Ad Sequencing for
-                            Markovian Users</h4>
-                            <div class="card-subtitle">
-                                <b>Wangsheng Zhu</b>
-                                , Shaojie Tang and Vijay Mookerjee.<a class="status"></a>
-                            </div>
-                        </div>
-                        <div id="taam" class="card-info">
-                            <div class="abstract">
-                                <b>Abstract:</b>
-                                As ad revenue continues to soar, publishers like Google and Amazon face the challenge of
-                                optimizing ad selection to maximize their earnings. Previous researches assumed
-                                customers
-                                click on ads once with decaying possibilities over time. However, it's been observed
-                                that
-                                repeated exposure to an ad increases interest and potential purchase consideration. To
-                                account
-                                for this, we generalize the previous model by allowing ads to be repeated in multiple
-                                positions.
-                                Additionally, existing models assume that users permanently leave the ad session after
-                                clicking
-                                an ad. Our framework accommodates more complex user behavior, enabling users to return
-                                to the
-                                previous ad list even after clicking an ad. Our model considers various factors
-                                affecting click
-                                probabilities, including ad quality, position, and previously displayed ads. We have
-                                developed
-                                efficient algorithms with guaranteed optimal or approximate solutions.
-                            </div>
-                            <div class="keywords">
-                                <b>Keywords:</b>
-                                Internet advertisement, advertisement allocation, dynamic programming, revenue
-                                optimization
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="card all ad">-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="card-title" onclick="abs('taam')"><h4>Towards Adaptive Ad Sequencing for-->
+<!--                            Markovian Users</h4>-->
+<!--                            <div class="card-subtitle">-->
+<!--                                <b>Wangsheng Zhu</b>-->
+<!--                                , Shaojie Tang and Vijay Mookerjee.<a class="status"></a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div id="taam" class="card-info">-->
+<!--                            <div class="abstract">-->
+<!--                                <b>Abstract:</b>-->
+<!--                                As ad revenue continues to soar, publishers like Google and Amazon face the challenge of-->
+<!--                                optimizing ad selection to maximize their earnings. Previous researches assumed-->
+<!--                                customers-->
+<!--                                click on ads once with decaying possibilities over time. However, it's been observed-->
+<!--                                that-->
+<!--                                repeated exposure to an ad increases interest and potential purchase consideration. To-->
+<!--                                account-->
+<!--                                for this, we generalize the previous model by allowing ads to be repeated in multiple-->
+<!--                                positions.-->
+<!--                                Additionally, existing models assume that users permanently leave the ad session after-->
+<!--                                clicking-->
+<!--                                an ad. Our framework accommodates more complex user behavior, enabling users to return-->
+<!--                                to the-->
+<!--                                previous ad list even after clicking an ad. Our model considers various factors-->
+<!--                                affecting click-->
+<!--                                probabilities, including ad quality, position, and previously displayed ads. We have-->
+<!--                                developed-->
+<!--                                efficient algorithms with guaranteed optimal or approximate solutions.-->
+<!--                            </div>--m>
+<!--                            <div class="keywords">-->
+<!--                                <b>Keywords:</b>-->
+<!--                                Internet advertisement, advertisement allocation, dynamic programming, revenue-->
+<!--                                optimization-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
             <div class="working-Projects">
-                <div class="ribbon"><i class="fa fa-chevron-circle-right ribbon-icon"></i>&nbsp;Working Projects</div>
+                <div class="ribbon"><i class="fa fa-chevron-circle-right ribbon-icon"></i>&nbsp;Work-in-progress</div>
                 <div class="card all ad">
                     <div class="card-body">
-                        <div class="card-title" onclick="abs('mads')"><h4>Managing Ad Campaigns on Digital
-                            Billboards under Supply Disruptions</h4>
+                        <div class="card-title" onclick="abs('mads')">
+                            <h4>Managing Ad Campaigns on Digital Billboards under Supply Disruptions</h4>
                             <div class="card-subtitle">
-                                <b>Wangsheng Zhu</b>
-                                , Shaojie Tang and Vijay Mookerjee.<a class="status">Work-in-progress</a>
+                                <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerjee
+                                <a class="status">Work-in-progress</a>
                             </div>
                         </div>
                         <div id="mads" class="card-info">
@@ -500,11 +510,11 @@
                 </div>
                 <div class="card all rs">
                     <div class="card-body">
-                        <div class="card-title" onclick="abs('rstd')"><h4>Recommendation System for Designing
-                            Customized Tours</h4>
+                        <div class="card-title" onclick="abs('rstd')">
+                            <h4>Recommendation System for Designing Customized Tours</h4>
                             <div class="card-subtitle">
-                                <b>Wangsheng Zhu</b>
-                                , Syam Menon, and Sumit Sarkar.<a class="status">Work-in-progress</a>
+                                <b>Wangsheng Zhu</b>, Syam Menon, and Sumit Sarkar
+                                <a class="status">Work-in-progress</a>
                             </div>
                         </div>
                         <div id="rstd" class="card-info">
@@ -517,13 +527,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="card all ad">
+                <div class="card all ad md">
                     <div class="card-body">
-                        <div class="card-title" onclick="abs('wsar')"><h4>When should ad-exchanges release user
-                            information to advertisers</h4>
+                        <div class="card-title" onclick="abs('wsar')">
+                            <h4>When should ad-exchanges release user information to advertisers</h4>
                             <div class="card-subtitle">
-                                <b>Wangsheng Zhu</b>
-                                , Shaojie Tang and Vijay Mookerje.<a class="status">Work-in-progress</a>
+                                <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerje
+                                <a class="status">Work-in-progress</a>
                             </div>
                         </div>
                         <div id="wsar" class="card-info">
@@ -536,6 +546,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="card all rl ml sm">
+                    <div class="card-body">
+                        <div class="card-title" onclick="abs('rloc')">
+                            <h4>Use Reinforcement Learning for Strcutural Model Identification</h4>
+                            <div class="card-subtitle">
+                                Kai Sun, <b>Wangsheng Zhu</b>, and Vijay Mookerje<a class="status">Work-in-progress</a>
+                            </div>
+                        </div>
+                        <div id="rloc" class="card-info">
+                            <div class="abstract">
+                                <b>Abstract:</b>
+                            </div>
+                            <div class="keywords">
+                                <b>Keywords:</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                <div class="card all pa ad sm ct">-->
+<!--                    <div class="card-body">-->
+<!--                        <div class="card-title" onclick="abs('nuoa')">-->
+<!--                            <h4>Navigating the Unknown: Optimizing Advertising Strategies in the Face of Ad Auction Uncertainty</h4>-->
+<!--                            <div class="card-subtitle">-->
+<!--                                Kai Sun, <b>Wangsheng Zhu</b>, and Vijay Mookerje<a class="status">Work-in-progress</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div id="nuoa" class="card-info">-->
+<!--                            <div class="abstract">-->
+<!--                                <b>Abstract:</b>-->
+<!--                            </div>-->
+<!--                            <div class="keywords">-->
+<!--                                <b>Keywords:</b>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>
@@ -621,7 +667,7 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">RUC Scholarship of Outstanding Academic Performance (Top 20%)</h4>
+                <h4 class="card-title">RUC Scholarship of Outstanding Academic Performance</h4>
                 <div class="card-subtitle">
                     Renmin Business School, Renmin University of China
                     <span class="middot-divider"></span>2014
@@ -630,7 +676,7 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">RUC Scholarship of Outstanding Academic Performance (Top 20%)</h4>
+                <h4 class="card-title">RUC Scholarship of Outstanding Academic Performance</h4>
                 <div class="card-subtitle">
                     Renmin Business School, Renmin University of China
                     <span class="middot-divider"></span>2012

@@ -17,6 +17,7 @@
 	flex-wrap: wrap;
 	font-size: 13pt;
 	justify-content: space-between;
+	margin-bottom: 1%;
 }
 
 .research-interests-left{
@@ -30,7 +31,7 @@
 }
 
 .research-i-icon{
-	font-size: 11pt;
+	font-size: 10pt;
 }
 
 .ribbon{
@@ -50,17 +51,21 @@
 	font-size: 12pt;
 }
 
-.research .status{
-	color:blue !important;
-}
-
-
 .research .status::before{
 	content: '\00B7';
 	padding: 0 10px;
 	font-palette: light;
 	color: darkgray
 }
+
+.research .status{
+	color:blue !important;
+}
+
+.r-link{
+	color:blue !important;
+}
+
 
 .research .card-info{
 	display:none;
