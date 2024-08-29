@@ -1,10 +1,8 @@
-.research .section-body{
-	width:100%;
-	margin:0 auto;
-	padding-left:0;
+#research .section-heading .span{
+	font-size:10pt;
 }
 
-#research-interests-box{
+#research #filter-box{
 	background-color: rgba(110, 111, 142, 15%);
 	color: black;
 	padding: 5pt;
@@ -27,11 +25,10 @@
 	width: 80%;
 }
 
-.research-i-tag{
+#research .itag{
 	font-size: 11pt;
 }
-
-.research-i-icon{
+#research .iicon{
 	font-size: 10pt;
 }
 
@@ -42,40 +39,33 @@
 	min-width: fit-content;
 	height: fit-content;
 	padding: 3pt 5pt;
-	/*background-color: rgba(253, 41, 13, 0.54);*/
 	border-radius: 2pt;
-	/*color: white;*/
 	margin-bottom: 2%;
 }
-
 .ribbon-icon{
 	font-size: 12pt;
 }
 
-.research .status::before{
+/******************************************/
+/********************* Section ***********/
+#research .status{
+	color:blue !important;
+}
+#research .status::before{
 	content: '\00B7';
 	padding: 0 10px;
 	font-palette: light;
 	color: darkgray
 }
-
-.research .status{
+#research .link{
 	color:blue !important;
 }
 
-.r-link{
-	color:blue !important;
-}
-
-
-.research .card-info{
+/******************************************/
+/********************* Section ***********/
+#research .card-info{
 	display:none;
 }
-
-.research .abstract{
+#research .abstract{
 	padding-bottom:10pt;
 }
-
-/*.paper-list li{*/
-/*	padding-bottom:4vh;*/
-/*}*/

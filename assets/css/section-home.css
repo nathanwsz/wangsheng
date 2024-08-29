@@ -115,7 +115,7 @@
 
 #welcome-text {
     height: 100%;
-    width: min(70%, 640pt);
+    width: 50%;
     min-height: fit-content;
     margin: 0;
     padding: 0 0 0 min(5%, 25pt);
@@ -174,21 +174,8 @@
 }
 
 .welcome-text-icons {
-
     text-align: left;
     font-size: 14pt;
-}
-
-#home .fa {
-    margin-left: min(2%, 15px);
-}
-
-#home a {
-    color: whitesmoke;
-}
-
-#home a:hover {
-    text-decoration: none;
 }
 
 .welcome-text-icons-box{
@@ -211,4 +198,41 @@
     font-family: sans-serif;
     font-weight: 700;
     text-align: center;
+}
+
+#home .fa {
+    margin-left: min(2%, 15px);
+}
+
+#home a {
+    color: whitesmoke;
+}
+
+#home a:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+    #welcome-picture {
+        margin: 15pt;
+    }
+
+    .welcome-title {
+        font-size: 18pt;
+        padding-bottom: 20px;
+    }
+
+    #welcome-text {
+        width: 100%;
+    }
+
+    .welcome-text-main {
+        margin: 0;
+        font-size: 12pt;
+    }
+
+    .welcome-text-icons {
+        font-size: 10pt;
+        margin-bottom: 10pt;
+    }
 }

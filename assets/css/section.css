@@ -22,63 +22,16 @@
 
 .section-heading {
     padding-bottom: 3vh;
-    /*font-family: math;*/
     font-family: Oswald, sans-serif;
-}
-
-.animated-bar {
-    background-color: #2eca7f;
-    display: block;
-    height: 4px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.animated-bar:after, .animated-bar:before {
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-name: barAnimation;
-    -webkit-animation-timing-function: linear;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-name: barAnimation;
-    animation-timing-function: linear;
-    background-color: #fff;
-    content: '';
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 4px
-}
-.animated-bar:before {
-    left: 10px
-}
-.animated-bar:after {
-    left: 0
-}
-@-webkit-keyframes barAnimation {
-    from {
-        -webkit-transform: translateX(0);
-        transform: translateX(0)
-    }
-    to {
-        -webkit-transform: translateX(75px);
-        transform: translateX(75px)
-    }
-}
-@keyframes barAnimation {
-    from {
-        -webkit-transform: translateX(0);
-        transform: translateX(0)
-    }
-    to {
-        -webkit-transform: translateX(75px);
-        transform: translateX(75px)
-    }
 }
 
 .section-heading h1 {
     font-size: 35pt;
     font-weight: bold;
+}
+
+.section-body{
+    width:100%;
+    margin:0 auto;
+    padding-left:0;
 }

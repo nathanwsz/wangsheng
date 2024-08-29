@@ -1,8 +1,8 @@
-.about p{
+#about p{
     margin: 0;
 }
 
-.about .section-body{
+#about .section-body{
     margin: 0;
     padding: 0;
     width: 100%!important;
@@ -10,26 +10,15 @@
     display: flex;
 }
 
-.about .col-sm{
+#about .col-sm{
     width: 33%;
     padding: 0 5% 0 0;
 }
-
-.about .col-sm:last-child {
+#about .col-sm:last-child {
     padding: 0;
 }
 
-@media screen and (max-width: 915px) {
-    .about .section-body{
-        display: block;
-    }
-    .about .col-sm{
-        width: 100%;
-        margin-top: 5%;
-    }
-}
-
-.about .about-me-col-heading{
+#about .col-heading{
     width: 100%!important;
     height: min(50px,10%);
     display: flex;
@@ -37,16 +26,14 @@
     align-items: center;
     position: relative;
     text-transform: uppercase;
-    /*color: black;*/
     color: rgb(62,63,94);
     margin-bottom: 1vh;
 }
-
-.about .about-me-col-heading-title{
+#about .col-title{
     font-size: Large;
 }
 
-.about-me-col-entry{
+.col-entry{
     margin:0 0 0 0;
     color: rgb(143, 145, 172);
 }
@@ -58,6 +45,9 @@
     margin:20px 0 0 0;
     color: rgb(143, 145, 172);
 }
+div:nth-child(2){
+    margin-top: 0;
+}
 
 .skill-name{
     height:100%;
@@ -65,13 +55,23 @@
     font-weight: bold;
 }
 
-.skill-progress{
-    height:100%;
-    width:63%;
-    margin-left:1%;
-    margin-top:1%;
+.progress{
+    height:100%!important;
+    width:63%!important;
+    margin-left:1%!important;
+    margin-top:1%!important;
 }
 
-.skill-progress-bar {
-    background-color: rgb(143, 145, 172);
+.progress-bar {
+    background-color: rgb(143, 145, 172)!important;
+}
+
+@media screen and (max-width: 915px) {
+    #about .section-body{
+        display: block;
+    }
+    #about .col-sm{
+        width: 100%;
+        margin-top: 5%;
+    }
 }

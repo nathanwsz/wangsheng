@@ -1,5 +1,6 @@
 body {
     background-color: rgb(244, 243, 249);
+    font-family: sans-serif;
 }
 
 .nomargin{
@@ -11,6 +12,11 @@ body {
 }
 
 .if {
+    font-style: italic;
+}
+
+bif {
+    font-weight: bold;
     font-style: italic;
 }
 
