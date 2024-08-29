@@ -12,64 +12,51 @@
 /**********************************************************************************************************************/
 
 
-#navbar-main {
+#navbar-box {
     display: flex;
     position: fixed;
+    height: 8vh;
     max-width: none;
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: transparent;
+    /*background-color: transparent;*/
+    background-color: white;
+    box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.1);
     z-index: 100;
 }
 
-#navbar-main ul {
+#navbar-packet {
+    display: flex;
+    justify-content: right;
+    height: 100%;
+}
+
+#navbar-packet ul {
+    height: 100%;
     list-style-type: none; /* Remove the bullets from a list */
 }
 
-#navbar-main .nav-item {
-    position: relative; /* This is used for the ::after effect; otherwise, the position of triangle may get messed */
-}
-
-#navbar-main .nav-link {
-    color: white;
+#navbar-packet .nav-link {
+    height: 100%;
+    color: rgba(110, 111, 142);
     font-weight: bold;
     font-family: sans-serif;
-    padding: 15pt;
+    display: flex;
+    align-content: center !important;
 }
 
-#navbar-main .active {
-    background-color: #0db2fd;
+#navbar-packet .active {
+    height: 100%;
 }
 
-#navbar-main .active::after {
-    content: '';
-    position: absolute;
-    left: 42%;
-    top: 100%;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #0db2fd;
-    clear: both;
-}
-
-#navbar-main .never-active {
-    background-color: transparent !important;
-}
-
-#navbar-main .never-active::after {
-    border-top: 10px solid transparent !important;
-}
-
-#navbar-main .navbar-toggler {
+#navbar-packet .active .nav-link {
+    height: 100%;
     color: white;
+    background-color: rgb(46, 202, 127);
+    border-radius: 2pt;
 }
 
-.navbar-toggler:focus, .navbar-toggler:hover {
-    outline: none;
-}
 
 /**********************************************************************************************************************/
 /********                   *******************************************************************************************/
@@ -97,16 +84,20 @@
     background-size: auto;
     display: flex;
     align-items: center;
+    /*background-image: url('./images/bg.blue.png');*/
+    background-color: rgb(244, 243, 249);
+    border-bottom: 1pt solid rgba(47,79,79,0.3);
+    box-shadow: 0 0 15px 0 rgba(47,79,79,0.5);
 }
 
 #welcome-content-container {
     width: 100vw;
     height: 100%;
-    min-height: fit-content;
+    min-height: 70vh;
     flex-wrap: wrap;
     overflow: hidden;
     margin: 0;
-    padding: min(5%, 20pt) min(5%, 80pt);
+    padding: min(5%, 29vh) min(5%, 80pt) 0 0;
 }
 
 #welcome-picture {
@@ -115,13 +106,6 @@
     width: min(30%, 320pt);
     min-width: 150pt;
     flex-wrap: wrap;
-}
-
-.swiper {
-    border-radius: 20px;
-    border: solid white 5px;
-    border-bottom: solid white 16px;
-    overflow: hidden;
 }
 
 .welcome-photo {
@@ -139,67 +123,60 @@
     align-items: center;
 }
 
-.welcome-title {
-    font-size: max(18pt, min(3vw, 40pt));
-    font-family: fantasy;
-    display: inline-block;
-    color: white;
-    padding-bottom: 30px;
+#welcome-name{
+    color: rgb(62,63,94);
+    text-transform: uppercase;
+    font-size: 50px;
+    text-align: left;
+    font-weight: 600;
+    font-family: Oswald, serif;
+    padding-bottom: 3vh;
 }
 
-.welcome-text-main {
-    margin: 0;
+#welcome-title {
+    font-family: Oswald, serif;
+    display: inline-block;
+    /*color: white;*/
+    color: rgb(110,111,142);
+    text-transform: uppercase;
+    font-size: 28px;
+    width: fit-content;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid rgb(110,111,142); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto 3vh; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em; /* Adjust as needed */
+    animation:
+            typing 3.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 58% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(110,111,142); }
+}
+
+#welcome-text-main {
+    margin: 0 0 3vh;
     word-wrap: anywhere;
     text-align: left;
-    font-size: 16pt;
+    font-size: 12pt;
+    color: rgb(143, 145, 172);
+    font-family: sans-serif;
 }
 
 .welcome-text-icons {
+
     text-align: left;
     font-size: 14pt;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-        filter: blur(4px);
-    }
-    15% {
-        opacity: 1;
-        filter: blur(0);
-    }
-    95% {
-        opacity: 1;
-        filter: blur(0);
-    }
-    100% {
-        opacity: 0;
-        filter: blur(4px);
-    }
-}
-
-.welcome-title:nth-child(1) {
-    animation: fade-in 16s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    /*-webkit-animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);*/
-    /*-moz-animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);*/
-    /*-o-animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);*/
-    /*-ms-animation: fade-in 1.5s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);*/
-    animation-iteration-count: infinite;
-}
-
-.welcome-title:nth-child(2) {
-    animation: fade-in 16s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    animation-iteration-count: infinite;
-}
-
-.welcome-title:nth-child(3) {
-    animation: fade-in 16s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    animation-iteration-count: infinite;
-}
-
-.welcome-title:nth-child(4) {
-    animation: fade-in 16s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-    animation-iteration-count: infinite;
 }
 
 #home .fa {
@@ -207,19 +184,31 @@
 }
 
 #home a {
-    color: white;
+    color: whitesmoke;
 }
 
 #home a:hover {
     text-decoration: none;
 }
 
-#home .swiper-pagination {
-    position: relative;
-    top: -16px;
-    height: 16px;
-    display: flex;
-    align-items: center;
-    justify-items: right;
-    justify-content: center;
+.welcome-text-icons-box{
+    width: max-content;
+    min-height: 5vh;
+    margin-right: 5pt;
+    background: rgb(46, 202, 127) none repeat scroll 0 0;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    font-size: 14px;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.icon-title{
+    white-space: nowrap;
+    min-width: max-content;
+    width: max-content;
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center;
 }

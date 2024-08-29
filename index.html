@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/card.css">
     <link rel="stylesheet" href="assets/css/section-awards.css">
     <link rel="stylesheet" href="assets/css/section-miscellaneous.css">
+    <link rel="stylesheet" href="assets/css/font-oswald.css">
     <meta name="google-site-verification" content="f6OyFRI7CZWfPjeGdGiErVrEjCtym-wy7ZJt9mOlfzA"/>
     <style>
         html, body {
@@ -58,71 +59,62 @@
 </head>
 
 <body>
-<nav id="navbar-main" class="navbar navbar-expand-lg">
-    <div class="container" style="display: flex; justify-content: right;">
+<nav id="navbar-box" class="navbar navbar-expand-lg">
+    <div id="navbar-packet">
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
             <span><i class="fa fas fa-bars"></i></span>
         </button>
         <div id="navbar" class="collapse navbar-collapse t-center">
             <ul class="nav list-group list-group-horizontal js-navigation-bar">
-                <li class="nav-item never-active"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
                 <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
                 <li class="nav-item"><a class="nav-link" href="#awards">Awards and Honors</a></li>
                 <li class="nav-item"><a class="nav-link" href="#miscellaneous">Miscellaneous</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contactme">Contact</a></li>
+<!--                <li class="nav-item"><a class="nav-link" href="#contactme">Contact</a></li>-->
             </ul>
         </div>
     </div>
 </nav>
 
 <section id="home" class="section" data-section="home">
-    <div id="welcome-background" class="t-center" style="background-image: url('./assets/images/bg.blue.png');">
+    <div id="welcome-background" class="t-center">
         <div id="welcome-content-container" class="t-center">
             <div id="welcome-picture" class="t-center">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img alt="photo" class="welcome-photo" src="./assets/images/wz.photo.selfie.jpg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img alt="photo" class="welcome-photo" src="./assets/images/wz.photo.2.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
+                <img alt="photo" class="welcome-photo" src="assets/css/images/Transparent%20BG.png">
             </div>
             <div id="welcome-text" class="t-center">
-                <div style="color:white;">
-                    <span class="welcome-title">Welcome&nbsp;</span>
-                    <span class="welcome-title">to&nbsp;</span>
-                    <span class="welcome-title">my&nbsp;</span>
-                    <span class="welcome-title">website!</span>
-                    <div class="welcome-text-main">
-                        Hi, I am Wangsheng Zhu (朱旺盛 in Chinese). Currently, I am a Ph.D. candidate in Management
-                        Science (with a concerntration on Information Systems) from the Naveen Jindal School of
-                        Management at the University of Texas at Dallas.
-                        I will join the Department of Information Systems, Business Statistics
-                        and Operations Management (ISOM) at the Business School, Hong Kong University of Science
-                        and Technology (HKUST) in July 2024.
-                        I received my B.S. and M.S. from the Renmin
-                        Business School, Renmin University of China in Beijing.
-                        <!--                        In July 2024, I will join the Department of Information Systems, Business Statistics-->
-                        <!--                        and Operations Management (ISOM) at the Business School, Hong Kong University of Science-->
-                        <!--                        and Technology (HKUST).-->
+                <div>
+                    <div id="welcome-name">Wangsheng Zhu</div>
+                    <div id="welcome-title">Welcome&nbsp;to&nbsp;my&nbsp;website! </div>
+                    <div id="welcome-text-main">
+                        Hi, I am Wangsheng Zhu (朱旺盛 in Chinese). I am an assistant professor in the Department of
+                        Information Systems, Business Statistics and Operations Management (ISOM) at the Business
+                        School, Hong Kong University of Science and Technology (HKUST). I received my B.S. and M.S.
+                        from Renmin University of China and received my Ph.D. from University of Texas at Dallas.
                     </div>
-                    <hr style="border-width: thin; border-color: antiquewhite">
-                    <div class="welcome-text-icons">
-                        Curriculum Vitae:
-                        <a class="fa fas fa-newspaper" href="./CV.pdf" target="_blank" title="c.v."></a>
-                        <span style="margin-left:10%;">Social Media:</span>
-                        <a class="fa fab fa-facebook-square" target="_blank" title="Facebook"
-                           href="https://www.facebook.com/wangsheng.zhu.35"></a>
-                        <a class="fa fas fa-graduation-cap" target="_blank" title="Google Scholar"
-                           href="https://scholar.google.com/citations?user=3dJNG4EAAAAJ&hl=en"></a>
-                        <a class="fa fab fa-orcid" target="_blank" title="ORCiD"
-                           href="https://orcid.org/0000-0002-4478-659X"></a>
+                    <div class="welcome-text-icons container-side-by-side">
+                        <div class="welcome-text-icons-box">
+                            <div class="icon-title">Download CV:
+                                <a class="fa fas fa-newspaper" href="./CV.pdf" target="_blank" title="c.v."></a>
+                            </div>
+                        </div>
+                        <div class="welcome-text-icons-box">
+                            <div class="icon-title">Social Media:
+                                <a class="fa fab fa-facebook-square" target="_blank" title="Facebook"
+                                   href="https://www.facebook.com/wangsheng.zhu.35"></a>
+                                <a class="fa fas fa-graduation-cap" target="_blank" title="Google Scholar"
+                                   href="https://scholar.google.com/citations?user=3dJNG4EAAAAJ&hl=en"></a>
+                                <a class="fa fab fa-orcid" target="_blank" title="ORCiD"
+                                   href="https://orcid.org/0000-0002-4478-659X"></a>
+                            </div>
+                        </div>
+                        <div class="welcome-text-icons-box" style="margin-top: 2vh; width: 59%;">
+                            <div class="icon-title">
+                                <a class="fa fas fa-mail-bulk"></a> Email: wangshengzhu@ust.hk
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,10 +124,15 @@
 
 <section id="about" class="section about" data-section="about">
     <div class="section-container">
-        <div class="section-heading"><h1>About Me</h1></div>
+        <div class="section-heading">
+            <h1>About Me</h1><span class="animated-bar"></span>
+        </div>
         <div class="section-body">
             <div class="col-sm">
-                <div class="about-me-col-heading bf">Work</div>
+                <div class="about-me-col-heading bf">
+                    <a class="fa fas fa-chalkboard-teacher"></a>&nbsp;
+                    <a class="about-me-col-heading-title">Work</a>
+                </div>
                 <div class="about-me-col-entry">
                     <p class="bf">Assistant Professor, July 2024 ~</p>
                     <p>Department of Information Systems, Business Statistics and Operations
@@ -145,7 +142,8 @@
             </div>
             <div class="col-sm">
                 <div class="about-me-col-heading">
-                    <p class="subtitle bf">Education</p>
+                    <a class="fa fas fa-user-graduate"></a>&nbsp;
+                    <p class="about-me-col-heading-title subtitle bf">Education</p>
                 </div>
                 <div class="about-me-col-entry">
                     <p class="bf">Ph.D. in Management Science, 2024</p>
@@ -166,9 +164,10 @@
             </div>
             <div class="col-sm">
                 <div class="about-me-col-heading">
-                    <p class="subtitle bf">Skills</p>
+                    <a class="fa fas fa-file-code"></a>&nbsp;
+                    <p class="about-me-col-heading-title subtitle bf">Skills</p>
                 </div>
-                <div class="skill-entry">
+                <div class="skill-entry" style="margin-top: 0;">
                     <div class="skill-name">Python</div>
                     <div class="progress skill-progress">
                         <div class="progress-bar skill-progress-bar" role="progressbar" aria-valuenow="95"
@@ -225,6 +224,7 @@
             <span style="font-size:10pt">* updated at April 2024.&nbsp;&nbsp;</span>
             <span style="font-size:10pt">** click the research interest to filter the projects.&nbsp;&nbsp;</span>
             <span style="font-size:10pt">*** click the project title to expand the project details. </span>
+            <span class="animated-bar"></span>
         </div>
 
         <div class="section-body">
@@ -590,7 +590,7 @@
 <section id="teaching" class="section" data-section="teaching">
     <div class="section-container">
         <div class="section-heading">
-            <h1>Teaching</h1>
+            <h1>Teaching</h1><span class="animated-bar"></span>
         </div>
         <div>
             <div class="card">
@@ -628,7 +628,7 @@
 
 <section id="awards" class="section awards" data-section="awards">
     <div class="section-container">
-        <div class="section-heading"><h1>Awards and Honors</h1></div>
+        <div class="section-heading"><h1>Awards and Honors</h1><span class="animated-bar"></span></div>
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Dean's Excellence Scholarship</h4>
@@ -688,73 +688,76 @@
 
 <section id="miscellaneous" class="section miscellaneous" data-section="miscellaneous">
     <div class="section-container">
-        <div class="section-heading"><h1>Miscellaneous</h1></div>
-        <div class="card" style="border: none; box-shadow: none;">
-            <div class="card-body container-side-by-side">
-                <div class="left-side" style="width: 40%;margin: 0;">
-                    <div class="photo" style="background-image: url('./assets/images/wz.photo.1.png');"></div>
+        <div class="section-heading">
+            <h1>Miscellaneous</h1><span class="animated-bar"></span>
+        </div>
+        <div class="container-side-by-side">
+            <div class="card">
+                <div><div id="swiper1" class="swiper" >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img alt="photo" class="bg-img" src="assets/css/images/20240701_171714_随笔_港科大入住-fotor.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img alt="photo" class="bg-img" src="assets/css/images/20240623_205908__随笔_一泓家告别%20(7).jpg">
+                        </div>
+                    </div>
                 </div>
-                <div class="right-side" style="width:55%;margin-left:5%;">
-                    <div class="card">
-                        <div class="subcard container-side-by-side">
-                            <div class="icon">
-                                <span class="flaticon-design flaticon"></span>
-                            </div>
-                            <div class="text">
-                                <h2 class="subcard-title">Blog</h2>
-                                <p class="subcard-subtitle">I also do not know what I will write here.</p>
-                            </div>
-                        </div>
+                    <div class="swiper-pagination swiper-pagination1"></div></div>
+                <div class="subcard container-side-by-side">
+                    <div class="icon">
+                        <span class="flaticon-design flaticon"></span>
                     </div>
-                    <div class="card">
-                        <div class="subcard container-side-by-side">
-                            <div class="icon">
-                                <span class="flaticon-online-learning flaticon"></span>
-                            </div>
-                            <div class="text">
-                                <h2 class="subcard-title">Gallery</h2>
-                                <p class="subcard-subtitle">Photos capturing unforgettable moments in my life</p>
-                            </div>
-                        </div>
+                    <div class="text">
+                        <h2 class="subcard-title">Blog</h2>
+                        <p class="subcard-subtitle">I do not know what I will write here.</p>
                     </div>
-                    <div class="card" onclick="window.open('map.html')" style="cursor: pointer;">
-                        <div class="subcard container-side-by-side">
-                            <div class="icon">
-                                <span class="flaticon-computer-science flaticon"></span>
-                            </div>
-                            <div class="text">
-                                <h2 class="subcard-title">Footprint</h2>
-                                <p class="subcard-subtitle">A record of the cities I have been to before </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--						<div class="card">-->
-                    <!--							<div class="miscellaneous subcard container-side-by-side">-->
-                    <!--								<div class="icon">-->
-                    <!--									<span class="flaticon-calendar flaticon"></span>-->
-                    <!--								</div>-->
-                    <!--								<div class="text">-->
-                    <!--									<h2 class="subcard-title"></h2>-->
-                    <!--									<p class="subcard-subtitle"></p>-->
-                    <!--								</div>-->
-                    <!--							</div>-->
-                    <!--						</div>-->
                 </div>
             </div>
-        </div>
-    </div>
-    </div>
-    </div>
-</section>
-
-<section id="contactme" class="section contactme" data-section="contactme">
-    <div class="section-container contactme">
-        <div class="section-heading contactme">
-            <h1>Contact Me</h1>
-        </div>
-        <div>
-            <bf>Email</bf>
-            : Wangsheng.Zhu@utdallas.edu
+            <div class="card">
+                <div><div id="swiper2" class="swiper" >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img alt="photo" class="bg-img" src="assets/css/images/20210218_174945__随笔_Dallas_冬雪.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img alt="photo" class="bg-img" src="assets/css/images/20191020_145849__会议_CIST%202019_Seattle%20WA.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination2"></div></div>
+                <div class="subcard container-side-by-side">
+                    <div class="icon">
+                        <span class="flaticon-online-learning flaticon"></span>
+                    </div>
+                    <div class="text">
+                        <h2 class="subcard-title">Gallery</h2>
+                        <p class="subcard-subtitle">Unforgettable moments in my life</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div><div id="swiper3" class="swiper" onclick="window.open('map.html')">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img alt="photo" class="bg-img" src="assets/css/images/20240701_173735_随笔_港科大.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img alt="photo" class="bg-img" src="assets/css/images/20160730_080601__随笔_在路上-fotor.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination3"></div></div>
+                <div class="subcard container-side-by-side" onclick="window.open('map.html')">
+                    <div class="icon">
+                        <span class="flaticon-computer-science flaticon"></span>
+                    </div>
+                    <div class="text">
+                        <h2 class="subcard-title">Footprint</h2>
+                        <p class="subcard-subtitle">A record of the cities I have been to before </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -763,31 +766,6 @@
     <p style="color:white;width:fit-content;height:fit-content;margin:0 auto;">Copyright © 2023 by Wangsheng Zhu</p>
 </div>
 
-<!-- Script 1: used to control the navbar color when scrolling -->
-<script>
-    const headerbar = document.querySelector('#navbar-main')
-
-    function change_navbar_color() {
-        let y = 0.4 + (window.scrollY || window.pageYOffset) / window.innerHeight
-        y = y < 0.5 ? 0 : y
-        y = y > 1 ? 1 : y
-        headerbar.style.backgroundColor = `rgba(7, 121, 228, ${y})`
-    }
-
-    window.addEventListener('scroll', () => {
-        change_navbar_color()
-    })
-</script>
-<!-- Script 2: used to change the navbar color under the collapse status -->
-<script>
-    const navbarr = document.querySelector('.navbar-toggler')
-    navbarr.addEventListener('click', () => {
-        headerbar.style.backgroundColor = `rgba(7, 121, 228, 1)`;
-        if (navbarr.getAttribute("aria-expanded") === "true") {
-            change_navbar_color()
-        }
-    })
-</script>
 <!-- Script 3: used to change the display of the abstract -->
 <script>
     function disp(inerest) {
@@ -842,7 +820,7 @@
     var checkSection = function checkSection() {
         $(".section").each(function () {
             var $this = $(this),
-                topEdge = $this.offset().top - 60,
+                topEdge = $this.offset().top - 120,
                 bottomEdge = topEdge + $this.height(),
                 wScroll = $(window).scrollTop();
             if (topEdge < wScroll && bottomEdge > wScroll) {
@@ -859,28 +837,40 @@
 </script>
 
 <script>
-    var mySwiper = new Swiper('.swiper', {
+    var mySwiper3 = new Swiper('#swiper3', {
         direction: 'horizontal', // 垂直切换选项
         loop: true, // 循环模式选项
 
         // 如果需要分页器
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-pagination3',
             clickable: true,
-        },
-
-        // 如果需要前进后退按钮
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // 如果需要滚动条
-        scrollbar: {
-            el: '.swiper-scrollbar',
         },
     })
 </script>
+<script>
+    var mySwiper2 = new Swiper('#swiper2', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
 
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination2',
+            clickable: true,
+        },
+    })
+</script>
+<script>
+    var mySwiper1 = new Swiper('#swiper1', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination1',
+            clickable: true,
+        },
+    })
+</script>
 </body>
 </html>

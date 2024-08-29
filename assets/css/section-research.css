@@ -5,8 +5,8 @@
 }
 
 #research-interests-box{
-	background-color: rgba(253, 41, 13, 0.54);
-	color: white;
+	background-color: rgba(110, 111, 142, 15%);
+	color: black;
 	padding: 5pt;
 	border-radius: 3pt;
 	margin: 0 0 2% 0;
@@ -15,19 +15,20 @@
 .research-interests{
 	display: flex;
 	flex-wrap: wrap;
-	font-size: 13pt;
+	font-size: 11pt;
 	justify-content: space-between;
 	margin-bottom: 1%;
 }
 
 .research-interests-left{
+	font-size: 11pt;
 	display: flex!important;
 	flex-wrap: wrap;
 	width: 80%;
 }
 
 .research-i-tag{
-	font-size: 13pt;
+	font-size: 11pt;
 }
 
 .research-i-icon{

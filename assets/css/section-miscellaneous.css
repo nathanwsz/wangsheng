@@ -4,6 +4,14 @@
 	align-items: center;
 }
 
+.miscellaneous .card {
+	width: 25vw;
+	height: 25vw;
+	margin-right: 1vw;
+	cursor: pointer;
+	background-color: transparent;
+}
+
 .miscellaneous .photo{
 	width: 100%;
 	height: min(90vh,700px);
@@ -13,10 +21,23 @@
 }
 
 .miscellaneous .subcard{
+	position: absolute;
+	z-index: 100;
 	display: flex !important;
 	padding: 2vh;
+	margin: 0.5vw 0 0 0.5vw;
+	width: 80%;
+	/*border: rgba(110, 111, 142, 0.3) solid;*/
+	box-shadow: 5px 5px 10px 0 rgba(110, 111, 142, 0.4);
+	border-radius: 10pt;
+	background-color: rgba(245, 245, 245, 0.3);
+	transition-property: background-color;
+	transition-duration: 1.5s;
 }
 
+.miscellaneous .subcard:hover {
+	background-color: rgba(245, 245, 245, 1);
+}
 
 .miscellaneous .flaticon{
 	font-size: min(9vh, 60px);
@@ -26,13 +47,14 @@
 
 .miscellaneous .text{
 	flex:1;
-	padding-left: min(3vh,20px);
+	margin-left: min(3vh,20px);
+	padding-left: 1vh;
 }
 
 .miscellaneous .subcard-title{
-	font-size: 20px;
-	font-weight: 500;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	font-family: Oswald, sans-serif;
 	margin-bottom: 0.5vh;
 }
 
@@ -45,3 +67,32 @@
 	margin-bottom: 0px;
 }
 
+.miscellaneous .bg-img{
+	width: 100%;
+	height: 100%;
+}
+
+.miscellaneous .swiper-slide{
+	height: 25vw;
+}
+
+.miscellaneous .swiper-pagination{
+	background-color: rgba(245, 245, 245, 0.3);
+	width: 80%;
+	margin: 0 10%;
+	border-radius: 10pt;
+	transition-property: background-color;
+	transition-duration: 1.5s;
+}
+
+.miscellaneous .swiper-pagination:hover {
+	background-color: rgba(245, 245, 245, 1);
+}
+
+.swiper-pagination2 {
+	position: absolute;
+	text-align: center;
+	transition: .3s opacity;
+	transform: translate3d(0, 0, 0);
+	z-index: 10
+}

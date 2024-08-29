@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(244, 243, 249);
+}
+
 .nomargin{
     margin: 0;
 }
