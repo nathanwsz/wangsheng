@@ -1,11 +1,19 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<title>Footprints - Wangsheng's Personal Website</title>
 	<meta charset="utf-8" />
 	<script src="assets/echarts-5.4.3/dist/echarts.js"></script>
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<style>
+		.float-picture {
+			min-height: 10vw;
+			min-width: 10vw;
+			max-height: 20vw;
+			max-width: 20vw;
+		}
+	</style>
 </head>
 
 <body>
@@ -34,7 +42,8 @@
 					geo:{
 						silent: false,
 						map:"world",
-						regions: buildHighlightAreaObjList(['China', 'United States', 'Singapore', 'Malaysia']),
+						regions: buildHighlightAreaObjList([
+								'China', 'United States', 'Singapore', 'Malaysia']),
 						emphasis:{
 							label:{
 								show: false,
@@ -85,14 +94,20 @@
 							}
 						},
 						tooltip: {
+							show: true,
 							formatter: function (params) {
-								return params.name
+								return params.name + '<br>' +
+										'<img alt="" class="float-picture" src="assets/css/images/front-page.png">'
+
 							},
 						},
 					},
 					]
 				};
 				myChart.setOption(option);
+				myChart.on('mouseover', function (params) {
+					console.log(params);
+				});
 				myChart.on('click', function(params) {
 					console.log(params);
 					window.open(
