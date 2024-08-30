@@ -45,7 +45,7 @@
     margin:20px 0 0 0;
     color: rgb(143, 145, 172);
 }
-div:nth-child(2){
+#about div:nth-child(2){
     margin-top: 0;
 }
 

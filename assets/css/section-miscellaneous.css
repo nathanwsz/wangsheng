@@ -1,9 +1,16 @@
 .miscellaneous .card {
-	width: 25vw;
-	height: 25vw;
+	width: 30%;
+	height: min(25vw,420px);
 	margin-right: 1vw;
 	cursor: pointer;
 	background-color: transparent;
+}
+@media screen and (max-width: 900px) {
+	.miscellaneous .card {
+		width: 400px;
+		height: 400px;
+		margin: 10px auto;
+	}
 }
 
 
@@ -11,8 +18,8 @@
 	position: absolute;
 	z-index: 100;
 	display: flex !important;
-	padding: 2vh;
-	margin: 0.5vw 0 0 0.5vw;
+	padding: min(4%, 10px);
+	margin: min(4%, 10px) 0 0 min(4%, 10px);
 	width: 80%;
 	/*border: rgba(110, 111, 142, 0.3) solid;*/
 	box-shadow: 5px 5px 10px 0 rgba(110, 111, 142, 0.4);
@@ -35,23 +42,43 @@
 .miscellaneous .text{
 	flex:1;
 	margin-left: min(3vh,20px);
-	padding-left: 1vh;
 }
 
 .miscellaneous .subcard-title{
-	font-size: 18px;
+	font-size: 1.3vw;
 	font-weight: 400;
 	font-family: Oswald, sans-serif;
 	margin-bottom: 0.5vh;
 }
-
 .miscellaneous .subcard-subtitle{
 	font-family: 'Roboto', Arial, sans-serif;
-	font-size: min(2.5vh, 18px);
+	font-size: 1.1vw;
 	line-height: 1.5;
 	font-weight: 400;
 	color: #999999;
-	margin-bottom: 0px;
+	margin-bottom: 0;
+}
+@media screen and (min-width: 1500px) {
+	.miscellaneous .subcard-title{
+		font-size: 25px;
+		font-weight: 400;
+		font-family: Oswald, sans-serif;
+		margin-bottom: 0.5vh;
+	}
+	.miscellaneous .subcard-subtitle{
+		font-size: 20px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.miscellaneous .subcard-title{
+		font-size: 20px;
+		font-weight: 400;
+		font-family: Oswald, sans-serif;
+		margin-bottom: 0.5vh;
+	}
+	.miscellaneous .subcard-subtitle{
+		font-size: 18px;
+	}
 }
 
 .miscellaneous .bg-img{
@@ -76,33 +103,28 @@
 	background-color: rgba(245, 245, 245, 1);
 }
 
-@media screen and (max-width: 600px) {
-	.miscellaneous .card {
-		width: 80vw;
-		height: 80vw;
-	}
-	.miscellaneous .swiper-box{
-		width: 100%;
-		height: 100%;
-	}
-
-	.miscellaneous .swiper{
-		width: 100%;
-		height: 100%;
-	}
-
-	.miscellaneous .swiper-wrapper{
-		width: 100%;
-		height: 100%;
-	}
-
-	.miscellaneous .swiper-slide{
-		width: 100%;
-		height: 100%;
-	}
-
-	.miscellaneous .bg-img{
-		width: 80vw;
-		height: 80vw;;
-	}
+.miscellaneous .swiper-box{
+	width: 100%;
+	height: 100%;
 }
+
+.miscellaneous .swiper{
+	width: 100%;
+	height: 100%;
+}
+
+.miscellaneous .swiper-wrapper{
+	width: 100%;
+	height: 100%;
+}
+
+.miscellaneous .swiper-slide{
+	width: 100%;
+	height: 100%;
+}
+
+.miscellaneous .bg-img{
+	width: 100%;
+	height: 100%;
+}
+

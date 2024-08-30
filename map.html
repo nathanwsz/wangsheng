@@ -96,8 +96,9 @@
 						tooltip: {
 							show: true,
 							formatter: function (params) {
-								return params.name + '<br>' +
-										'<img alt="" class="float-picture" src="assets/css/images/front-page.png">'
+								return params.name
+										// + '<br>' +
+										// '<img alt="" class="float-picture" src="assets/css/images/front-page.png">'
 
 							},
 						},
@@ -105,9 +106,9 @@
 					]
 				};
 				myChart.setOption(option);
-				myChart.on('mouseover', function (params) {
-					console.log(params);
-				});
+				// myChart.on('mouseover', function (params) {
+				// 	console.log(params);
+				// });
 				myChart.on('click', function(params) {
 					console.log(params);
 					window.open(
