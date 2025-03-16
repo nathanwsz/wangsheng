@@ -65,8 +65,20 @@
                     <div id="welcome-text-main">
                         Hi, I am Wangsheng Zhu (朱旺盛 in Chinese). I am an assistant professor in the Department of
                         Information Systems, Business Statistics and Operations Management (ISOM) at the Business
-                        School, Hong Kong University of Science and Technology (HKUST). I received my B.S. and M.S.
-                        from Renmin University of China and received my Ph.D. from University of Texas at Dallas.
+                        School, Hong Kong University of Science and Technology (HKUST). I received my Ph.D. from
+                        University of Texas at Dallas.
+                        <br>
+                        <br>
+                        My research interests focus on <b>decision science</b> and <b>market design</b>.
+                        <br>
+                        (1) In my decision science studies, I derive the data-driven optimal decisions  across various
+                        business contexts using techniques such as structural modeling, reinforcement learning, deep
+                        learning, optimization theory, and counterfactual simulations. Through these analyses, I provide
+                        valuable business insights and design innovative IT artifacts, primarily recommendation systems.
+                        <br>
+                        (2) In my market design studies, I examine the economic impact of emerging technologies and
+                        explore optimal and efficient market/platform designs related to pricing, subsidy offerings, and
+                        contract design.
                     </div>
                     <div class="welcome-text-icons container-side-by-side">
                         <div class="welcome-text-icons-box">
@@ -76,8 +88,8 @@
                         </div>
                         <div class="welcome-text-icons-box">
                             <div class="icon-title">Social Media:
-                                <a class="fa fab fa-facebook-square" target="_blank" title="Facebook"
-                                   href="https://www.facebook.com/wangsheng.zhu.35"></a>
+<!--                                <a class="fa fab fa-facebook-square" target="_blank" title="Facebook"-->
+<!--                                   href="https://www.facebook.com/wangsheng.zhu.35"></a>-->
                                 <a class="fa fas fa-graduation-cap" target="_blank" title="Google Scholar"
                                    href="https://scholar.google.com/citations?user=3dJNG4EAAAAJ&hl=en"></a>
                                 <a class="fa fab fa-orcid" target="_blank" title="ORCiD"
@@ -205,10 +217,12 @@
                 <div class="research-interests">
                     <div class="research-interests-left">
                         <div class="bf">Topics:&nbsp;&nbsp;</div>
+                        <div class="itag" onclick="disp('pa')">
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Decision science&nbsp;&nbsp;</div>
+                        <div class="itag" onclick="disp('med')">
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Market design&nbsp;&nbsp;</div>
                         <div class="itag" onclick="disp('rl')">
                             <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Reinforcement Learning&nbsp;&nbsp;</div>
-                        <div class="itag" onclick="disp('pa')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Prescriptive Anaytics&nbsp;&nbsp;</div>
                         <div class="itag" onclick="disp('ad')">
                             <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Digital Advertising&nbsp;&nbsp;</div>
                         <div class="itag" onclick="disp('rs')">
@@ -219,14 +233,14 @@
                 <div class="research-interests">
                     <div class="research-interests-left">
                         <div class="bf">Methods:&nbsp;&nbsp;</div>
+                        <div class="itag" onclick="disp('ml')">
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Machine learning&nbsp;&nbsp;</div>
                         <div class="itag" onclick="disp('sm')">
                             <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Structural modeling&nbsp;&nbsp;</div>
                         <div class="itag" onclick="disp('ct')">
                             <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Control Theory&nbsp;&nbsp;</div>
                         <div class="itag" onclick="disp('md')">
                             <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Mechanism design&nbsp;&nbsp;</div>
-                        <div class="itag" onclick="disp('ml')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Machine learning&nbsp;&nbsp;</div>
                     </div>
                     <div class="research-interests-tag" onclick="disp('all')">[Reset to All]</div>
                 </div>
@@ -290,7 +304,7 @@
                 </div>
             </div>
 
-            <div class="card all ad md">
+            <div class="card all ad md med">
                 <div class="card-body">
                     <div class="card-title" onclick="abs('isaa')">
                         Should Ad-Exchanges Subsidize the Acquisition of Targeting Data in Ad Auctions?
@@ -391,48 +405,65 @@
                         </div>
                     </div>
                 </div>
+            </div><div class="card all pa rs ml">
+            <div class="card-body">
+                <div class="card-title" onclick="abs('rstd')">
+                    Recommendation System for Designing Customized Tours
+                </div>
+                <div class="card-subtitle">
+                    <b>Wangsheng Zhu</b>, Syam Menon, and Sumit Sarkar
+                    <a class="status">Work paper</a>
+                </div>
+                <div id="rstd" class="card-info">
+                    <div class="abstract">
+                        <b>Abstract:</b>
+                    </div>
+                    <div class="keywords">
+                        <b>Keywords:</b>
+                    </div>
+                </div>
             </div>
-            <!--                <div class="card all ad">-->
-            <!--                    <div class="card-body">-->
-            <!--                        <div class="card-title" onclick="abs('taam')"><h4>Towards Adaptive Ad Sequencing for-->
-            <!--                            Markovian Users</h4>-->
-            <!--                            <div class="card-subtitle">-->
-            <!--                                <b>Wangsheng Zhu</b>-->
-            <!--                                , Shaojie Tang and Vijay Mookerjee.<a class="status"></a>-->
-            <!--                            </div>-->
+        </div>
+            <!--            <div class="card all ad md">-->
+            <!--                <div class="card-body">-->
+            <!--                    <div class="card-title" onclick="abs('wsar')">-->
+            <!--                        When should ad-exchanges release user information to advertisers-->
+            <!--                    </div>-->
+            <!--                    <div class="card-subtitle">-->
+            <!--                        <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerje-->
+            <!--                        <a class="status">Work-in-progress</a>-->
+            <!--                    </div>-->
+            <!--                    <div id="wsar" class="card-info">-->
+            <!--                        <div class="abstract">-->
+            <!--                            <b>Abstract:</b>-->
             <!--                        </div>-->
-            <!--                        <div id="taam" class="card-info">-->
-            <!--                            <div class="abstract">-->
-            <!--                                <b>Abstract:</b>-->
-            <!--                                As ad revenue continues to soar, publishers like Google and Amazon face the challenge of-->
-            <!--                                optimizing ad selection to maximize their earnings. Previous researches assumed-->
-            <!--                                customers-->
-            <!--                                click on ads once with decaying possibilities over time. However, it's been observed-->
-            <!--                                that-->
-            <!--                                repeated exposure to an ad increases interest and potential purchase consideration. To-->
-            <!--                                account-->
-            <!--                                for this, we generalize the previous model by allowing ads to be repeated in multiple-->
-            <!--                                positions.-->
-            <!--                                Additionally, existing models assume that users permanently leave the ad session after-->
-            <!--                                clicking-->
-            <!--                                an ad. Our framework accommodates more complex user behavior, enabling users to return-->
-            <!--                                to the-->
-            <!--                                previous ad list even after clicking an ad. Our model considers various factors-->
-            <!--                                affecting click-->
-            <!--                                probabilities, including ad quality, position, and previously displayed ads. We have-->
-            <!--                                developed-->
-            <!--                                efficient algorithms with guaranteed optimal or approximate solutions.-->
-            <!--                            </div>--m>
-            <!--                            <div class="keywords">-->
-            <!--                                <b>Keywords:</b>-->
-            <!--                                Internet advertisement, advertisement allocation, dynamic programming, revenue-->
-            <!--                                optimization-->
-            <!--                            </div>-->
+            <!--                        <div class="keywords">-->
+            <!--                            <b>Keywords:</b>-->
             <!--                        </div>-->
             <!--                    </div>-->
             <!--                </div>-->
+            <!--            </div>-->
+            <div class="card all rl ml sm">
+                <div class="card-body">
+                    <div class="card-title" onclick="abs('rloc')">
+                        Use Reinforcement Learning for Strcutural Model Identification
+                    </div>
+                    <div class="card-subtitle">
+                        Kai Sun, <b>Wangsheng Zhu</b>, and Vijay Mookerje<a class="status">Work paper</a>
+                    </div>
+                    <div id="rloc" class="card-info">
+                        <div class="abstract">
+                            <b>Abstract:</b>
+                        </div>
+                        <div class="keywords">
+                            <b>Keywords:</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="ribbon"><i class="fa fa-chevron-circle-right ribbon-icon"></i>&nbsp;Work-in-progress</div>
-            <div class="card all ad">
+            <div class="card all ad med md">
                 <div class="card-body">
                     <div class="card-title" onclick="abs('mads')">
                         Managing Ad Campaigns on Digital Billboards under Supply Disruptions
@@ -477,16 +508,15 @@
                     </div>
                 </div>
             </div>
-            <div class="card all rs">
+            <div class="card all pa rl ad sm ct">
                 <div class="card-body">
-                    <div class="card-title" onclick="abs('rstd')">
-                        Recommendation System for Designing Customized Tours
+                    <div class="card-title" onclick="abs('ntuk')">
+                            Navigating the Unknown: Optimizing Advertising Strategies in the Face of Ad Auction Uncertainty
                     </div>
                     <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b>, Syam Menon, and Sumit Sarkar
-                        <a class="status">Work-in-progress</a>
+                       <b>Wangsheng Zhu</b><a class="status">Work-in-progress</a>
                     </div>
-                    <div id="rstd" class="card-info">
+                    <div id="ntuk" class="card-info">
                         <div class="abstract">
                             <b>Abstract:</b>
                         </div>
@@ -496,61 +526,6 @@
                     </div>
                 </div>
             </div>
-            <div class="card all ad md">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('wsar')">
-                        When should ad-exchanges release user information to advertisers
-                    </div>
-                    <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerje
-                        <a class="status">Work-in-progress</a>
-                    </div>
-                    <div id="wsar" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card all rl ml sm">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('rloc')">
-                        Use Reinforcement Learning for Strcutural Model Identification
-                    </div>
-                    <div class="card-subtitle">
-                        Kai Sun, <b>Wangsheng Zhu</b>, and Vijay Mookerje<a class="status">Work-in-progress</a>
-                    </div>
-                    <div id="rloc" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--                <div class="card all pa ad sm ct">-->
-            <!--                    <div class="card-body">-->
-            <!--                        <div class="card-title" onclick="abs('nuoa')">-->
-            <!--                            <h4>Navigating the Unknown: Optimizing Advertising Strategies in the Face of Ad Auction Uncertainty</h4>-->
-            <!--                            <div class="card-subtitle">-->
-            <!--                                Kai Sun, <b>Wangsheng Zhu</b>, and Vijay Mookerje<a class="status">Work-in-progress</a>-->
-            <!--                            </div>-->
-            <!--                        </div>-->
-            <!--                        <div id="nuoa" class="card-info">-->
-            <!--                            <div class="abstract">-->
-            <!--                                <b>Abstract:</b>-->
-            <!--                            </div>-->
-            <!--                            <div class="keywords">-->
-            <!--                                <b>Keywords:</b>-->
-            <!--                            </div>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
         </div>
     </div>
 </section>
@@ -559,6 +534,19 @@
     <div class="section-container">
         <div class="section-heading"><h1>Teaching</h1><span class="animated-bar"></span></div>
         <div class="section-body">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">Business Applications Development in Java</div>
+                    <div class="card-subtitle">HKUST Business School<span class="middot"></span>Fall 2024
+                    </div>
+                    <div class="card-info">This course covers development of applications (programs) through Java programming language. Java
+                        is an extensively deployed programming language with market dominance. Major topics of this course
+                        include object-oriented development approaches, GUI building blocks, exception handling, and so on.
+                        Students will learn how to apply Java programming and develop applications so as to address practical
+                        needs.
+                    </div>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">Introduction to Programming</div>
