@@ -155,6 +155,11 @@
         width: 830px;
     }
 }
+@media screen and (max-width: 1660px) {
+    #welcome-text {
+        width: 58%;
+    }
+}
 
 #welcome-name{
     color: rgb(62,63,94);
