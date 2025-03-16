@@ -143,7 +143,7 @@
 
 #welcome-text {
     height: 100%;
-    width: 50%;
+    width: 55%;
     min-height: fit-content;
     margin: 0;
     padding: 0 0 0 min(5%, 33px);
@@ -153,11 +153,6 @@
 @media screen and (min-width: 1660px) {
     #welcome-text {
         width: 830px;
-    }
-}
-@media screen and (max-width: 1660px) {
-    #welcome-text {
-        width: 60%;
     }
 }
 
