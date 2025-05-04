@@ -1,6 +1,6 @@
 /* (PART A) ENTIRE TABLE */
 #task-list { width: 400px; border-collapse: collapse; }
-#task-list tr:nth-child(odd) { background: #f2f2f2; }
+#task-list tr { background: #f2f2f2; }
 #task-list td, #task-list th {
     text-align: left; padding: 10px;
     border: 1px solid #ccc;

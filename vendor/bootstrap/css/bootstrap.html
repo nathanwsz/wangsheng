@@ -32,6 +32,7 @@ content="An online LaTeX editor that’s easy to use. No installation, real-time
 <meta property="og:image" content="https://cdn.overleaf.com/img/ol-brand/overleaf_og_logo.png">
 <meta property="og:type" content="website">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<script src="vendor/bootstrap/css/draggable.js"></script>
 <link rel="icon" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -55,8 +56,7 @@ id="main-stylesheet">
 <link rel="alternate" href="https://da.overleaf.com/project" hreflang="da">
 <link rel="alternate" href="https://ko.overleaf.com/project" hreflang="ko">
 <link rel="alternate" href="https://ja.overleaf.com/project" hreflang="ja">
-<!--<link rel="stylesheet" href="vendor/bootstrap/css/draggable.css">-->
-<script src="vendor/bootstrap/css/draggable.js"></script>
+<link rel="stylesheet" href="vendor/bootstrap/css/draggable.css">
 <link rel="preload" href="https://cdn.overleaf.com/js/en-json-2e7a40177e0abec557a7.js" as="script" nonce="">
 <script async="" src="//www.google-analytics.com/analytics.js"></script>
 <script type="text/javascript" nonce="" id="ga-loader" data-ga-token="UA-112092690-1"
@@ -176,7 +176,50 @@ content="{&quot;url&quot;:&quot;https://cn.overleaf.com&quot;,&quot;lngCode&quot
 <script type="text/javascript" async=""
 src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11404926318/?random=1746349575652&amp;cv=11&amp;fst=1746349575652&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je54u1v882274400za200&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509156~103101747~103101749~103116025~103200001~103211513~103233424~103251618~103251620&amp;u_w=3414&amp;u_h=1440&amp;url=https%3A%2F%2Fwww.overleaf.com%2Fproject&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Your%20Projects%20-%20Overleaf%2C%20Online%20LaTeX%20Editor&amp;userId=5b80d098c5f2313c78024bf3&amp;ga_uid=G-RV4YBCCCWJ.5b80d098c5f2313c78024bf3&amp;npa=0&amp;pscdl=noapi&amp;auid=1599619476.1740121989&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B135.0.7049.115%7CNot-A.Brand%3B8.0.0.0%7CChromium%3B135.0.7049.115&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=15.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config%3Banonymize_ip%3Dtrue&amp;rfmt=3&amp;fmt=4"
 nonce=""></script>
-<style>.ZD1LzV_5hhnbdBzBCTeC {
+<script>
+    window.addEventListener("load", () => {
+        // (PART A) GET TABLE ROWS, EXCLUDE HEADER ROW
+        var all = document.querySelectorAll("#task-list tr");
+
+        // (PART B) "CURRENT ROW BEING DRAGGED"
+        var dragged;
+
+        // (PART C) DRAG-AND-DROP MECHANISM
+        for (let tr of all) {
+            // (C1) ROW IS DRAGGABLE
+            tr.draggable = true;
+
+            // (C2) ON DRAG START - SET "CURRENTLY DRAGGED" & DATA TRANSFER
+            tr.ondragstart = e => {
+                dragged = tr;
+                e.dataTransfer.dropEffect = "move";
+                e.dataTransfer.effectAllowed = "move";
+                e.dataTransfer.setData("text/html", tr.innerHTML);
+            };
+
+            // (C3) PREVENT DRAG OVER - NECESSARY FOR DROP TO WORK
+            tr.ondragover = e => e.preventDefault();
+
+            // (C4) ON DROP - "SWAP ROWS"
+            tr.ondrop = e => {
+                e.preventDefault();
+                if (dragged != tr) {
+                    dragged.innerHTML = tr.innerHTML;
+                    tr.innerHTML = e.dataTransfer.getData("text/html");
+                }
+            };
+
+            // (C5) COSMETICS - HIGHLIGHT ROW "ON DRAG HOVER"
+            tr.ondragenter = () => tr.classList.add("hover");
+            tr.ondragleave = () => tr.classList.remove("hover");
+            tr.ondragend = () => {
+                for (let r of all) { r.classList.remove("hover"); }
+            };
+        }
+    });
+</script>
+<style>
+.ZD1LzV_5hhnbdBzBCTeC {
 z-index: 65536;
 }
 
@@ -3529,105 +3572,8 @@ class="new-project-button dropdown-toggle btn btn-primary">New Project
 </div>
 </div>
 </div>
-<footer class="fat-footer hidden-print">
-<div role="navigation" aria-label="Footer navigation" class="fat-footer-container">
-<div class="fat-footer-sections ">
-    <div class="footer-section" id="footer-brand"><a href="/" aria-label="Overleaf"
-                                                     class="footer-brand"><span
-            class="visually-hidden">Overleaf</span></a></div>
-    <div class="footer-section"><h2 class="footer-section-heading">About</h2>
-        <ul class="list-unstyled">
-            <li><a href="/about">About us</a></li>
-            <li><a href="/about/values">Our values</a></li>
-            <li><a href="https://digitalscience.pinpointhq.com/">Careers</a></li>
-            <li><a href="/for/press">Press &amp; awards</a></li>
-            <li><a href="/blog">Blog</a></li>
-        </ul>
-    </div>
-    <div class="footer-section"><h2 class="footer-section-heading">Learn</h2>
-        <ul class="list-unstyled">
-            <li><a href="/learn/latex/Learn_LaTeX_in_30_minutes">LaTeX in 30 minutes</a>
-            </li>
-            <li><a href="/latex/templates">Templates</a></li>
-            <li><a href="/events/webinars">Webinars</a></li>
-            <li><a href="/learn/latex/Tutorials">Tutorials</a></li>
-            <li><a href="/learn/latex/Inserting_Images">How to insert images</a></li>
-            <li><a href="/learn/latex/Tables">How to create tables</a></li>
-        </ul>
-    </div>
-    <div class="footer-section"><h2 class="footer-section-heading">Get Involved</h2>
-        <ul class="list-unstyled">
-            <li><a href="/for/community/advisors">Become an Overleaf advisor</a></li>
-            <li><a href="https://forms.gle/67PSpN1bLnjGCmPQ9">Let us know what you think</a>
-            </li>
-            <li><a href="/beta/participate">Join beta program</a></li>
-        </ul>
-    </div>
-    <div class="footer-section"><h2 class="footer-section-heading">Help</h2>
-        <ul class="list-unstyled">
-            <li><a href="/about/why-latex">Why LaTeX?</a></li>
-            <li><a href="/learn">Documentation</a></li>
-            <li><a href="/contact">Contact us</a></li>
-            <li><a href="https://status.overleaf.com/">Website status</a></li>
-        </ul>
-    </div>
 </div>
-<footer class="fat-footer-base">
-    <div class="fat-footer-base-section fat-footer-base-meta">
-        <div class="fat-footer-base-item">
-            <div class="fat-footer-base-copyright">© 2025 Overleaf</div>
-            <a class="fat-footer-link" href="/legal">Privacy and Terms</a><a
-                class="fat-footer-link"
-                href="https://www.digital-science.com/security-certifications/">Compliance</a>
-        </div>
-        <div class="fat-footer-base-item fat-footer-base-language">
-            <div class="dropup">
-                <button type="button" id="language-picker-toggle" aria-expanded="false"
-                        aria-label="Select a language" data-bs-toggle="dropdown"
-                        class="btn-inline-link dropdown-toggle btn btn-link"><span
-                        class="material-symbols"
-                        aria-hidden="true">translate</span>&nbsp;<span
-                        class="language-picker-text">English</span></button>
-            </div>
-        </div>
-    </div>
-    <div class="fat-footer-base-section fat-footer-base-social">
-        <div class="fat-footer-base-item"><a class="fat-footer-social x-logo"
-                                             href="https://x.com/overleaf">
-            <svg height="25" viewBox="0 0 1200 1227" xmlns="http://www.w3.org/2000/svg">
-                <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
-                      fill="#0f1419"></path>
-            </svg>
-            <span class="visually-hidden">Overleaf on X</span></a><a
-                class="fat-footer-social facebook-logo"
-                href="https://www.facebook.com/overleaf.editor">
-            <svg xmlns="http://www.w3.org/2000/svg" height="25"
-                 viewBox="0 0 666.66668 666.66717">
-                <g transform="matrix(1.33333 0 0 -1.33333 -133.333 800)">
-                    <path d="M0 0c0 138.071-111.929 250-250 250S-500 138.071-500 0c0-117.245 80.715-215.622 189.606-242.638v166.242h-51.552V0h51.552v32.919c0 85.092 38.508 124.532 122.048 124.532 15.838 0 43.167-3.105 54.347-6.211V81.986c-5.901.621-16.149.932-28.882.932-40.993 0-56.832-15.528-56.832-55.9V0h81.659l-14.028-76.396h-67.631v-171.773C-95.927-233.218 0-127.818 0 0"
-                          fill="#0866ff" class="background"
-                          transform="translate(600 350)"></path>
-                    <path d="m0 0 14.029 76.396H-67.63v27.019c0 40.372 15.838 55.899 56.831 55.899 12.733 0 22.981-.31 28.882-.931v69.253c-11.18 3.106-38.509 6.212-54.347 6.212-83.539 0-122.048-39.441-122.048-124.533V76.396h-51.552V0h51.552v-166.242a250.559 250.559 0 0 1 60.394-7.362c10.254 0 20.358.632 30.288 1.831V0Z"
-                          class="text" fill="#fff"
-                          transform="translate(447.918 273.604)"></path>
-                </g>
-            </svg>
-            <span class="visually-hidden">Overleaf on Facebook</span></a><a
-                class="fat-footer-social linkedin-logo"
-                href="https://www.linkedin.com/company/writelatex-limited">
-            <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 72 72">
-                <g fill="none" fill-rule="evenodd">
-                    <path class="background" fill="#0B66C3"
-                          d="M8 72h56a8 8 0 0 0 8-8V8a8 8 0 0 0-8-8H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8"></path>
-                    <path class="text" fill="#FFF"
-                          d="M62 62H51.316V43.802c0-4.99-1.896-7.777-5.845-7.777-4.296 0-6.54 2.901-6.54 7.777V62H28.632V27.333H38.93v4.67s3.096-5.729 10.453-5.729c7.353 0 12.617 4.49 12.617 13.777zM16.35 22.794c-3.508 0-6.35-2.864-6.35-6.397C10 12.864 12.842 10 16.35 10c3.507 0 6.347 2.864 6.347 6.397 0 3.533-2.84 6.397-6.348 6.397ZM11.032 62h10.736V27.333H11.033V62"></path>
-                </g>
-            </svg>
-            <span class="visually-hidden">Overleaf on LinkedIn</span></a></div>
-    </div>
-</footer>
 </div>
-</footer>
 </div>
 </main>
 </div>
