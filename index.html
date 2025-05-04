@@ -61,12 +61,14 @@
             <div id="welcome-text" class="t-center">
                 <div>
                     <div id="welcome-name">Wangsheng Zhu</div>
-                    <div id="welcome-title">Welcome&nbsp;to&nbsp;my&nbsp;website! </div>
+                    <div id="welcome-title">Welcome&nbsp;to&nbsp;my&nbsp;website!</div>
                     <div id="welcome-text-main">
                         Hi, I am Wangsheng Zhu (朱旺盛 in Chinese). I am an assistant professor in the Department of
                         Information Systems, Business Statistics and Operations Management (ISOM) at the Business
-                        School, Hong Kong University of Science and Technology (HKUST). I received my B.S. and M.S.
-                        from Renmin University of China and received my Ph.D. from University of Texas at Dallas.
+                        School, Hong Kong University of Science and Technology (HKUST). My research centers on (1)
+                        responsible AI and AI governance, (2) recommendation systems and decision analytics leveraging
+                        structured and unstructured data, and (3) platform design. I use reinforcement learning, deep
+                        learning, stochastic and dynamic optimization, structural modeling and game theory in my studies.
                     </div>
                     <div class="welcome-text-icons container-side-by-side">
                         <div class="welcome-text-icons-box">
@@ -76,8 +78,8 @@
                         </div>
                         <div class="welcome-text-icons-box">
                             <div class="icon-title">Social Media:
-                                <a class="fa fab fa-facebook-square" target="_blank" title="Facebook"
-                                   href="https://www.facebook.com/wangsheng.zhu.35"></a>
+                                <!--                                <a class="fa fab fa-facebook-square" target="_blank" title="Facebook"-->
+                                <!--                                   href="https://www.facebook.com/wangsheng.zhu.35"></a>-->
                                 <a class="fa fas fa-graduation-cap" target="_blank" title="Google Scholar"
                                    href="https://scholar.google.com/citations?user=3dJNG4EAAAAJ&hl=en"></a>
                                 <a class="fa fab fa-orcid" target="_blank" title="ORCiD"
@@ -201,32 +203,45 @@
 
         <div class="section-body">
             <div id="filter-box">
-                <div class="research-interests"><div class="bf">Research Interests</div></div>
+                <div class="research-interests">
+                    <div class="bf">Research Interests</div>
+                </div>
                 <div class="research-interests">
                     <div class="research-interests-left">
                         <div class="bf">Topics:&nbsp;&nbsp;</div>
-                        <div class="itag" onclick="disp('rl')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Reinforcement Learning&nbsp;&nbsp;</div>
                         <div class="itag" onclick="disp('pa')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Prescriptive Anaytics&nbsp;&nbsp;</div>
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Decision science&nbsp;&nbsp;
+                        </div>
+                        <div class="itag" onclick="disp('med')">
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Market design&nbsp;&nbsp;
+                        </div>
+                        <div class="itag" onclick="disp('rl')">
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Reinforcement Learning&nbsp;&nbsp;
+                        </div>
                         <div class="itag" onclick="disp('ad')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Digital Advertising&nbsp;&nbsp;</div>
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Digital Advertising&nbsp;&nbsp;
+                        </div>
                         <div class="itag" onclick="disp('rs')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Recommender System</div>
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Recommender System
+                        </div>
                     </div>
                     <div class="research-interests-tag"></div>
                 </div>
                 <div class="research-interests">
                     <div class="research-interests-left">
                         <div class="bf">Methods:&nbsp;&nbsp;</div>
-                        <div class="itag" onclick="disp('sm')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Structural modeling&nbsp;&nbsp;</div>
-                        <div class="itag" onclick="disp('ct')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Control Theory&nbsp;&nbsp;</div>
-                        <div class="itag" onclick="disp('md')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Mechanism design&nbsp;&nbsp;</div>
                         <div class="itag" onclick="disp('ml')">
-                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Machine learning&nbsp;&nbsp;</div>
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Machine learning&nbsp;&nbsp;
+                        </div>
+                        <div class="itag" onclick="disp('sm')">
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Structural modeling&nbsp;&nbsp;
+                        </div>
+                        <div class="itag" onclick="disp('ct')">
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Control Theory&nbsp;&nbsp;
+                        </div>
+                        <div class="itag" onclick="disp('md')">
+                            <i class="fa fa-dot-circle-o iicon"></i>&nbsp;Mechanism design&nbsp;&nbsp;
+                        </div>
                     </div>
                     <div class="research-interests-tag" onclick="disp('all')">[Reset to All]</div>
                 </div>
@@ -290,7 +305,7 @@
                 </div>
             </div>
 
-            <div class="card all ad md">
+            <div class="card all ad md med">
                 <div class="card-body">
                     <div class="card-title" onclick="abs('isaa')">
                         Should Ad-Exchanges Subsidize the Acquisition of Targeting Data in Ad Auctions?
@@ -392,47 +407,65 @@
                     </div>
                 </div>
             </div>
-            <!--                <div class="card all ad">-->
-            <!--                    <div class="card-body">-->
-            <!--                        <div class="card-title" onclick="abs('taam')"><h4>Towards Adaptive Ad Sequencing for-->
-            <!--                            Markovian Users</h4>-->
-            <!--                            <div class="card-subtitle">-->
-            <!--                                <b>Wangsheng Zhu</b>-->
-            <!--                                , Shaojie Tang and Vijay Mookerjee.<a class="status"></a>-->
-            <!--                            </div>-->
+            <div class="card all pa rs ml">
+                <div class="card-body">
+                    <div class="card-title" onclick="abs('rstd')">
+                        Recommendation System for Designing Customized Tours
+                    </div>
+                    <div class="card-subtitle">
+                        <b>Wangsheng Zhu</b>, Syam Menon, and Sumit Sarkar
+                        <a class="status">working paper</a>
+                    </div>
+                    <div id="rstd" class="card-info">
+                        <div class="abstract">
+                            <b>Abstract:</b>
+                        </div>
+                        <div class="keywords">
+                            <b>Keywords:</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            <div class="card all ad md">-->
+            <!--                <div class="card-body">-->
+            <!--                    <div class="card-title" onclick="abs('wsar')">-->
+            <!--                        When should ad-exchanges release user information to advertisers-->
+            <!--                    </div>-->
+            <!--                    <div class="card-subtitle">-->
+            <!--                        <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerje-->
+            <!--                        <a class="status">Work-in-progress</a>-->
+            <!--                    </div>-->
+            <!--                    <div id="wsar" class="card-info">-->
+            <!--                        <div class="abstract">-->
+            <!--                            <b>Abstract:</b>-->
             <!--                        </div>-->
-            <!--                        <div id="taam" class="card-info">-->
-            <!--                            <div class="abstract">-->
-            <!--                                <b>Abstract:</b>-->
-            <!--                                As ad revenue continues to soar, publishers like Google and Amazon face the challenge of-->
-            <!--                                optimizing ad selection to maximize their earnings. Previous researches assumed-->
-            <!--                                customers-->
-            <!--                                click on ads once with decaying possibilities over time. However, it's been observed-->
-            <!--                                that-->
-            <!--                                repeated exposure to an ad increases interest and potential purchase consideration. To-->
-            <!--                                account-->
-            <!--                                for this, we generalize the previous model by allowing ads to be repeated in multiple-->
-            <!--                                positions.-->
-            <!--                                Additionally, existing models assume that users permanently leave the ad session after-->
-            <!--                                clicking-->
-            <!--                                an ad. Our framework accommodates more complex user behavior, enabling users to return-->
-            <!--                                to the-->
-            <!--                                previous ad list even after clicking an ad. Our model considers various factors-->
-            <!--                                affecting click-->
-            <!--                                probabilities, including ad quality, position, and previously displayed ads. We have-->
-            <!--                                developed-->
-            <!--                                efficient algorithms with guaranteed optimal or approximate solutions.-->
-            <!--                            </div>--m>
-            <!--                            <div class="keywords">-->
-            <!--                                <b>Keywords:</b>-->
-            <!--                                Internet advertisement, advertisement allocation, dynamic programming, revenue-->
-            <!--                                optimization-->
-            <!--                            </div>-->
+            <!--                        <div class="keywords">-->
+            <!--                            <b>Keywords:</b>-->
             <!--                        </div>-->
             <!--                    </div>-->
             <!--                </div>-->
+            <!--            </div>-->
+            <div class="card all rl ml sm">
+                <div class="card-body">
+                    <div class="card-title" onclick="abs('rloc')">
+                        Use Reinforcement Learning for Strcutural Model Identification
+                    </div>
+                    <div class="card-subtitle">
+                        Kai Sun, <b>Wangsheng Zhu</b>, and Vijay Mookerje<a class="status">working paper</a>
+                    </div>
+                    <div id="rloc" class="card-info">
+                        <div class="abstract">
+                            <b>Abstract:</b>
+                        </div>
+                        <div class="keywords">
+                            <b>Keywords:</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="ribbon"><i class="fa fa-chevron-circle-right ribbon-icon"></i>&nbsp;Work-in-progress</div>
-            <div class="card all ad">
+            <div class="card all ad med md">
                 <div class="card-body">
                     <div class="card-title" onclick="abs('mads')">
                         Managing Ad Campaigns on Digital Billboards under Supply Disruptions
@@ -477,16 +510,15 @@
                     </div>
                 </div>
             </div>
-            <div class="card all rs">
+            <div class="card all pa rl ad sm ct">
                 <div class="card-body">
-                    <div class="card-title" onclick="abs('rstd')">
-                        Recommendation System for Designing Customized Tours
+                    <div class="card-title" onclick="abs('ntuk')">
+                        Navigating the Unknown: Optimizing Advertising Strategies in the Face of Ad Auction Uncertainty
                     </div>
                     <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b>, Syam Menon, and Sumit Sarkar
-                        <a class="status">Work-in-progress</a>
+                        <b>Wangsheng Zhu</b><a class="status">Work-in-progress</a>
                     </div>
-                    <div id="rstd" class="card-info">
+                    <div id="ntuk" class="card-info">
                         <div class="abstract">
                             <b>Abstract:</b>
                         </div>
@@ -496,61 +528,6 @@
                     </div>
                 </div>
             </div>
-            <div class="card all ad md">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('wsar')">
-                        When should ad-exchanges release user information to advertisers
-                    </div>
-                    <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerje
-                        <a class="status">Work-in-progress</a>
-                    </div>
-                    <div id="wsar" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card all rl ml sm">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('rloc')">
-                        Use Reinforcement Learning for Strcutural Model Identification
-                    </div>
-                    <div class="card-subtitle">
-                        Kai Sun, <b>Wangsheng Zhu</b>, and Vijay Mookerje<a class="status">Work-in-progress</a>
-                    </div>
-                    <div id="rloc" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--                <div class="card all pa ad sm ct">-->
-            <!--                    <div class="card-body">-->
-            <!--                        <div class="card-title" onclick="abs('nuoa')">-->
-            <!--                            <h4>Navigating the Unknown: Optimizing Advertising Strategies in the Face of Ad Auction Uncertainty</h4>-->
-            <!--                            <div class="card-subtitle">-->
-            <!--                                Kai Sun, <b>Wangsheng Zhu</b>, and Vijay Mookerje<a class="status">Work-in-progress</a>-->
-            <!--                            </div>-->
-            <!--                        </div>-->
-            <!--                        <div id="nuoa" class="card-info">-->
-            <!--                            <div class="abstract">-->
-            <!--                                <b>Abstract:</b>-->
-            <!--                            </div>-->
-            <!--                            <div class="keywords">-->
-            <!--                                <b>Keywords:</b>-->
-            <!--                            </div>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
         </div>
     </div>
 </section>
@@ -559,6 +536,23 @@
     <div class="section-container">
         <div class="section-heading"><h1>Teaching</h1><span class="animated-bar"></span></div>
         <div class="section-body">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">Business Applications Development in Java</div>
+                    <div class="card-subtitle">HKUST Business School<span class="middot"></span>Fall 2024
+                    </div>
+                    <div class="card-info">This course covers development of applications (programs) through Java
+                        programming language. Java
+                        is an extensively deployed programming language with market dominance. Major topics of this
+                        course
+                        include object-oriented development approaches, GUI building blocks, exception handling, and so
+                        on.
+                        Students will learn how to apply Java programming and develop applications so as to address
+                        practical
+                        needs.
+                    </div>
+                </div>
+            </div>
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">Introduction to Programming</div>
@@ -651,16 +645,19 @@
         </div>
         <div class="section-body container-side-by-side">
             <div class="card">
-                <div class="swiper-box"><div id="swiper1" class="swiper" >
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img alt="photo" class="bg-img" src="assets/images/20240701_171714_随笔_港科大入住-fotor.jpg">
+                <div class="swiper-box">
+                    <div id="swiper1" class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img alt="photo" class="bg-img"
+                                     src="assets/images/20240701_171714_随笔_港科大入住-fotor.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img alt="photo" class="bg-img"
+                                     src="assets/images/20240623_205908__随笔_一泓家告别%20(7).jpg">
+                            </div>
                         </div>
-                        <div class="swiper-slide">
-                            <img alt="photo" class="bg-img" src="assets/images/20240623_205908__随笔_一泓家告别%20(7).jpg">
-                        </div>
-                        </div>
-                     </div>
+                    </div>
                     <div class="swiper-pagination swiper-pagination1"></div>
                 </div>
                 <div class="subcard container-side-by-side">
@@ -674,17 +671,21 @@
                 </div>
             </div>
             <div class="card">
-                <div class="swiper-box"><div id="swiper2" class="swiper" >
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img alt="photo" class="bg-img" src="assets/images/20210218_174945__随笔_Dallas_冬雪.jpg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img alt="photo" class="bg-img" src="assets/images/20191020_145849__会议_CIST%202019_Seattle%20WA.jpg">
+                <div class="swiper-box">
+                    <div id="swiper2" class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img alt="photo" class="bg-img"
+                                     src="assets/images/20210218_174945__随笔_Dallas_冬雪.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img alt="photo" class="bg-img"
+                                     src="assets/images/20191020_145849__会议_CIST%202019_Seattle%20WA.jpg">
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination swiper-pagination2"></div>
                 </div>
-                    <div class="swiper-pagination swiper-pagination2"></div></div>
                 <div class="subcard container-side-by-side">
                     <div class="icon">
                         <span class="flaticon-online-learning flaticon"></span>
@@ -696,17 +697,20 @@
                 </div>
             </div>
             <div class="card">
-                <div class="swiper-box"><div id="swiper3" class="swiper" onclick="window.open('map.html')">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img alt="photo" class="bg-img" src="assets/images/20240701_173735_随笔_港科大.jpg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img alt="photo" class="bg-img" src="assets/images/20160730_080601__随笔_在路上-fotor.png">
+                <div class="swiper-box">
+                    <div id="swiper3" class="swiper" onclick="window.open('map.html')">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img alt="photo" class="bg-img" src="assets/images/20240701_173735_随笔_港科大.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img alt="photo" class="bg-img"
+                                     src="assets/images/20160730_080601__随笔_在路上-fotor.png">
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination swiper-pagination3"></div>
                 </div>
-                    <div class="swiper-pagination swiper-pagination3"></div></div>
                 <div class="subcard container-side-by-side" onclick="window.open('map.html')">
                     <div class="icon">
                         <span class="flaticon-computer-science flaticon"></span>
@@ -729,14 +733,15 @@
 <script>
     function disp(inerest) {
         const research_cards = document.getElementsByClassName("all");
-        Array.prototype.forEach.call(research_cards, function(r_card) {
+        Array.prototype.forEach.call(research_cards, function (r_card) {
             r_card.style.display = "none";
         });
         const interested_cards = document.getElementsByClassName(inerest);
-        Array.prototype.forEach.call(interested_cards, function(i_card) {
+        Array.prototype.forEach.call(interested_cards, function (i_card) {
             i_card.style.display = "block";
         });
     }
+
     function abs(title) {
         const ifdisplay = document.getElementById(title).style.display;
         if (ifdisplay === "block") {
