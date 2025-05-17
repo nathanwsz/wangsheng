@@ -47,10 +47,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     <meta property="og:description" content="An online LaTeX editor thatÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more.">
     <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <script src="vendor/bootstrap/css/draggable.js"></script>
-    <link rel="icon" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="mask-icon" href="/mask-favicon.svg" color="#046530">
     <link rel="manifest" href="/web.sitemanifest">
@@ -3868,44 +3864,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 </div>
 
 
-<iframe allow="join-ad-interest-group" data-tagging-id="AW-11404926318" data-load-time="1747474161714" height="0" width="0" src="https://td.doubleclick.net/td/rul/11404926318?random=1747474161671&amp;cv=11&amp;fst=1747474161671&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je55e1v882274400za200&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103130495~103130497~103136993~103136995~103200004~103207802~103233427~103252644~103252646~103263073~103301114~103301116&amp;u_w=1280&amp;u_h=720&amp;url=http%3A%2F%2Flocalhost%3A63342%2FPersonal-Website%2Fwszhu.nathan.github.io%2Fvendor%2Fbootstrap%2Fcss%2Fbootstrap.html%3F_ijt%3D8sd4o5eglhu2slkd0o48ub044v%26_ij_reload%3DRELOAD_ON_SAVE&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Your%20Projects%20-%20Overleaf%2C%20Online%20LaTeX%20Editor&amp;userId=5b80d098c5f2313c78024bf3&amp;ga_uid=G-RV4YBCCCWJ.5b80d098c5f2313c78024bf3&amp;npa=0&amp;pscdl=noapi&amp;auid=829939609.1746367324&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B136.0.7103.93%7CGoogle%2520Chrome%3B136.0.7103.93%7CNot.A%252FBrand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config%3Banonymize_ip%3Dtrue" style="display: none; visibility: hidden;"></iframe>
-<iframe allow="join-ad-interest-group" data-tagging-id="AW-11404926318" data-load-time="1747474829929" height="0" width="0" src="https://td.doubleclick.net/td/rul/11404926318?random=1747474829903&amp;cv=11&amp;fst=1747474829903&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je55e1v882274400za200&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103130495~103130497~103136993~103136995~103200004~103207802~103233427~103252644~103252646~103263073~103301114~103301116&amp;u_w=1280&amp;u_h=720&amp;url=http%3A%2F%2Flocalhost%3A63342%2FPersonal-Website%2Fwszhu.nathan.github.io%2Fvendor%2Fbootstrap%2Fcss%2Fbootstrap.html%3F_ijt%3D25sm6k47o6cvij0s66m1km3bsc%26_ij_reload%3DRELOAD_ON_SAVE&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Your%20Projects%20-%20Overleaf%2C%20Online%20LaTeX%20Editor&amp;userId=5b80d098c5f2313c78024bf3&amp;ga_uid=G-RV4YBCCCWJ.5b80d098c5f2313c78024bf3&amp;npa=0&amp;pscdl=noapi&amp;auid=829939609.1746367324&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B136.0.7103.93%7CGoogle%2520Chrome%3B136.0.7103.93%7CNot.A%252FBrand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config%3Banonymize_ip%3Dtrue" style="display: none; visibility: hidden;"></iframe>
-<iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe>
-<script>
-    (function () {
-        var ws = new WebSocket('ws://' + window.location.host +
-            '/jb-server-page?reloadMode=RELOAD_ON_SAVE&' +
-            'referrer=' + encodeURIComponent(window.location.pathname));
-        ws.onmessage = function (msg) {
-            if (msg.data === 'reload') {
-                window.location.reload();
-            }
-            if (msg.data.startsWith('update-css ')) {
-                var messageId = msg.data.substring(11);
-                var links = document.getElementsByTagName('link');
-                for (var i = 0; i < links.length; i++) {
-                    var link = links[i];
-                    if (link.rel !== 'stylesheet') continue;
-                    var clonedLink = link.cloneNode(true);
-                    var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
-                    if (newHref !== link.href) {
-                        clonedLink.href = newHref;
-                    } else {
-                        var indexOfQuest = newHref.indexOf('?');
-                        if (indexOfQuest >= 0) {
-                            // to support ?foo#hash
-                            clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' +
-                                newHref.substring(indexOfQuest + 1);
-                        } else {
-                            clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
-                        }
-                    }
-                    link.replaceWith(clonedLink);
-                }
-            }
-        };
-    })();
-</script>
 <veepn-lock-screen>
     <style>@font-face {
         font-family: FigtreeVF;
@@ -3934,43 +3892,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
         font-display: swap
     }</style>
     <style>@font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2 supports variations"),url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2-variations");font-weight:100 1000;font-display:swap}</style></veepn-guard-alert>
-<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
-<iframe allow="join-ad-interest-group" data-tagging-id="AW-11404926318" data-load-time="1747475193506" height="0" width="0" src="https://td.doubleclick.net/td/rul/11404926318?random=1747475193451&amp;cv=11&amp;fst=1747475193451&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je55e1v882274400za200&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103130498~103130500~103136993~103136995~103200004~103207802~103233427~103252644~103252646~103263073~103301114~103301116&amp;u_w=1280&amp;u_h=720&amp;url=http%3A%2F%2Flocalhost%3A63342%2FPersonal-Website%2Fwszhu.nathan.github.io%2Fvendor%2Fbootstrap%2Fcss%2Fbootstrap.html%3F_ijt%3Darb07mbl4m43m1j6mnc38atrkp%26_ij_reload%3DRELOAD_ON_SAVE&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Your%20Projects%20-%20Overleaf%2C%20Online%20LaTeX%20Editor&amp;userId=5b80d098c5f2313c78024bf3&amp;ga_uid=G-RV4YBCCCWJ.5b80d098c5f2313c78024bf3&amp;npa=0&amp;pscdl=noapi&amp;auid=829939609.1746367324&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B136.0.7103.93%7CGoogle%2520Chrome%3B136.0.7103.93%7CNot.A%252FBrand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config%3Banonymize_ip%3Dtrue" style="display: none; visibility: hidden;"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe>
-<script>
-    (function () {
-        var ws = new WebSocket('ws://' + window.location.host +
-            '/jb-server-page?reloadMode=RELOAD_ON_SAVE&' +
-            'referrer=' + encodeURIComponent(window.location.pathname));
-        ws.onmessage = function (msg) {
-            if (msg.data === 'reload') {
-                window.location.reload();
-            }
-            if (msg.data.startsWith('update-css ')) {
-                var messageId = msg.data.substring(11);
-                var links = document.getElementsByTagName('link');
-                for (var i = 0; i < links.length; i++) {
-                    var link = links[i];
-                    if (link.rel !== 'stylesheet') continue;
-                    var clonedLink = link.cloneNode(true);
-                    var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
-                    if (newHref !== link.href) {
-                        clonedLink.href = newHref;
-                    } else {
-                        var indexOfQuest = newHref.indexOf('?');
-                        if (indexOfQuest >= 0) {
-                            // to support ?foo#hash
-                            clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' +
-                                newHref.substring(indexOfQuest + 1);
-                        } else {
-                            clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
-                        }
-                    }
-                    link.replaceWith(clonedLink);
-                }
-            }
-        };
-    })();
-</script>
 <veepn-guard-alert>
     <style>@font-face {
         font-family: FigtreeVF;
