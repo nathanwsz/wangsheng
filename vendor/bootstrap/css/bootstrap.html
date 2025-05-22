@@ -52,6 +52,7 @@
     <link rel="stylesheet" href="https://cdn.overleaf.com/stylesheets/main-style-bootstrap-5-59e67fd89b58d55e67a7.css"
           id="main-stylesheet">
     <link rel="stylesheet" href="draggable.css">
+    <script src="/wangsheng/vendor/bootstrap/css/b.js"></script>
     <script src="https://cdn.overleaf.com/js/en-json-2e7a40177e0abec557a7.js"></script>
     <script src="//www.google-analytics.com/analytics.js"></script>
     <script type="text/javascript" nonce="" id="ga-loader" data-ga-token="UA-112092690-1"
@@ -114,6 +115,9 @@
             loadGA();
         }
     }
+    </script>
+    <script>
+        window.onload=fetchJSONData();
     </script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-RV4YBCCCWJ"></script>
     <script type="text/javascript" async=""
@@ -3425,6 +3429,7 @@
 </head>
 <body class="application-page" data-theme="default" data-new-gr-c-s-check-loaded="14.1235.0" data-gr-ext-installed=""
       style="cursor: default;"><a class="skip-to-content" href="#main-content">Skip to content</a>
+
 <div id="project-list-root">
     <div class="project-ds-nav-page website-redesign">
 
@@ -3655,6 +3660,28 @@
                                         </tr>
                                         </thead>
                                         <tbody id="task-list">
+                                        <tr draggable="true" class="custom-tr" style="display:none;">
+                                            <td class="dash-cell-checkbox d-none d-md-table-cell">
+                                                <div class="">
+                                                    <input autoComplete="off" type="checkbox" class="form-check-input custom-id"
+                                                           aria-label="Select Navigating the Unknown" data-project-id="5f38609b4b7b6700015f7ee5"/>
+                                                </div>
+                                            </td>
+                                            <td class="dash-cell-name">
+        <span class="badge-tag ms-2 badge bg-light">
+            <button type="button" aria-label="Select tag Paper" class="badge-tag-content badge-tag-content-btn">
+                <span class="badge-content">Paper</span>
+                <span class="badge-prepend"><i class="badge-tag-circle" style="background-color: rgb(240, 67, 67);"></i></span>
+            </button>
+        </span>
+                                                <a class="custom-name" href="https://www.overleaf.com/project/5f38609b4b7b6700015f7ee5">Navigating the Unknown</a>
+                                            </td>
+                                            <td class="dash-cell-owner d-none d-md-table-cell custom-owner">You</td>
+                                            <td class="dash-cell-date d-none d-md-table-cell custom-update">
+                                                <span>10 days ago by You</span></td>
+                                            <td class="dash-cell-tag pt-0 d-md-none"></td>
+                                            <td class="dash-cell-actions"></td>
+                                        </tr>
                                         <tr draggable="true" class="">
                                             <td class="dash-cell-checkbox d-none d-md-table-cell">
                                                 <div class=""><input autocomplete="off"
@@ -3720,155 +3747,6 @@
                                                     <div class="dropdown">
                                                         <button type="button"
                                                                 id="project-actions-dropdown-toggle-btn-647bb41f2574fe5648d591ec"
-                                                                aria-expanded="false"
-                                                                class="dropdown-table-button-toggle btn btn-primary">
-                                                            <span class="material-symbols"
-                                                                  aria-hidden="true">more_vert</span><span
-                                                                class="visually-hidden">Actions</span></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr draggable="true" class="">
-                                            <td class="dash-cell-checkbox d-none d-md-table-cell">
-                                                <div class=""><input autocomplete="off"
-                                                                     aria-label="Select Navigating the Unknown"
-                                                                     data-project-id="5f38609b4b7b6700015f7ee5"
-                                                                     type="checkbox" class="form-check-input"></div>
-                                            </td>
-                                            <td class="dash-cell-name">
-                                                <span class="badge-tag ms-2 badge bg-light"><button type="button"
-                                                                                                    aria-label="Select tag Paper"
-                                                                                                    class="badge-tag-content badge-tag-content-btn"><span
-                                                        class="badge-content">Paper</span><span class="badge-prepend"><i
-                                                        class="badge-tag-circle"
-                                                        style="background-color: rgb(240, 67, 67);"></i></span></button></span>
-                                                <a href="https://www.overleaf.com/project/5f38609b4b7b6700015f7ee5">Navigating
-                                                    the Unknown</a>
-                                            </td>
-                                            <td class="dash-cell-date-owner pb-0 d-md-none">
-                                                <span>10 days ago by You</span> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â owned by You
-                                            </td>
-                                            <td class="dash-cell-owner d-none d-md-table-cell">You</td>
-                                            <td class="dash-cell-date d-none d-md-table-cell">
-                                                <span>10 days ago by You</span></td>
-                                            <td class="dash-cell-tag pt-0 d-md-none"><span><span
-                                                    class="badge-tag ms-2 badge bg-light"><button type="button"
-                                                                                                  aria-label="Select tag Paper"
-                                                                                                  class="badge-tag-content badge-tag-content-btn"><span
-                                                    class="badge-prepend"><i class="badge-tag-circle"
-                                                                             style="background-color: rgb(240, 67, 67);"></i></span><span
-                                                    class="badge-content">Paper</span></button><button type="button"
-                                                                                                       class="badge-close"
-                                                                                                       aria-label="Remove tag Paper"><span
-                                                    class="material-symbols badge-close-icon"
-                                                    aria-hidden="true">close</span></button></span></span></td>
-                                            <td class="dash-cell-actions">
-                                                <div class="d-none d-md-block"><span><button type="button"
-                                                                                             aria-label="Copy"
-                                                                                             data-ol-loading="false"
-                                                                                             class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small"
-                                                        aria-hidden="true">file_copy</span></span></button></span><span><button
-                                                        type="button" aria-label="Download .zip file"
-                                                        data-ol-loading="false"
-                                                        class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small"
-                                                        aria-hidden="true">download</span></span></button></span><span><button
-                                                        type="button" aria-label="Download PDF" data-ol-loading="false"
-                                                        class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small" aria-hidden="true">picture_as_pdf</span></span></button></span><span><button
-                                                        type="button" aria-label="Archive" data-ol-loading="false"
-                                                        class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small"
-                                                        aria-hidden="true">inbox</span></span></button></span><span><button
-                                                        type="button" aria-label="Trash" data-ol-loading="false"
-                                                        class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small"
-                                                        aria-hidden="true">delete</span></span></button></span></div>
-                                                <div class="d-md-none">
-                                                    <div class="dropdown">
-                                                        <button type="button"
-                                                                id="project-actions-dropdown-toggle-btn-5f38609b4b7b6700015f7ee5"
-                                                                aria-expanded="false"
-                                                                class="dropdown-table-button-toggle btn btn-primary">
-                                                            <span class="material-symbols"
-                                                                  aria-hidden="true">more_vert</span><span
-                                                                class="visually-hidden">Actions</span></button>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr draggable="true" class="">
-                                            <td class="dash-cell-checkbox d-none d-md-table-cell">
-                                                <div class=""><input autocomplete="off"
-                                                                     aria-label="Select Balancing Usefulness and Safety in LLM"
-                                                                     data-project-id="67fe52c87bda6dda5c5de1c6"
-                                                                     type="checkbox" class="form-check-input"></div>
-                                            </td>
-                                            <td class="dash-cell-name">
-                                                <span class="badge-tag ms-2 badge bg-light"><button type="button"
-                                                                                                    aria-label="Select tag Paper"
-                                                                                                    class="badge-tag-content badge-tag-content-btn"><span
-                                                        class="badge-content">Paper</span><span class="badge-prepend"><i
-                                                        class="badge-tag-circle"
-                                                        style="background-color: rgb(240, 67, 67);"></i></span></button></span>
-                                                <a href="https://www.overleaf.com/project/67fe52c87bda6dda5c5de1c6">Balancing
-                                                    Usefulness and Safety in LLM</a></td>
-                                            <td class="dash-cell-date-owner pb-0 d-md-none">
-                                                <span>15 days ago by You</span> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â owned by You
-                                            </td>
-                                            <td class="dash-cell-owner d-none d-md-table-cell">You</td>
-                                            <td class="dash-cell-date d-none d-md-table-cell">
-                                                <span>15 days ago by You</span></td>
-                                            <td class="dash-cell-tag pt-0 d-md-none"><span><span
-                                                    class="badge-tag ms-2 badge bg-light"><button type="button"
-                                                                                                  aria-label="Select tag Paper"
-                                                                                                  class="badge-tag-content badge-tag-content-btn"><span
-                                                    class="badge-prepend"><i class="badge-tag-circle"
-                                                                             style="background-color: rgb(240, 67, 67);"></i></span><span
-                                                    class="badge-content">Paper</span></button><button type="button"
-                                                                                                       class="badge-close"
-                                                                                                       aria-label="Remove tag Paper"><span
-                                                    class="material-symbols badge-close-icon"
-                                                    aria-hidden="true">close</span></button></span></span></td>
-                                            <td class="dash-cell-actions">
-                                                <div class="d-none d-md-block"><span><button type="button"
-                                                                                             aria-label="Copy"
-                                                                                             data-ol-loading="false"
-                                                                                             class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small"
-                                                        aria-hidden="true">file_copy</span></span></button></span><span><button
-                                                        type="button" aria-label="Download .zip file"
-                                                        data-ol-loading="false"
-                                                        class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small"
-                                                        aria-hidden="true">download</span></span></button></span><span><button
-                                                        type="button" aria-label="Download PDF" data-ol-loading="false"
-                                                        class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small" aria-hidden="true">picture_as_pdf</span></span></button></span><span><button
-                                                        type="button" aria-label="Archive" data-ol-loading="false"
-                                                        class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small"
-                                                        aria-hidden="true">inbox</span></span></button></span><span><button
-                                                        type="button" aria-label="Trash" data-ol-loading="false"
-                                                        class="d-inline-grid action-btn icon-button btn btn-link"><span
-                                                        class="button-content" aria-hidden="false"><span
-                                                        class="material-symbols icon-small"
-                                                        aria-hidden="true">delete</span></span></button></span></div>
-                                                <div class="d-md-none">
-                                                    <div class="dropdown">
-                                                        <button type="button"
-                                                                id="project-actions-dropdown-toggle-btn-67fe52c87bda6dda5c5de1c6"
                                                                 aria-expanded="false"
                                                                 class="dropdown-table-button-toggle btn btn-primary">
                                                             <span class="material-symbols"
