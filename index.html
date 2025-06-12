@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/section-research.css">
     <link rel="stylesheet" href="assets/css/section-miscellaneous.css">
     <meta name="google-site-verification" content="f6OyFRI7CZWfPjeGdGiErVrEjCtym-wy7ZJt9mOlfzA"/>
+    <script src="vendor/jquery/list_research_projects.js"></script>
     <style>
         html, body {
             height: 100%;
@@ -33,6 +34,10 @@
             padding: 0;
         }
     </style>
+    <script>
+        window.onload = fetchJSONData();
+    </script>
+    <script src="vendor/jquery/list_research_projects.js"></script>
 </head>
 
 <body>
@@ -246,288 +251,23 @@
                     <div class="research-interests-tag" onclick="disp('all')">[Reset to All]</div>
                 </div>
             </div>
+
+            <div class="researchcard" style="display:none">
+                <div class="card-body">
+                    <div class="card-title">
+                    </div>
+                    <div class="card-subtitle">
+                        <a class="status"></a>
+                    </div>
+                    <div class="card-info">
+                        <div class="abstract"></div>
+                        <div class="keywords"></div>
+                    </div>
+                </div>
+            </div>
             <div class="ribbon"><i class="fa fa-chevron-circle-right ribbon-icon"></i>&nbsp;Publication</div>
-            <div class="card all ad pa rl ct sm ml">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('coordination')">
-                        Coordination in Multibrand Multichannel Advertising: Is it Always a Good Thing?
-                    </div>
-                    <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b>, Subodha Kumar, and Vijay Mookerjee
-                        <a class="status">Information Systems Research
-                            <a class="link" href="https://doi.org/10.1287/isre.2022.0283" target="_blank">[link]</a>
-                        </a>
-                    </div>
-                    <div class="card-info" id="coordination">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                            The growing online retail market has led to the prevalence of multichannel retailing.
-                            Meanwhile, retailers are
-                            increasingly combining multichannel retailing with a multibranding strategy. While this
-                            can further increase
-                            the retailer's sales, it brings new advertising challenges. Multibrand, multichannel
-                            retailers usually launch
-                            advertising campaigns for different brands on multiple media. Thus, the retailer's
-                            advertising efforts
-                            fall into a set of brand-media units. Each unit's advertising efforts can affect the
-                            sales of all brands on all
-                            channels. Therefore, retailers need to coordinate the advertising efforts of different
-                            units to maximize advertising
-                            efficiency in propelling sales. So far, the optimization problem of multibrand,
-                            multimedia advertising has not been
-                            analyzed in the literature, and our study aims to bridge this gap. We develop a
-                            stochastic differential equation
-                            model to estimate the impact of multimedia advertising on sales in a multibrand,
-                            multichannel context. Using the
-                            data from a jewelry retailer in the U.S., we show that our model is effective in
-                            predicting future sales driven by
-                            advertising. Afterward, we formulate the advertising optimization problems under four
-                            coordination strategies:
-                            (i) non-coordination, (ii) brand coordination, (iii) media coordination, and (iv) global
-                            coordination. By solving
-                            the problem for each strategy, the retailers can obtain the optimal expenditure for each
-                            unit under that strategy.
-                            Finally, we compare the retailer’s profits under four strategies. Interestingly, we find
-                            that brand or media
-                            coordination may result in a profit lower than non-coordination. Our findings provide
-                            insights regarding the
-                            selection of coordination strategies for multibrand, multichannel retailers with
-                            multimedia advertising campaigns,
-                            especially when they cannot do global coordination.
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                            multibrand retailer, multichannel retailer, multimedia advertising, advertising
-                            optimization,
-                            advertising coordination, stochastic differential equations
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card all ad md med">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('isaa')">
-                        Should Ad-Exchanges Subsidize the Acquisition of Targeting Data in Ad Auctions?
-                    </div>
-                    <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerjee
-                        <a class="status">Information Systems Research
-                            <a class="link" href="https://doi.org/10.1287/isre.2023.0126" target="_blank">[link]</a>
-                        </a>
-                    </div>
-                    <div id="isaa" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                            Large volumes of online impressions are sold daily via real-time auctions to deliver
-                            targeted ads to consumers.
-                            Advertisers use data to learn about user preferences and select the most appropriate ad
-                            for each user, which
-                            also helps them optimize their bids in an ad auction. While ad exchanges may provide
-                            some user data to advertisers,
-                            it is usually limited, and advertisers often acquire data from various sources to
-                            improve targeting performance.
-                            The acquisition of such data can significantly influence the revenue of the ad exchange,
-                            which has mainly been
-                            passive about advertisers' data acquisition process. Previous studies have examined the
-                            impact of ad exchanges
-                            revealing their data to advertisers, but little attention has been paid to the active
-                            role that ad exchanges can
-                            play when advertisers acquire data themselves. To address this gap, we propose three
-                            subsidy frameworks to increase
-                            ad exchange revenue by inducing more advertisers to acquire data: All-subsidized (AS),
-                            Winner-subsidized (WS), and
-                            Loser-subsidized (LS). Using a stylized game-theoretic model, we analyze the impact of
-                            subsidy provisions on the
-                            platform's net revenue. Our results show that WS can be better or worse than AS,
-                            depending on the cost of data
-                            acquisition, its beneficial impact on ad selection, and how impression value is
-                            distributed. We also consider an
-                            extension of our model wherein advertisers have heterogeneous abilities to leverage data
-                            for targeting and analyze
-                            how this heterogeneity affects the platform's revenue under the optimal subsidy
-                            framework.
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                            targeted advertising, ad auctions, targeting data acquisition, subsidy frameworks
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="ribbon"><i class="fa fa-chevron-circle-right ribbon-icon"></i>&nbsp;Working Paper</div>
-            <div class="card all rs pa ml">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('cdss')">
-                        A Recommendation Framework for Crowdsourcing Contest Design
-                    </div>
-                    <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b>, Jiahui Mo, Syam Menon, and Sumit Sarkar
-                        <a class="status">To be submitted to Information Systems Research</a>
-                    </div>
-                    <div id="cdss" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                            Crowdsourcing contests are popular mechanisms for firms to obtain solutions to tasks
-                            from external
-                            sources. Platforms allow firms to select from various features they make available, in
-                            addition to
-                            setting essential contest attributes like prize amounts and duration. The combination of
-                            features
-                            selected when posting a contest can have a significant impact on the probability that it
-                            will succeed
-                            in attracting acceptable solutions. This study develops a framework that first
-                            identifies an effective
-                            prediction model, and then incorporates it into an optimization model to maximize the
-                            predicted probability
-                            that a crowdsourcing contest will succeed. Since the outcome of a contest depends not
-                            just on its own design
-                            but also on the other contests on the platform, we consider both contest and
-                            environmental attributes as inputs
-                            to the prediction model, while allowing for interactions among them. Motivated by
-                            practices commonly observed
-                            on such platforms, we formulate several versions of the contest design problem as
-                            variants of the mixed linear
-                            and nonlinear knapsack problems. We identify useful analytical properties that help
-                            interpret the optimal
-                            solution (and thereby, the basis for making the recommendation), and propose solution
-                            procedures. We validate
-                            our framework using data collected from a leading crowdsourcing contest platform. The
-                            results from computational
-                            experiments leveraging our findings show that the contest designs recommended by the
-                            proposed framework can
-                            increase predicted success probabilities significantly relative to seeker-specified
-                            designs.
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                            success probability, prediction, optimization, mixed knapsack problem,
-                            predict-then-optimize
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card all pa rs ml">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('rstd')">
-                        Recommendation System for Designing Customized Tours
-                    </div>
-                    <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b>, Syam Menon, and Sumit Sarkar
-                        <a class="status">working paper</a>
-                    </div>
-                    <div id="rstd" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--            <div class="card all ad md">-->
-            <!--                <div class="card-body">-->
-            <!--                    <div class="card-title" onclick="abs('wsar')">-->
-            <!--                        When should ad-exchanges release user information to advertisers-->
-            <!--                    </div>-->
-            <!--                    <div class="card-subtitle">-->
-            <!--                        <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerje-->
-            <!--                        <a class="status">Work-in-progress</a>-->
-            <!--                    </div>-->
-            <!--                    <div id="wsar" class="card-info">-->
-            <!--                        <div class="abstract">-->
-            <!--                            <b>Abstract:</b>-->
-            <!--                        </div>-->
-            <!--                        <div class="keywords">-->
-            <!--                            <b>Keywords:</b>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <div class="card all rl ml sm">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('rloc')">
-                        Use Reinforcement Learning for Strcutural Model Identification
-                    </div>
-                    <div class="card-subtitle">
-                        Kai Sun, <b>Wangsheng Zhu</b>, and Vijay Mookerje<a class="status">working paper</a>
-                    </div>
-                    <div id="rloc" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="ribbon"><i class="fa fa-chevron-circle-right ribbon-icon"></i>&nbsp;Work-in-progress</div>
-            <div class="card all ad med md">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('mads')">
-                        Managing Ad Campaigns on Digital Billboards under Supply Disruptions
-                    </div>
-                    <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b>, Shaojie Tang, and Vijay Mookerjee
-                        <a class="status">Work-in-progress</a>
-                    </div>
-                    <div id="mads" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                            The digitization of billboards has facilitated the sale of advertising slots through
-                            real-time auctions.
-                            Consequently, there has been a rise in the number of agents who assist advertisers in
-                            bidding and
-                            acquiring these slots. These agents enter into contracts with advertisers to secure a
-                            specific number of
-                            slots within designated time periods. To fulfill these contracts, agents participate in
-                            auctions to win the
-                            desired slots. However, accepting numerous contracts may require the agent to place
-                            higher bids in auctions,
-                            potentially impacting their profitability. Therefore, it is crucial to strike a balance
-                            between contract
-                            acceptance and the bidding strategy employed.<br>
-                            Motivated by these observations, we address two key aspects: (1) identifying the optimal
-                            set of advertisers
-                            for the agent to contract with, and (2) determining the appropriate bidding strategy
-                            based on the contracted
-                            advertisers' demands. We formulate a two-stage optimization problem for agents, followed
-                            by the proposal of a
-                            near-optimal solution to the bidding optimization problem. Through this near-optimal
-                            solution, we demonstrate
-                            that the objective function in the resulting advertiser selection problem exhibits the
-                            properties of a submodular
-                            set function. To solve the advertiser selection problem, we introduce a greedy
-                            algorithm.
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                            digital billboard, advertiser selection, bidding strategy
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card all pa rl ad sm ct">
-                <div class="card-body">
-                    <div class="card-title" onclick="abs('ntuk')">
-                        Navigating the Unknown: Optimizing Advertising Strategies in the Face of Ad Auction Uncertainty
-                    </div>
-                    <div class="card-subtitle">
-                        <b>Wangsheng Zhu</b><a class="status">Work-in-progress</a>
-                    </div>
-                    <div id="ntuk" class="card-info">
-                        <div class="abstract">
-                            <b>Abstract:</b>
-                        </div>
-                        <div class="keywords">
-                            <b>Keywords:</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
