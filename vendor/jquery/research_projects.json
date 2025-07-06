@@ -20,16 +20,6 @@
     "progress": "publication"
   },
   {
-    "id": "cdss",
-    "class": "card all rs pa ml",
-    "title": "A Recommendation Framework for Crowdsourcing Contest Design",
-    "authors": "<b>Wangsheng Zhu</b>, Jiahui Mo, Syam Menon, and Sumit Sarkar",
-    "status": "Major revision at Information Systems Research",
-    "abstract": "Crowdsourcing contests are popular mechanisms for firms to obtain solutions to tasks from external sources. Platforms allow firms to select from various features they make available, in addition to setting essential contest attributes like prize amounts and duration. The combination of features selected when posting a contest can have a significant impact on the probability that it will succeed in attracting acceptable solutions. This study develops a framework that first identifies an effective prediction model, and then incorporates it into an optimization model to maximize the predicted probability that a crowdsourcing contest will succeed. Since the outcome of a contest depends not just on its own design but also on the other contests on the platform, we consider both contest and environmental attributes as inputs to the prediction model, while allowing for interactions among them. Motivated by practices commonly observed on such platforms, we formulate several versions of the contest design problem as variants of the mixed linear and nonlinear knapsack problems. We identify useful analytical properties that help interpret the optimal solution (and thereby, the basis for making the recommendation), and propose solution procedures. We validate our framework using data collected from a leading crowdsourcing contest platform. The results from computational experiments leveraging our findings show that the contest designs recommended by the proposed framework can increase predicted success probabilities significantly relative to seeker-specified designs.",
-    "keywords": "success probability, prediction, optimization, mixed knapsack problem, predict-then-optimize",
-    "progress": "working-paper"
-  },
-  {
     "id": "rstd",
     "class": "card all pa rs ml",
     "title": "Recommendation System for Designing Customized Tours",
@@ -47,6 +37,16 @@
     "status": "Working paper",
     "abstract": "",
     "keywords": "",
+    "progress": "working-paper"
+  },
+  {
+    "id": "cdss",
+    "class": "card all rs pa ml",
+    "title": "A Recommendation Framework for Crowdsourcing Contest Design",
+    "authors": "<b>Wangsheng Zhu</b>, Jiahui Mo, Syam Menon, and Sumit Sarkar",
+    "status": "Major revision at Information Systems Research",
+    "abstract": "Crowdsourcing contests are popular mechanisms for firms to obtain solutions to tasks from external sources. Platforms allow firms to select from various features they make available, in addition to setting essential contest attributes like prize amounts and duration. The combination of features selected when posting a contest can have a significant impact on the probability that it will succeed in attracting acceptable solutions. This study develops a framework that first identifies an effective prediction model, and then incorporates it into an optimization model to maximize the predicted probability that a crowdsourcing contest will succeed. Since the outcome of a contest depends not just on its own design but also on the other contests on the platform, we consider both contest and environmental attributes as inputs to the prediction model, while allowing for interactions among them. Motivated by practices commonly observed on such platforms, we formulate several versions of the contest design problem as variants of the mixed linear and nonlinear knapsack problems. We identify useful analytical properties that help interpret the optimal solution (and thereby, the basis for making the recommendation), and propose solution procedures. We validate our framework using data collected from a leading crowdsourcing contest platform. The results from computational experiments leveraging our findings show that the contest designs recommended by the proposed framework can increase predicted success probabilities significantly relative to seeker-specified designs.",
+    "keywords": "success probability, prediction, optimization, mixed knapsack problem, predict-then-optimize",
     "progress": "working-paper"
   },
   {
