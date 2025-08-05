@@ -117,7 +117,7 @@ loadGA();
 }
 </script>
 <script>
-window.onload = fetchJSONData();
+window.onload = fetchJSONData(null,'startup');
 </script>
 <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-RV4YBCCCWJ"></script>
 <script type="text/javascript" async=""
@@ -3453,19 +3453,16 @@ class="new-project-button dropdown-toggle btn btn-primary">New Project
 <div class="project-list-sidebar-scroll" style="font-size: small;">
 <ul class="list-unstyled project-list-filters">
 <li class="active">
-<button type="button">All Projects</button>
+<button type="button" onclick="fetchJSONData(this,'ongoing')" id="entrance">Your Projects</button>
 </li>
 <li class="">
-<button type="button">Your Projects</button>
+<button type="button" onclick="fetchJSONData(this,'all')">All Projects</button>
 </li>
 <li class="">
-<button type="button">Shared with you</button>
+<button type="button" onclick="fetchJSONData(this,'archived')">Archived Projects</button>
 </li>
 <li class="">
-<button type="button">Archived Projects</button>
-</li>
-<li class="">
-    <button type="button" onclick="fetchJSONDataTrashed(this)">Trashed Projects</button>
+    <button type="button" onclick="fetchJSONData(this,'trash')">Trashed Projects</button>
 </li>
 
 <li role="none">
@@ -3473,20 +3470,20 @@ class="new-project-button dropdown-toggle btn btn-primary">New Project
 </li>
 <li class="dropdown-header" aria-hidden="true" data-testid="organize-projects">Organize Tags
 </li>
-<li class="tag">
-<button type="button" class="tag-name">
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-viewBox="0 0 256 256">
-<path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"></path>
-</svg>
-<span class="name">New Tag</span></button>
-</li>
+<!--<li class="tag">-->
+<!--<button type="button" class="tag-name">-->
+<!--<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"-->
+<!--viewBox="0 0 256 256">-->
+<!--<path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"></path>-->
+<!--</svg>-->
+<!--<span class="name">New Tag</span></button>-->
+<!--</li>-->
 <li class="tag ">
-<button type="button" class="tag-name"><span style="color: rgb(240, 67, 67);"><svg
+<button type="button" class="tag-name"><span style="color: rgb(70, 100, 180);"><svg
 xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
 viewBox="0 0 256 256" class="tag-list-icon"><path
-d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88h0l45.63-68.44A8,8,0,0,0,246.66,123.56Z"></path></svg></span><span
-class="name">Paper <span class="subdued">(7)</span></span></button>
+d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88h0l45.63-68.44A8,8,0,0,0,246.66,123.56Z"></path></svg></span><a
+ href="https://www.overleaf.com/project/66525e7be1ae575e5dffa5ac" style="padding-left: 5px;color:#495365;text-decoration: none">Libraries </a></button>
 <div class="tag-menu dropdown">
 <button type="button" id="6803b70fc7eca3481183c531-dropdown-toggle"
 aria-expanded="false" aria-label="Open Paper action menu"
@@ -3499,11 +3496,11 @@ viewBox="0 0 256 256">
 </div>
 </li>
 <li class="tag ">
-<button type="button" class="tag-name"><span style="color: rgb(185, 67, 240);"><svg
+<button type="button" class="tag-name"><span style="color: rgb(70, 100, 180);"><svg
 xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
 viewBox="0 0 256 256" class="tag-list-icon"><path
-d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88h0l45.63-68.44A8,8,0,0,0,246.66,123.56Z"></path></svg></span><span
-class="name">Private <span class="subdued">(2)</span></span></button>
+d="M246.66,123.56,201,55.13A15.94,15.94,0,0,0,187.72,48H40A16,16,0,0,0,24,64V192a16,16,0,0,0,16,16H187.72A16,16,0,0,0,201,200.88h0l45.63-68.44A8,8,0,0,0,246.66,123.56Z"></path></svg></span><a
+class="name" href="https://www.overleaf.com/project/68006e5caadada78945d757b" style="padding-left: 5px;color:#495365;text-decoration: none">Template</a></button>
 <div class="tag-menu dropdown">
 <button type="button" id="6803b6e3fc64bfca10761f88-dropdown-toggle"
 aria-expanded="false" aria-label="Open Private action menu"
@@ -3515,10 +3512,10 @@ viewBox="0 0 256 256">
 </button>
 </div>
 </li>
-<li class="tag untagged ">
-<button type="button" class="tag-name"><span class="name fst-italic">Uncategorized <span
-class="subdued">(0)</span></span></button>
-</li>
+<!--<li class="tag untagged ">-->
+<!--<button type="button" class="tag-name"><span class="name fst-italic">Uncategorized <span-->
+<!--class="subdued">(0)</span></span></button>-->
+<!--</li>-->
 </ul>
 </div>
 
@@ -3624,7 +3621,7 @@ class="subdued">(0)</span></span></button>
     <caption class="visually-hidden">Projects list</caption>
     <thead class="visually-hidden-max-md">
     <tr>
-        <th class="dash-cell-checkbox d-none d-md-table-cell" aria-label="Select Projects">
+        <th class="dash-cell-checkbox d-none d-md-table-cell" aria-label="Select Projects" style="padding-left:0;padding-top:0;padding-bottom:10px;">
             <div class=""><input autocomplete="off" aria-label="Select all projects" type="checkbox" class="form-check-input"></div>
         </th>
         <th class="dash-cell-name" aria-label="Title" aria-sort="descending" style="padding-top:0">
@@ -3649,11 +3646,8 @@ class="subdued">(0)</span></span></button>
         </td>
         <td class="dash-cell-name">
             <span class="badge-tag ms-2 badge bg-light">
-                <button type="button" aria-label="Select tag Paper" class="badge-tag-content badge-tag-content-btn">
-                    <span class="badge-content custom-badge">Paper</span>
-                    <span class="badge-prepend">
-                        <i class="badge-tag-circle custom-color" style="background-color: rgb(240, 67, 67);"></i>
-                    </span>
+                <button type="button" aria-label="Select tag Paper" class="badge-tag-content badge-tag-content-btn custom-color" style="background-color: rgb(180, 70, 70)">
+                    <span class="badge-content custom-badge" style="color: white;">paper</span>
                 </button>
             </span>
             <a class="custom-name"></a>

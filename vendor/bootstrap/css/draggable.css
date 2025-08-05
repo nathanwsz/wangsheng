@@ -2,10 +2,25 @@
 #task-list { width: 400px; border-collapse: collapse; }
 #task-list tr { background: #f2f2f2; }
 #task-list td, #task-list th {
-    text-align: left; padding: 10px;
-    border: 1px solid #ccc;
+    text-align: left;
+    padding: 10px 10px 10px 0;
+    border: none;
+}
+#task-list input {
+    margin-top: 5px;
 }
 #task-list th { color: #fff; background: #51759a; }
 
 /* (PART B) ON DRAG HOVER */
 #task-list tr.hover { background: #eff70d; }
+
+.custom-color {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border: none;
+    width: 34px;
+    height: 17px;
+    font-size: 10px;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
