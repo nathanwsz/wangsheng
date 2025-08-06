@@ -15,7 +15,7 @@
 #task-list tr.hover { background: #eff70d; }
 
 .custom-color {
-    display: flex;
+    /*display: flex;*/
     align-items: center;
     justify-content: center;
     text-align: center;
