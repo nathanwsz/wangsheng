@@ -65,7 +65,7 @@ fetch('bootstrap.min.json')
                     copied.getElementsByClassName('custom-color')[0].style.backgroundColor='rgb(70, 100, 180)';
                 }
                 if (trash) {
-                    copied.getElementsByClassName('custom-badge')[0].innerHTML="untag";
+                    copied.getElementsByClassName('custom-badge')[0].innerHTML="---";
                     copied.getElementsByClassName('custom-color')[0].style.backgroundColor='rgb(70, 70, 70)';
                 }
 
