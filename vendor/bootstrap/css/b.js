@@ -59,11 +59,16 @@ fetch('bootstrap.min.json')
                 copied.getElementsByClassName('custom-name')[0].innerHTML=dt['name'];
                 copied.getElementsByClassName('custom-owner')[0].innerHTML=dt['owner']['firstName']+' '+dt['owner']['lastName'];
                 // copied.getElementsByClassName('custom-update')[0].innerHTML=dt['update'];
-                console.log(catdata)
+                // console.log(catdata)
                 if (dt['name'] in catdata) {
                     copied.getElementsByClassName('custom-badge')[0].innerHTML=catdata[dt['name']];
                     copied.getElementsByClassName('custom-color')[0].style.backgroundColor='rgb(70, 100, 180)';
                 }
+                if (trash) {
+                    copied.getElementsByClassName('custom-badge')[0].innerHTML="untag";
+                    copied.getElementsByClassName('custom-color')[0].style.backgroundColor='rgb(70, 70, 70)';
+                }
+
                 template.parentNode.insertBefore(copied,previouscopied.nextSibling);
                 previouscopied=copied;
             }
