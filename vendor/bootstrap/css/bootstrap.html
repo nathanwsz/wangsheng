@@ -124,48 +124,50 @@ window.onload = fetchJSONData(null,'startup');
 src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11404926318/?random=1746349575652&amp;cv=11&amp;fst=1746349575652&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je54u1v882274400za200&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509156~103101747~103101749~103116025~103200001~103211513~103233424~103251618~103251620&amp;u_w=3414&amp;u_h=1440&amp;url=https%3A%2F%2Fwww.overleaf.com%2Fproject&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Your%20Projects%20-%20Overleaf%2C%20Online%20LaTeX%20Editor&amp;userId=5b80d098c5f2313c78024bf3&amp;ga_uid=G-RV4YBCCCWJ.5b80d098c5f2313c78024bf3&amp;npa=0&amp;pscdl=noapi&amp;auid=1599619476.1740121989&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B135.0.7049.115%7CNot-A.Brand%3B8.0.0.0%7CChromium%3B135.0.7049.115&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=15.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config%3Banonymize_ip%3Dtrue&amp;rfmt=3&amp;fmt=4"
 nonce=""></script>
 <script>
-window.addEventListener("load", () => {
+window.addEventListener("load", () => {setdraggable()});
+function setdraggable() {
+
 // (PART A) GET TABLE ROWS, EXCLUDE HEADER ROW
-var all = document.querySelectorAll("#task-list tr");
+    var all = document.querySelectorAll("#task-list tr");
 
 // (PART B) "CURRENT ROW BEING DRAGGED"
-var dragged;
+    var dragged;
 
 // (PART C) DRAG-AND-DROP MECHANISM
-for (let tr of all) {
+    for (let tr of all) {
 // (C1) ROW IS DRAGGABLE
-tr.draggable = true;
+        tr.draggable = true;
 
 // (C2) ON DRAG START - SET "CURRENTLY DRAGGED" & DATA TRANSFER
-tr.ondragstart = e => {
-dragged = tr;
-e.dataTransfer.dropEffect = "move";
-e.dataTransfer.effectAllowed = "move";
-e.dataTransfer.setData("text/html", tr.innerHTML);
-};
+        tr.ondragstart = e => {
+            dragged = tr;
+            e.dataTransfer.dropEffect = "move";
+            e.dataTransfer.effectAllowed = "move";
+            e.dataTransfer.setData("text/html", tr.innerHTML);
+        };
 
 // (C3) PREVENT DRAG OVER - NECESSARY FOR DROP TO WORK
-tr.ondragover = e => e.preventDefault();
+        tr.ondragover = e => e.preventDefault();
 
 // (C4) ON DROP - "SWAP ROWS"
-tr.ondrop = e => {
-e.preventDefault();
-if (dragged != tr) {
-dragged.innerHTML = tr.innerHTML;
-tr.innerHTML = e.dataTransfer.getData("text/html");
-}
-};
+        tr.ondrop = e => {
+            e.preventDefault();
+            if (dragged != tr) {
+                dragged.innerHTML = tr.innerHTML;
+                tr.innerHTML = e.dataTransfer.getData("text/html");
+            }
+        };
 
 // (C5) COSMETICS - HIGHLIGHT ROW "ON DRAG HOVER"
-tr.ondragenter = () => tr.classList.add("hover");
-tr.ondragleave = () => tr.classList.remove("hover");
-tr.ondragend = () => {
-for (let r of all) {
-r.classList.remove("hover");
+        tr.ondragenter = () => tr.classList.add("hover");
+        tr.ondragleave = () => tr.classList.remove("hover");
+        tr.ondragend = () => {
+            for (let r of all) {
+                r.classList.remove("hover");
+            }
+        };
+    }
 }
-};
-}
-});
 </script>
 <style>
 .ZD1LzV_5hhnbdBzBCTeC {

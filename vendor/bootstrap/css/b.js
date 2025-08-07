@@ -73,6 +73,7 @@ fetch('bootstrap.min.json')
                 previouscopied=copied;
             }
         }
+        setdraggable();
     })
 }
 
