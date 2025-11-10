@@ -591,6 +591,27 @@
     }
   },
   {
+    "id": "690f665c4408ed4243995397",
+    "name": "Guarantee Price in Two-sided Platform",
+    "archived": false,
+    "trashed": false,
+    "accessLevel": "readWrite",
+    "source": "invite",
+    "lastUpdated": "2025-11-08T16:20:07.665Z",
+    "lastUpdatedBy": {
+      "id": "5b44adc959c38f2db98ab73a",
+      "email": "fanzhikang@ruc.edu.cn",
+      "firstName": "Zhikang",
+      "lastName": ""
+    },
+    "owner": {
+      "id": "5b44adc959c38f2db98ab73a",
+      "email": "fanzhikang@ruc.edu.cn",
+      "firstName": "Zhikang",
+      "lastName": ""
+    }
+  },
+  {
     "id": "6503c13fac2333b482d56a81",
     "name": "Research Project: Data Selling in Auctions (for job application)",
     "lastUpdated": "2023-09-15T02:30:29.665Z",
