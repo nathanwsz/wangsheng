@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Footprints — Wangsheng</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+	<script src="world.js"></script>
+	<style>
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		html, body { height: 100%; background: #04091a; font-family: 'Space Mono', monospace; overflow: hidden; }
+		#stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+		#app { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100vh; }
+		#map-wrap {
+			flex: 1; min-height: 0; position: relative;
+			background: radial-gradient(ellipse 100% 70% at 50% 55%,
+				rgba(100,60,200,0.18) 0%,
+				rgba(30,60,180,0.14) 40%,
+				transparent 70%);
+		}
+		#main-map { width: 100%; height: 100%; }
+
+		footer {
+			flex-shrink: 0;
+			display: flex; align-items: center; justify-content: space-between;
+			margin: 0 auto 16px;
+			width: calc(100% - 80px);
+			padding: 12px 28px;
+			background: #fff;
+			border-radius: 40px;
+			box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+		}
+		.legend { display: flex; align-items: center; gap: 20px; }
+		.legend-item {
+			display: flex; align-items: center; gap: 7px;
+			font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+			color: rgba(0,0,0,0.45);
+		}
+		.legend-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+		.legend-dot.city    { background: #4dffc3; box-shadow: 0 0 5px rgba(77,255,195,0.6); }
+		.legend-dot.country { background: rgba(50,110,255,0.6); border: 1px solid rgba(77,255,195,0.5); }
+		.hint { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(0,0,0,0.3); }
+
+		#city-panel {
+			position: fixed; top: 24px; right: 24px; width: 200px;
+			background: #fff;
+			border: none;
+			border-left: 3px solid #4dffc3;
+			border-radius: 8px; padding: 16px 18px;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+			transform: translateX(260px);
+			transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+			pointer-events: none; z-index: 10;
+		}
+		#city-panel.visible { transform: translateX(0); pointer-events: auto; }
+		#city-panel .panel-tag { font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase; color: #4dffc3; margin-bottom: 8px; }
+		#city-panel .panel-name { font-size: 15px; font-weight: 700; color: #111; line-height: 1.2; margin-bottom: 8px; }
+		#city-panel .panel-coords { font-size: 9px; color: rgba(0,0,0,0.4); letter-spacing: 0.08em; }
+		#city-panel .panel-search {
+			display: inline-block; margin-top: 12px;
+			font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+			color: #111; text-decoration: none;
+			border: 1px solid rgba(0,0,0,0.15); border-radius: 3px; padding: 4px 10px;
+			transition: background 0.2s, color 0.2s;
+		}
+		#city-panel .panel-search:hover { background: #4dffc3; border-color: #4dffc3; color: #111; }
+	</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+<div id="app">
+	<div id="map-wrap"><div id="main-map"></div></div>
+	<footer>
+		<div class="legend">
+			<div class="legend-item"><div class="legend-dot city"></div>Visited city</div>
+			<div class="legend-item"><div class="legend-dot country"></div>Visited country</div>
+		</div>
+		<div class="hint">Click a city to explore</div>
+	</footer>
+</div>
+
+<div id="city-panel">
+	<div class="panel-tag">📍 Location</div>
+	<div class="panel-name" id="panel-name">—</div>
+	<div class="panel-coords" id="panel-coords"></div>
+	<a class="panel-search" id="panel-link" href="#" target="_blank">Search →</a>
+</div>
+
+<script>
+// ── Starfield ────────────────────────────────────────────────
+(function() {
+	const canvas = document.getElementById('stars');
+	const ctx = canvas.getContext('2d');
+	let stars = [];
+	function resize() { canvas.width = innerWidth; canvas.height = innerHeight; }
+	function init() {
+		stars = Array.from({length: 320}, () => ({
+			x: Math.random() * canvas.width,
+			y: Math.random() * canvas.height,
+			r: Math.random() * 1.1 + 0.1,
+			a: Math.random() * 0.7 + 0.1,
+			speed: Math.random() * 0.004 + 0.001,
+			phase: Math.random() * Math.PI * 2,
+			// occasional purple/blue tint
+			hue: Math.random() < 0.3 ? `rgba(180,160,255,` : `rgba(200,220,255,`
+		}));
+	}
+	function draw(t) {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		stars.forEach(s => {
+			const a = s.a * (0.5 + 0.5 * Math.sin(t * s.speed + s.phase));
+			ctx.beginPath();
+			ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+			ctx.fillStyle = s.hue + a + ')';
+			ctx.fill();
+		});
+		requestAnimationFrame(draw);
+	}
+	resize();
+	window.addEventListener('resize', () => { resize(); init(); });
+	init();
+	requestAnimationFrame(draw);
+})();
+
+// ── City data ────────────────────────────────────────────────
+const CITIES = [
+	{name:"Beijing",value:[116.3917,39.9067]},{name:"Singapore",value:[103.8198,1.3521]},
+	{name:"Dallas",value:[-96.7970,32.7767]},{name:"Langkawi",value:[99.7311,6.3424]},
+	{name:"Phoenix",value:[-112.0740,33.4484]},{name:"San Francisco",value:[-122.4194,37.7749]},
+	{name:"Austin",value:[-97.7431,30.2672]},{name:"Orlando",value:[-81.3789,28.5384]},
+	{name:"Xi'an",value:[108.9541,34.2658]},{name:"Linhai (临海)",value:[121.1449,28.8584]},
+	{name:"Shanghai",value:[121.4737,31.2304]},{name:"Hong Kong",value:[114.1694,22.3193]},
+	{name:"Chengde",value:[117.9634,40.9515]},{name:"Chifeng",value:[118.8889,42.2586]},
+	{name:"Chengdu",value:[104.0665,30.5723]},{name:"Hangzhou",value:[120.1552,30.2741]},
+	{name:"Changzhou",value:[119.9736,31.8107]},{name:"Tianjin",value:[117.1994,39.0851]},
+	{name:"Dalian",value:[121.6147,38.9140]},{name:"Changsha",value:[112.9389,28.2278]},
+	{name:"Wudangshan",value:[111.0103,32.3985]},{name:"Xiangyang",value:[112.1226,32.0090]},
+	{name:"Wuhan",value:[114.3052,30.5928]},{name:"Chiayi",value:[120.4491,23.4801]},
+	{name:"Indianapolis",value:[-86.1581,39.7684]},{name:"Newport Beach",value:[-117.9298,33.6189]},
+	{name:"Seattle",value:[-122.3328,47.6061]},{name:"New Orleans",value:[-90.0715,29.9511]},
+	{name:"Atlanta",value:[-84.3885,33.7501]},{name:"Bangkok",value:[100.5018,13.7563]},
+	{name:"Everglades National Park",value:[-80.8987,25.2866]},{name:"Reno",value:[-119.8138,39.5296]}
+];
+
+const VISITED = ['China','United States','Singapore','Malaysia','Thailand'];
+
+const panel       = document.getElementById('city-panel');
+const panelName   = document.getElementById('panel-name');
+const panelCoords = document.getElementById('panel-coords');
+const panelLink   = document.getElementById('panel-link');
+
+function showPanel(name, coords) {
+	panelName.textContent = name;
+	const lat = coords[1] >= 0 ? coords[1].toFixed(2)+'° N' : Math.abs(coords[1]).toFixed(2)+'° S';
+	const lon = coords[0] >= 0 ? coords[0].toFixed(2)+'° E' : Math.abs(coords[0]).toFixed(2)+'° W';
+	panelCoords.textContent = lat + '  ' + lon;
+	panelLink.href = 'https://www.google.com/search?q=' + encodeURIComponent(name);
+	panel.classList.add('visible');
+}
+
+echarts.registerMap('world', WORLD_GEOJSON);
+const chart = echarts.init(document.getElementById('main-map'));
+
+chart.setOption({
+	backgroundColor: '#04091a',
+	geo: {
+		map: 'world',
+		roam: true,
+		scaleLimit: { min: 0.8, max: 10 },
+		center: [15, 20],
+		zoom: 1.15,
+		itemStyle: {
+			areaColor: '#1a2340',
+			borderColor: 'rgba(100,150,255,0.35)',
+			borderWidth: 0.7,
+		},
+		emphasis: {
+			label: { show: false },
+			itemStyle: { areaColor: 'rgba(77,127,255,0.45)', borderColor: 'rgba(77,255,195,0.7)' }
+		},
+		regions: VISITED.map(n => ({
+			name: n,
+			itemStyle: { areaColor: 'rgba(50,110,255,0.45)', borderColor: 'rgba(77,255,195,0.6)', borderWidth: 1.2 },
+			emphasis: { itemStyle: { areaColor: 'rgba(77,255,195,0.30)', borderColor: 'rgba(77,255,195,0.9)' } }
+		}))
+	},
+	series: [
+		// outer halo
+		{ type:'scatter', coordinateSystem:'geo', data:CITIES, symbolSize:22, silent:true, z:3,
+		  itemStyle:{ color:'rgba(77,255,195,0.08)', borderColor:'transparent' } },
+		// mid halo
+		{ type:'scatter', coordinateSystem:'geo', data:CITIES, symbolSize:12, silent:true, z:4,
+		  itemStyle:{ color:'rgba(77,255,195,0.20)', borderColor:'transparent' } },
+		// core dot
+		{ type:'scatter', coordinateSystem:'geo', data:CITIES, symbolSize:6, z:5,
+		  name:'cities',
+		  itemStyle:{ color:'#4dffc3', borderColor:'rgba(255,255,255,0.7)', borderWidth:1 },
+		  emphasis:{ scale:true, itemStyle:{ color:'#fff', borderColor:'#4dffc3', borderWidth:2, shadowBlur:20, shadowColor:'#4dffc3' } },
+		  tooltip:{ show:true, formatter: p => `<span style="font-family:'Space Mono',monospace;font-size:11px;color:#4dffc3;">${p.name}</span>` }
+		}
+	],
+	tooltip: {
+		trigger: 'item',
+		backgroundColor: 'rgba(12,18,40,0.92)',
+		borderColor: 'rgba(120,160,255,0.2)',
+		textStyle: { color:'#c8d8ff', fontFamily:'Space Mono,monospace', fontSize:11 },
+		extraCssText: 'backdrop-filter:blur(8px); box-shadow:0 0 20px rgba(58,111,255,0.2);'
+	}
+});
+
+window.addEventListener('resize', () => chart.resize());
+chart.on('click', { seriesName:'cities' }, p => showPanel(p.name, p.value));
+chart.on('click', e => { if (e.seriesName !== 'cities') panel.classList.remove('visible'); });
+</script>
+</body>
+</html>

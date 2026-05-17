@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Footprints — Wangsheng</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: 'Times New Roman', Times, serif; overflow: hidden; background: #d2d7d9; }
+
+    #map { width: 100vw; height: calc(100vh - 48px); }
+
+    footer {
+      width: 100vw; height: 48px;
+      display: flex; align-items: center;
+      padding: 0 40px; gap: 24px;
+      background: #fff;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+    }
+    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #111; }
+    .legend-dot { width: 7px; height: 7px; border-radius: 50%; }
+    .legend-dot.city    { background: #00c896; }
+    .legend-dot.country { background: rgba(77,159,255,0.5); border: 1px solid #4d9fff; }
+
+    #city-panel {
+      position: fixed; top: 24px; right: 24px; width: 240px;
+      background: #fff; border-radius: 10px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+      transform: translateX(280px);
+      transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+      pointer-events: none; z-index: 1000;
+    }
+    #city-panel.visible { transform: translateX(0); pointer-events: auto; }
+    .panel-img-wrap { position: relative; width: 100%; height: 160px; background: #d0d8e0; overflow: hidden; }
+    .panel-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .img-placeholder {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(0,0,0,0.3); font-size: 13px;
+    }
+    .panel-city-name {
+      position: absolute; bottom: 0; left: 0;
+      background: rgba(80,80,80,0.75); color: #fff;
+      font-size: 15px; font-weight: bold; padding: 5px 10px;
+      backdrop-filter: blur(4px);
+      max-width: 92%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+
+    .city-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: #00c896; border: 2px solid rgba(255,255,255,0.9);
+      box-shadow: 0 0 0 3px rgba(0,200,150,0.25);
+      cursor: pointer; transition: transform 0.15s;
+    }
+    .city-dot:hover { transform: scale(1.5); }
+    .leaflet-control-attribution { font-size: 9px !important; }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<footer>
+  <div class="legend-item"><div class="legend-dot city"></div>Visited city</div>
+  <div class="legend-item"><div class="legend-dot country"></div>Visited country</div>
+</footer>
+
+<div id="city-panel">
+  <div class="panel-img-wrap">
+    <div class="img-placeholder" id="panel-placeholder">Loading…</div>
+    <img id="panel-img" src="" alt="" style="display:none;" />
+    <div class="panel-city-name" id="panel-city-name"></div>
+  </div>
+</div>
+
+<script>
+const CITIES = [
+  {name:"Beijing",       lat:39.9067, lng:116.3917},
+  {name:"Singapore",     lat:1.3521,  lng:103.8198},
+  {name:"Dallas",        lat:32.7767, lng:-96.7970},
+  {name:"Langkawi",      lat:6.3424,  lng:99.7311},
+  {name:"Phoenix",       lat:33.4484, lng:-112.0740},
+  {name:"San Francisco", lat:37.7749, lng:-122.4194},
+  {name:"Austin",        lat:30.2672, lng:-97.7431},
+  {name:"Orlando",       lat:28.5384, lng:-81.3789},
+  {name:"Xi'an",         lat:34.2658, lng:108.9541},
+  {name:"Linhai (临海)", lat:28.8584, lng:121.1449},
+  {name:"Shanghai",      lat:31.2304, lng:121.4737},
+  {name:"Hong Kong",     lat:22.3193, lng:114.1694},
+  {name:"Chengde",       lat:40.9515, lng:117.9634},
+  {name:"Chifeng",       lat:42.2586, lng:118.8889},
+  {name:"Chengdu",       lat:30.5723, lng:104.0665},
+  {name:"Hangzhou",      lat:30.2741, lng:120.1552},
+  {name:"Changzhou",     lat:31.8107, lng:119.9736},
+  {name:"Tianjin",       lat:39.0851, lng:117.1994},
+  {name:"Dalian",        lat:38.9140, lng:121.6147},
+  {name:"Changsha",      lat:28.2278, lng:112.9389},
+  {name:"Wudangshan",    lat:32.3985, lng:111.0103},
+  {name:"Xiangyang",     lat:32.0090, lng:112.1226},
+  {name:"Wuhan",         lat:30.5928, lng:114.3052},
+  {name:"Chiayi",        lat:23.4801, lng:120.4491},
+  {name:"Indianapolis",  lat:39.7684, lng:-86.1581},
+  {name:"Newport Beach", lat:33.6189, lng:-117.9298},
+  {name:"Seattle",       lat:47.6061, lng:-122.3328},
+  {name:"New Orleans",   lat:29.9511, lng:-90.0715},
+  {name:"Atlanta",       lat:33.7501, lng:-84.3885},
+  {name:"Bangkok",       lat:13.7563, lng:100.5018},
+  {name:"Everglades NP", lat:25.2866, lng:-80.8987},
+  {name:"Reno",          lat:39.5296, lng:-119.8138}
+];
+
+const map = L.map('map', {
+  center: [20, 10],
+  zoom: 2,
+  worldCopyJump: false,
+  maxBounds: [[-90, -180], [90, 180]],
+  maxBoundsViscosity: 1.0,
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>',
+  subdomains: 'abcd',
+  maxZoom: 19,
+  noWrap: true,
+}).addTo(map);
+
+// Country highlights using world.js embedded data via ECharts GeoJSON
+// We use L.geoJSON with the WORLD_GEOJSON from world.js if available
+if (typeof WORLD_GEOJSON !== 'undefined') {
+  const VISITED_NAMES = ['China', 'United States', 'Singapore', 'Malaysia', 'Thailand'];
+  L.geoJSON(WORLD_GEOJSON, {
+    style: feature => {
+      const name = feature.properties?.name || feature.properties?.NAME || '';
+      const visited = VISITED_NAMES.some(v => name.includes(v) || v.includes(name));
+      return {
+        fillColor: visited ? '#4d9fff' : 'transparent',
+        fillOpacity: visited ? 0.35 : 0,
+        color: '#4d9fff',
+        weight: visited ? 1 : 0,
+        interactive: false,
+      };
+    },
+    interactive: false,
+  }).addTo(map);
+}
+
+const panel            = document.getElementById('city-panel');
+const panelImg         = document.getElementById('panel-img');
+const panelPlaceholder = document.getElementById('panel-placeholder');
+const panelCityName    = document.getElementById('panel-city-name');
+
+function showPanel(name) {
+  panel.classList.add('visible');
+  panelCityName.textContent = name;
+  panelImg.style.display = 'none';
+  panelPlaceholder.style.display = 'flex';
+  panelPlaceholder.textContent = 'Loading…';
+  fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(name)}`)
+    .then(r => r.json())
+    .then(d => {
+      const url = d?.thumbnail?.source || d?.originalimage?.source;
+      if (url) {
+        panelImg.onload = () => { panelPlaceholder.style.display = 'none'; panelImg.style.display = 'block'; };
+        panelImg.onerror = () => { panelPlaceholder.textContent = 'No image'; };
+        panelImg.src = url;
+      } else { panelPlaceholder.textContent = 'No image found'; }
+    })
+    .catch(() => { panelPlaceholder.textContent = 'No image found'; });
+}
+
+const icon = L.divIcon({
+  className: '',
+  html: '<div class="city-dot"></div>',
+  iconSize: [10, 10],
+  iconAnchor: [5, 5],
+});
+
+CITIES.forEach(city => {
+  L.marker([city.lat, city.lng], { icon })
+    .addTo(map)
+    .on('click', () => {
+      showPanel(city.name);
+      map.setView([city.lat, city.lng], Math.max(map.getZoom(), 10), { animate: true });
+    });
+});
+
+map.on('click', () => panel.classList.remove('visible'));
+</script>
+
+<!-- load world.js for country highlight (same folder) -->
+<script src="world.js"></script>
+</body>
+</html>

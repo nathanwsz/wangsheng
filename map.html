@@ -1,142 +1,292 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Footprints - Wangsheng's Personal Website</title>
+	<title>Footprints — Wangsheng</title>
 	<meta charset="utf-8" />
-	<script src="assets/echarts-5.4.3/dist/echarts.js"></script>
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+	<script src="world.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 	<style>
-		.float-picture {
-			min-height: 10vw;
-			min-width: 10vw;
-			max-height: 20vw;
-			max-width: 20vw;
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		html, body { height: 100%; background: #0a1428; font-family: 'Times New Roman', Times, serif; overflow: hidden; }
+
+		#stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+		#app { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100vh; }
+
+		/* World map (ECharts) */
+		#world-wrap { flex: 1; min-height: 0; position: relative;
+			background: radial-gradient(ellipse 100% 70% at 50% 55%, rgba(100,60,200,0.15) 0%, rgba(30,60,180,0.10) 40%, transparent 70%);
+		}
+		#main-map { width: 100%; height: 100%; }
+
+		/* Reno detail map (Leaflet) — hidden by default */
+		#reno-wrap {
+			position: absolute; inset: 0;
+			display: none;
+			z-index: 5;
+		}
+		#reno-wrap.visible { display: block; }
+		#reno-map { width: 100%; height: 100%; }
+
+		footer {
+			flex-shrink: 0; height: 36px;
+			background: #fff;
+			box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+			display: flex; align-items: center; justify-content: center;
+			font-size: 11px; letter-spacing: 0.12em;
+			color: rgba(0,0,0,0.35);
+			font-family: 'Times New Roman', Times, serif;
+			user-select: none; cursor: default;
+			z-index: 10;
+		}
+
+		/* city panel */
+		#city-panel {
+			position: fixed; top: 24px; right: 24px; width: 240px;
+			background: #fff; border-radius: 10px; overflow: hidden;
+			box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+			transform: translateX(300px);
+			transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+			pointer-events: none; z-index: 1000;
+		}
+		#city-panel.visible { transform: translateX(0); pointer-events: auto; }
+		.panel-img-wrap { position: relative; width: 100%; height: 160px; background: #c8d0dc; overflow: hidden; }
+		.panel-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+		.img-placeholder {
+			position: absolute; inset: 0;
+			display: flex; align-items: center; justify-content: center;
+			color: rgba(0,0,0,0.25); font-size: 13px;
+		}
+		.panel-city-name {
+			position: absolute; bottom: 0; left: 0;
+			background: rgba(100,100,100,0.72); color: #fff;
+			font-size: 15px; font-weight: bold; padding: 5px 10px;
+			backdrop-filter: blur(4px);
+			max-width: 90%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+		}
+
+		/* Tahoe dot on Leaflet */
+		.tahoe-dot {
+			width: 12px; height: 12px; border-radius: 50%;
+			background: rgba(120,210,255,0.95);
+			border: 2px solid rgba(255,255,255,0.9);
+			box-shadow: 0 0 0 3px rgba(120,210,255,0.3);
+			cursor: pointer;
 		}
 	</style>
 </head>
-
 <body>
-	<div id="main2" style="height: 100vh;left:0;position: relative;"></div>
-	<script>
-		window.onload=function(){
-			const XHR = new XMLHttpRequest();
-			XHR.open("get","assets/json.map/world.json",true)
-			XHR.onload=function(){
-				const jsondata=XHR.response;
-				echarts.registerMap("world",jsondata);
-				var myChart = echarts.init(document.getElementById('main2'));
+<canvas id="stars"></canvas>
+<div id="app">
+	<div id="world-wrap">
+		<div id="main-map"></div>
+		<div id="reno-wrap">
+			<div id="reno-map"></div>
+		</div>
+	</div>
+	<footer id="footer-bar">Double-click Reno · zoom in</footer>
+</div>
 
-				var option = {
-					radius:'100%',
-					grid: {
-						zlevel:0,
-						z:0,
-						left: '0%',
-						right: '0%',
-						top: 'bottom',
-						bottom: '0%',
-						containLabel:false,
-						height:10000,
-					},
-					geo:{
-						silent: false,
-						map:"world",
-						regions: buildHighlightAreaObjList([
-								'China', 'United States', 'Singapore', 'Malaysia', 'Thailand']),
-						emphasis:{
-							label:{
-								show: false,
-							},
-						},
-					},
-					tooltip:{
-						trigger: 'item',
-					},
-					series:[{
-						data: [
-								{name: "Beijing", value: [116.3917, 39.906666]},
-								{name: "Singapore", value: [103.8198, 1.3521]},
-								{name: "Dallas", value: [-96.7970, 32.7767]},
-								{name: "Langkawi", value: [99.7311, 6.3424]},
-								{name: "Phoenix", value: [-112.0740, 33.4484]},
-								{name: "San Francisco", value: [-122.4194, 37.7749]},
-								{name: "Austin", value: [-97.7431, 30.2672]},
-								{name: "Orlando", value: [-81.3789, 28.5384]},
-								{name: "Xi'an", value: [108.9541, 34.2658]},
-								{name: "Linhai (临海)", value: [121.1449, 28.8584]},
-								{name: "Shanghai", value: [121.4737, 31.2304]},
-								{name: "Hong Kong", value: [114.1694, 22.3193]},
-								{name: "Chengde", value: [1117.9634, 40.9515]},
-								{name: "Chifeng", value: [118.8889, 42.2586]},
-								{name: "Chengdu", value: [104.0665, 30.5723]},
-								{name: "Hangzhou", value: [120.1552, 30.2741]},
-								{name: "Changzhou", value: [119.9736, 31.8107]},
-								{name: "Tianjin", value: [117.1994, 39.0851]},
-								{name: "Dalian", value: [121.6147, 38.9140]},
-								{name: "Changsha", value: [112.9389, 28.2278]},
-								{name: "Wudangshan", value: [111.0103, 32.3985]},
-								{name: "Xiangyang", value: [112.1226, 32.0090]},
-								{name: "Wuhan", value: [114.3052, 30.5928]},
-								{name: "Chiayi", value: [120.4491, 23.4801]},
-								{name: "Indianapolis", value: [-86.1581, 39.7684]},
-								{name: "Newport Beach", value: [-117.9298, 33.6189]},
-								{name: "Seattle", value: [-122.3328, 47.6061]},
-								{name: "New Orleans", value: [-90.071533, 29.951065]},
-								{name: "Atlanta", value: [-84.3885, 33.7501]},
-								{name: "Bangkok", value: [100.5018, 13.7563]},
-								{name: "Everglades National Park", value: [-80.8987, 25.2866]},
-								{name: "Reno", value: [-119.8138, 39.5296]}
-								],
-						type: 'scatter',
-						coordinateSystem: 'geo',
-						symbolSize: 6,
-						emphasis:{
-							itemStyle: {
-								color: 'rgb(252, 1, 26)',
-							}
-						},
-						tooltip: {
-							show: true,
-							formatter: function (params) {
-								return params.name
-										// + '<br>' +
-										// '<img alt="" class="float-picture" src="assets/css/images/front-page.png">'
+<div id="city-panel">
+	<div class="panel-img-wrap">
+		<div class="img-placeholder" id="panel-placeholder">Loading…</div>
+		<img id="panel-img" src="" alt="" style="display:none;" />
+		<div class="panel-city-name" id="panel-city-name"></div>
+	</div>
+</div>
 
-							},
-						},
-					},
-					]
-				};
-				myChart.setOption(option);
-				// myChart.on('mouseover', function (params) {
-				// 	console.log(params);
-				// });
-				myChart.on('click', function(params) {
-					console.log(params);
-					window.open(
-							'https://www.google.com/search?q=' + encodeURIComponent(params.name)
-					);
-				});
-			}
-			XHR.send();
+<script>
+// ── Starfield ────────────────────────────────────────────────
+(function() {
+	const canvas = document.getElementById('stars');
+	const ctx = canvas.getContext('2d');
+	let stars = [];
+	function resize() { canvas.width = innerWidth; canvas.height = innerHeight; }
+	function init() {
+		stars = Array.from({length: 600}, () => ({
+			x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+			r: Math.random() * 1.8 + 0.3, a: Math.random() * 0.85 + 0.15,
+			speed: Math.random() * 0.003 + 0.0008, phase: Math.random() * Math.PI * 2,
+			hue: Math.random() < 0.3 ? 'rgba(200,180,255,' : 'rgba(230,240,255,'
+		}));
+	}
+	function draw(t) {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		stars.forEach(s => {
+			const a = s.a * (0.5 + 0.5 * Math.sin(t * s.speed + s.phase));
+			ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+			ctx.fillStyle = s.hue + a + ')'; ctx.fill();
+		});
+		requestAnimationFrame(draw);
+	}
+	resize(); window.addEventListener('resize', () => { resize(); init(); });
+	init(); requestAnimationFrame(draw);
+})();
+
+// ── City data ────────────────────────────────────────────────
+const CITIES = [
+	{name:"Beijing",value:[116.3917,39.9067]},{name:"Singapore",value:[103.8198,1.3521]},
+	{name:"Dallas",value:[-96.7970,32.7767]},{name:"Langkawi",value:[99.7311,6.3424]},
+	{name:"Phoenix",value:[-112.0740,33.4484]},{name:"San Francisco",value:[-122.4194,37.7749]},
+	{name:"Austin",value:[-97.7431,30.2672]},{name:"Orlando",value:[-81.3789,28.5384]},
+	{name:"Xi'an",value:[108.9541,34.2658]},{name:"Linhai (临海)",value:[121.1449,28.8584]},
+	{name:"Shanghai",value:[121.4737,31.2304]},{name:"Hong Kong",value:[114.1694,22.3193]},
+	{name:"Chengde",value:[117.9634,40.9515]},{name:"Chifeng",value:[118.8889,42.2586]},
+	{name:"Chengdu",value:[104.0665,30.5723]},{name:"Hangzhou",value:[120.1552,30.2741]},
+	{name:"Changzhou",value:[119.9736,31.8107]},{name:"Tianjin",value:[117.1994,39.0851]},
+	{name:"Dalian",value:[121.6147,38.9140]},{name:"Changsha",value:[112.9389,28.2278]},
+	{name:"Wudangshan",value:[111.0103,32.3985]},{name:"Xiangyang",value:[112.1226,32.0090]},
+	{name:"Wuhan",value:[114.3052,30.5928]},{name:"Chiayi",value:[120.4491,23.4801]},
+	{name:"Indianapolis",value:[-86.1581,39.7684]},{name:"Newport Beach",value:[-117.9298,33.6189]},
+	{name:"Seattle",value:[-122.3328,47.6061]},{name:"New Orleans",value:[-90.0715,29.9511]},
+	{name:"Atlanta",value:[-84.3885,33.7501]},{name:"Bangkok",value:[100.5018,13.7563]},
+	{name:"Everglades National Park",value:[-80.8987,25.2866]},{name:"Reno",value:[-119.8138,39.5296]}
+];
+
+const VISITED = ['China','United States','Singapore','Malaysia','Thailand'];
+
+// ── Panel ────────────────────────────────────────────────────
+const panel = document.getElementById('city-panel');
+const panelImg = document.getElementById('panel-img');
+const panelPlaceholder = document.getElementById('panel-placeholder');
+const panelCityName = document.getElementById('panel-city-name');
+
+function showPanel(name) {
+	panel.classList.add('visible');
+	panelCityName.textContent = name;
+	panelImg.style.display = 'none';
+	panelPlaceholder.style.display = 'flex';
+	panelPlaceholder.textContent = 'Loading…';
+	fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(name)}`)
+		.then(r => r.json())
+		.then(d => {
+			const url = d?.thumbnail?.source || d?.originalimage?.source;
+			if (url) {
+				panelImg.onload = () => { panelPlaceholder.style.display = 'none'; panelImg.style.display = 'block'; };
+				panelImg.onerror = () => { panelPlaceholder.textContent = 'No image'; };
+				panelImg.src = url;
+			} else { panelPlaceholder.textContent = 'No image found'; }
+		}).catch(() => { panelPlaceholder.textContent = 'No image found'; });
+}
+
+// ── ECharts world map ─────────────────────────────────────────
+echarts.registerMap('world', WORLD_GEOJSON);
+const chart = echarts.init(document.getElementById('main-map'));
+
+chart.setOption({
+	backgroundColor: '#0a1428',
+	geo: {
+		map: 'world', roam: true,
+		scaleLimit: { min: 0.8, max: 10 },
+		center: [15, 15], zoom: 1.15,
+		itemStyle: { areaColor: 'rgba(26,35,64,0.75)', borderColor: 'rgba(100,150,255,0.35)', borderWidth: 0.7 },
+		emphasis: { label: { show: false }, itemStyle: { areaColor: 'rgba(77,127,255,0.45)', borderColor: 'rgba(77,255,195,0.7)' } },
+		regions: VISITED.map(n => ({
+			name: n,
+			itemStyle: { areaColor: 'rgba(50,110,255,0.55)', borderColor: 'rgba(77,255,195,0.6)', borderWidth: 1.2 },
+			emphasis: { itemStyle: { areaColor: 'rgba(77,255,195,0.30)', borderColor: 'rgba(77,255,195,0.9)' } }
+		}))
+	},
+	series: [
+		{ type:'scatter', coordinateSystem:'geo', data:CITIES, symbolSize:22, silent:true, z:3,
+		  itemStyle:{ color:'rgba(77,255,195,0.08)', borderColor:'transparent' } },
+		{ type:'scatter', coordinateSystem:'geo', data:CITIES, symbolSize:12, silent:true, z:4,
+		  itemStyle:{ color:'rgba(77,255,195,0.20)', borderColor:'transparent' } },
+		{ type:'scatter', coordinateSystem:'geo', data:CITIES, symbolSize:6, z:5, name:'cities',
+		  itemStyle:{ color:'#4dffc3', borderColor:'rgba(255,255,255,0.7)', borderWidth:1 },
+		  emphasis:{ scale:true, itemStyle:{ color:'#fff', borderColor:'#4dffc3', borderWidth:2, shadowBlur:20, shadowColor:'#4dffc3' } },
+		  tooltip:{ show:true, formatter: p => `<span style="font-size:11px;color:#4dffc3;">${p.name}</span>` }
 		}
+	],
+	tooltip: {
+		trigger: 'item',
+		backgroundColor: 'rgba(12,18,40,0.92)', borderColor: 'rgba(120,160,255,0.2)',
+		textStyle: { color:'#c8d8ff', fontSize:11 }, extraCssText: 'backdrop-filter:blur(8px);'
+	}
+});
+window.addEventListener('resize', () => chart.resize());
 
-		function buildHighlightAreaObjList(highlightAreaList){
-			objList = [];
-			if(Array.isArray(highlightAreaList)) {
-				highlightAreaList.forEach(item => {
-					objList.push({
-						name: item,
-						itemStyle: {
-							color: 'red',
-							areaColor: 'rgb(122,223,51)'
-						}
-					})
-				})
+// ── Leaflet Reno detail map ───────────────────────────────────
+let renoMap = null;
+let renoZoomed = false;
+const renoWrap = document.getElementById('reno-wrap');
+const footerBar = document.getElementById('footer-bar');
+
+function zoomToReno() {
+	renoZoomed = true;
+	renoWrap.classList.add('visible');
+	footerBar.textContent = 'Double-click Lake Tahoe · zoom out';
+	panel.classList.remove('visible');
+
+	if (!renoMap) {
+		renoMap = L.map('reno-map', { center: [39.5, -119.9], zoom: 9 });
+		// OpenStreetMap tiles — real streets, real state borders, real lake outlines
+		L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+			attribution: '© OpenStreetMap © CARTO',
+			subdomains: 'abcd', maxZoom: 19
+		}).addTo(renoMap);
+
+		// Grand Sierra Resort marker
+		L.circleMarker([39.5249, -119.7738], {
+			radius: 6, fillColor: '#4d9fff', fillOpacity: 1,
+			color: '#fff', weight: 2
+		}).addTo(renoMap)
+		  .bindTooltip('Grand Sierra Resort', { permanent: false })
+		  .on('click', () => showPanel('Grand Sierra Resort Reno'));
+
+		// Lake Tahoe marker — double-click to zoom out
+		const tahoeMarker = L.circleMarker([39.0968, -120.0324], {
+			radius: 6, fillColor: '#4d9fff', fillOpacity: 1,
+			color: '#fff', weight: 2
+		}).addTo(renoMap);
+		tahoeMarker.bindTooltip('Lake Tahoe', { permanent: false });
+
+		let tahoeClickTimer = null;
+		tahoeMarker.on('click', () => {
+			if (tahoeClickTimer) {
+				clearTimeout(tahoeClickTimer);
+				tahoeClickTimer = null;
+				resetToWorld();
+			} else {
+				tahoeClickTimer = setTimeout(() => {
+					tahoeClickTimer = null;
+					showPanel('Lake Tahoe');
+				}, 280);
 			}
-			return objList;
-		}
-	</script>
+		});
+	} else {
+		renoMap.setView([39.5, -119.9], 9);
+		setTimeout(() => renoMap.invalidateSize(), 100);
+	}
+}
+
+function resetToWorld() {
+	renoZoomed = false;
+	renoWrap.classList.remove('visible');
+	footerBar.textContent = 'Double-click Reno · zoom in';
+	panel.classList.remove('visible');
+}
+
+// ── Click handling ────────────────────────────────────────────
+let clickTimer = null;
+
+chart.on('click', { seriesName:'cities' }, p => {
+	if (clickTimer) {
+		clearTimeout(clickTimer); clickTimer = null;
+		if (p.name === 'Reno') zoomToReno();
+	} else {
+		clickTimer = setTimeout(() => {
+			clickTimer = null;
+			showPanel(p.name);
+		}, 280);
+	}
+});
+
+chart.on('click', e => {
+	if (e.seriesName !== 'cities') panel.classList.remove('visible');
+});
+</script>
 </body>
 </html>
