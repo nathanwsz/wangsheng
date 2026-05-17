@@ -217,7 +217,7 @@ const footerBar = document.getElementById('footer-bar');
 function zoomToReno() {
 	renoZoomed = true;
 	renoWrap.classList.add('visible');
-	footerBar.textContent = 'Double-click Lake Tahoe · zoom out';
+	footerBar.textContent = 'Double-click to zoom out';
 	panel.classList.remove('visible');
 
 	if (!renoMap) {
@@ -265,7 +265,7 @@ function zoomToReno() {
 function resetToWorld() {
 	renoZoomed = false;
 	renoWrap.classList.remove('visible');
-	footerBar.textContent = 'Double-click Reno · zoom in';
+	footerBar.textContent = 'Double-click to zoom in';
 	panel.classList.remove('visible');
 }
 
