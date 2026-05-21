@@ -676,5 +676,68 @@
       "firstName": "zhuws1992",
       "lastName": ""
     }
+  },
+  {
+    "id": "6a0ea23cffae2cf1c699b218",
+    "name": "pet",
+    "lastUpdated": "2026-05-21T07:00:52.297Z",
+    "lastUpdatedBy": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    },
+    "accessLevel": "owner",
+    "source": "owner",
+    "archived": false,
+    "trashed": false,
+    "owner": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    }
+  },
+  {
+    "id": "6a02d2b1cf026b50907da30f",
+    "name": "To Reserve or Not: Platform Coupon and Buyers Reservation in Live-streaming Auctions",
+    "lastUpdated": "2026-05-21T07:13:39.226Z",
+    "lastUpdatedBy": {
+      "id": "5b44adc959c38f2db98ab73a",
+      "email": "zhikangfan@ust.hk",
+      "firstName": "Zhikang",
+      "lastName": "Fan"
+    },
+    "accessLevel": "readWrite",
+    "source": "invite",
+    "archived": false,
+    "trashed": false,
+    "owner": {
+      "id": "5b44adc959c38f2db98ab73a",
+      "email": "zhikangfan@ust.hk",
+      "firstName": "Zhikang",
+      "lastName": "Fan"
+    }
+  },
+  {
+    "id": "69f5a559fd8ac12a52ae7387",
+    "name": "AI Shopping Agent",
+    "lastUpdated": "2026-05-20T15:30:47.439Z",
+    "lastUpdatedBy": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    },
+    "accessLevel": "owner",
+    "source": "owner",
+    "archived": false,
+    "trashed": false,
+    "owner": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    }
   }
 ]
