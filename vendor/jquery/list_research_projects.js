@@ -23,8 +23,8 @@ const displayOrder = [
     '6537fc8b9e66d99cff0c8375', // Ad Sequencing
     '647bb41f2574fe5648d591ec', // Digital billboard
     '5d9c0eb2777e3e0001050b50', // Crowdsourcing Decision Support System
-    '690f665c4408ed4243995397', // Guarantee Price in Two-sided Platform
     '69b94a13d5126b014ee0e4fc', // TAM2.0
+    '690f665c4408ed4243995397', // Guarantee Price in Two-sided Platform
     '5e1df5ea421e4c000155015e', // Information Selling in Ad Auctions
     '5d94ef23f51fed0001876f31', // Optimal Efforts of Zale Advertisement
     '65a6f028e7eaeb4f23b495fa', // Response Letter Template
