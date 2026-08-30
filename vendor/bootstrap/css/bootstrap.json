@@ -2,12 +2,12 @@
   {
     "id": "5f38609b4b7b6700015f7ee5",
     "name": "Navigating the Unknown",
-    "lastUpdated": "2025-05-22T06:31:48.639Z",
+    "lastUpdated": "2026-06-22T13:26:10.230Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -15,20 +15,20 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "67fe52c87bda6dda5c5de1c6",
     "name": "Balancing Usefulness and Safety in LLM",
-    "lastUpdated": "2025-04-19T13:21:22.461Z",
+    "lastUpdated": "2026-08-18T02:28:21.332Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -36,20 +36,20 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "68006e750a6d22af59b7d34e",
     "name": "Who should be Invited?",
-    "lastUpdated": "2025-04-17T02:59:01.894Z",
+    "lastUpdated": "2025-08-06T09:00:33.260Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -57,15 +57,15 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "65df9b845ad04767b1ceee04",
     "name": "Car Insurance Telematics, Driver Incentives",
-    "lastUpdated": "2025-06-25T14:36:56.401Z",
+    "lastUpdated": "2026-08-18T03:10:24.241Z",
     "lastUpdatedBy": {
       "id": "5eebdbd35f6b150001012307",
       "email": "sunkai.sufe@gmail.com",
@@ -86,10 +86,10 @@
   {
     "id": "65d3a8b2fb839dd66802c621",
     "name": "RL for Model Discovery",
-    "lastUpdated": "2024-11-16T22:32:56.872Z",
+    "lastUpdated": "2025-12-16T03:56:46.879Z",
     "lastUpdatedBy": {
       "id": "5eebdbd35f6b150001012307",
-      "email": "kai.sun@utdallas.edu",
+      "email": "sunkai.sufe@gmail.com",
       "firstName": "Kai",
       "lastName": "Sun"
     },
@@ -99,7 +99,7 @@
     "trashed": false,
     "owner": {
       "id": "5eebdbd35f6b150001012307",
-      "email": "kai.sun@utdallas.edu",
+      "email": "sunkai.sufe@gmail.com",
       "firstName": "Kai",
       "lastName": "Sun"
     }
@@ -110,9 +110,9 @@
     "lastUpdated": "2024-06-05T02:56:47.318Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -120,9 +120,9 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -131,9 +131,9 @@
     "lastUpdated": "2024-02-25T20:02:14.914Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -141,64 +141,62 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "66525e7be1ae575e5dffa5ac",
     "name": "*** Libraries",
-    "lastUpdated": "2025-05-17T07:49:02.003Z",
+    "lastUpdated": "2026-08-03T04:05:37.588Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
-    "badge": "Private",
     "accessLevel": "owner",
     "source": "owner",
     "archived": false,
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "68006e5caadada78945d757b",
     "name": "*** Libraries_Template",
-    "lastUpdated": "2025-04-17T03:53:59.085Z",
+    "lastUpdated": "2026-05-01T15:04:01.142Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
-    "badge": "Private",
     "accessLevel": "owner",
     "source": "owner",
     "archived": false,
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "5d9c0eb2777e3e0001050b50",
     "name": "Crowdsourcing Decision Support System",
-    "lastUpdated": "2025-04-10T23:20:49.912Z",
+    "lastUpdated": "2026-08-30T01:11:32.446Z",
     "lastUpdatedBy": {
       "id": "5cb64f240d5c51316a464148",
       "email": "smenon@chicagobooth.edu",
-      "firstName": "smenon",
-      "lastName": ""
+      "firstName": "Syam",
+      "lastName": "Menon"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -206,20 +204,20 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "5e1df5ea421e4c000155015e",
-    "name": "Information Selling in Ad Auctions",
+    "name": "Research Project: Information Selling in Ad Auctions",
     "lastUpdated": "2024-11-19T09:37:42.908Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -227,20 +225,20 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "5d94ef23f51fed0001876f31",
-    "name": "Optimal Efforts of Zale Advertisement",
+    "name": "Research Project: Optimal Efforts of Zale Advertisement",
     "lastUpdated": "2024-02-05T17:40:36.620Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -248,9 +246,9 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -259,9 +257,9 @@
     "lastUpdated": "2024-01-18T02:40:27.898Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -269,20 +267,20 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "64998d1584b0ea703ff8e92d",
-    "name": "Prob&amp;StatL1",
-    "lastUpdated": "2024-09-07T23:14:16.860Z",
+    "name": "Prob&StatL1",
+    "lastUpdated": "2026-05-28T09:36:51.729Z",
     "lastUpdatedBy": {
-      "id": "5eebdbd35f6b150001012307",
-      "email": "kai.sun@utdallas.edu",
-      "firstName": "Kai",
-      "lastName": "Sun"
+      "id": "5b8e938c2546f6120051abdc",
+      "email": "vmookerjee@gmail.com",
+      "firstName": "Vijay",
+      "lastName": "Mookerjee"
     },
     "accessLevel": "readWrite",
     "source": "invite",
@@ -311,9 +309,9 @@
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -322,9 +320,9 @@
     "lastUpdated": "2024-06-05T03:17:25.610Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -332,9 +330,9 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -343,20 +341,19 @@
     "lastUpdated": "2024-04-22T18:18:55.100Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
-    "badge": "Others",
     "accessLevel": "owner",
     "source": "owner",
     "archived": true,
     "trashed": false,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -365,9 +362,9 @@
     "lastUpdated": "2024-01-16T21:07:19.627Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -375,9 +372,9 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -386,9 +383,9 @@
     "lastUpdated": "2023-10-11T15:44:21.531Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -396,41 +393,41 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "690f665c4408ed4243995397",
     "name": "Guarantee Price in Two-sided Platform",
-    "archived": false,
-    "trashed": false,
-    "accessLevel": "readWrite",
-    "source": "invite",
-    "lastUpdated": "2025-11-08T16:20:07.665Z",
+    "lastUpdated": "2026-08-28T07:18:54.921Z",
     "lastUpdatedBy": {
       "id": "5b44adc959c38f2db98ab73a",
-      "email": "fanzhikang@ruc.edu.cn",
+      "email": "zhikangfan@ust.hk",
       "firstName": "Zhikang",
-      "lastName": ""
+      "lastName": "Fan"
     },
+    "accessLevel": "owner",
+    "source": "owner",
+    "archived": false,
+    "trashed": false,
     "owner": {
-      "id": "5b44adc959c38f2db98ab73a",
-      "email": "fanzhikang@ruc.edu.cn",
-      "firstName": "Zhikang",
-      "lastName": ""
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "64da4b1ba60bcb50aee6fcdb",
-    "name": "Prob&amp;StatL1 (Copy)",
+    "name": "Prob&StatL1 (Copy)",
     "lastUpdated": "2023-08-25T16:59:53.965Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -438,9 +435,9 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -449,9 +446,9 @@
     "lastUpdated": "2023-06-03T21:43:13.303Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -459,9 +456,9 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -470,9 +467,9 @@
     "lastUpdated": "2021-12-11T20:23:12.378Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -480,9 +477,9 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -491,9 +488,9 @@
     "lastUpdated": "2020-05-12T03:26:20.911Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -501,9 +498,9 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -512,9 +509,9 @@
     "lastUpdated": "2020-05-09T03:05:13.270Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "readWrite",
     "source": "invite",
@@ -554,9 +551,9 @@
     "lastUpdated": "2020-04-30T03:43:19.869Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -564,9 +561,9 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
@@ -575,9 +572,9 @@
     "lastUpdated": "2019-10-10T02:33:03.724Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -585,70 +582,73 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "5b9ad4e1f9699b21eb585169",
     "name": "Statistics Homework",
     "lastUpdated": "2018-12-19T06:20:18.215Z",
+    "lastUpdatedBy": null,
     "accessLevel": "owner",
     "source": "owner",
     "archived": false,
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "5b80d137c5f2313c78024bf9",
     "name": "Optimization Homework",
     "lastUpdated": "2018-12-04T04:29:06.033Z",
+    "lastUpdatedBy": null,
     "accessLevel": "owner",
     "source": "owner",
     "archived": false,
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "5b86dbd498f3225e4e56dfea",
     "name": "Economics Homework",
     "lastUpdated": "2018-11-30T02:51:13.412Z",
+    "lastUpdatedBy": null,
     "accessLevel": "owner",
     "source": "owner",
     "archived": false,
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "69b94a13d5126b014ee0e4fc",
     "name": "TAM2.0",
-    "archived": false,
-    "trashed": false,
-    "accessLevel": "readWrite",
-    "source": "invite",
-    "lastUpdated": "2026-03-17T13:57:39.448Z",
+    "lastUpdated": "2026-04-20T08:27:02.457Z",
     "lastUpdatedBy": {
       "id": "60c9a04072ccc770f881d311",
       "email": "yanzhenhapsy@gmail.com",
       "firstName": "Yanzhen",
       "lastName": "Chen"
     },
+    "accessLevel": "readWrite",
+    "source": "invite",
+    "archived": false,
+    "trashed": false,
     "owner": {
       "id": "60c9a04072ccc770f881d311",
       "email": "yanzhenhapsy@gmail.com",
@@ -662,9 +662,9 @@
     "lastUpdated": "2021-05-02T17:04:41.274Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     },
     "accessLevel": "owner",
     "source": "owner",
@@ -672,21 +672,16 @@
     "trashed": true,
     "owner": {
       "id": "5b80d098c5f2313c78024bf3",
-      "email": "zhuws1992@163.com",
-      "firstName": "zhuws1992",
-      "lastName": ""
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "6a0ea23cffae2cf1c699b218",
     "name": "pet",
-    "lastUpdated": "2026-05-21T07:00:52.297Z",
-    "lastUpdatedBy": {
-      "id": "5b80d098c5f2313c78024bf3",
-      "email": "wangshengzhu@ust.hk",
-      "firstName": "Wangsheng",
-      "lastName": "Zhu"
-    },
+    "lastUpdated": "2026-07-24T04:22:55.721Z",
+    "lastUpdatedBy": null,
     "accessLevel": "owner",
     "source": "owner",
     "archived": false,
@@ -701,28 +696,91 @@
   {
     "id": "6a02d2b1cf026b50907da30f",
     "name": "To Reserve or Not: Platform Coupon and Buyers Reservation in Live-streaming Auctions",
-    "lastUpdated": "2026-05-21T07:13:39.226Z",
+    "lastUpdated": "2026-07-02T07:23:14.984Z",
     "lastUpdatedBy": {
       "id": "5b44adc959c38f2db98ab73a",
       "email": "zhikangfan@ust.hk",
       "firstName": "Zhikang",
       "lastName": "Fan"
     },
-    "accessLevel": "readWrite",
-    "source": "invite",
+    "accessLevel": "owner",
+    "source": "owner",
     "archived": false,
     "trashed": false,
     "owner": {
-      "id": "5b44adc959c38f2db98ab73a",
-      "email": "zhikangfan@ust.hk",
-      "firstName": "Zhikang",
-      "lastName": "Fan"
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
     }
   },
   {
     "id": "69f5a559fd8ac12a52ae7387",
     "name": "AI Shopping Agent",
-    "lastUpdated": "2026-05-20T15:30:47.439Z",
+    "lastUpdated": "2026-08-14T21:04:16.076Z",
+    "lastUpdatedBy": {
+      "id": "5b919cb2a43d7b0249047420",
+      "email": "tangping381@163.com",
+      "firstName": "tangping381",
+      "lastName": ""
+    },
+    "accessLevel": "owner",
+    "source": "owner",
+    "archived": false,
+    "trashed": false,
+    "owner": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    }
+  },
+  {
+    "id": "6a7986acc9fc306b5deb5bca",
+    "name": "Agent Coordination",
+    "lastUpdated": "2026-08-30T05:52:20.417Z",
+    "lastUpdatedBy": {
+      "id": "5f3ea41afa79a50001c36f44",
+      "email": "yunxuanmichael.yang@utdallas.edu",
+      "firstName": "Michael",
+      "lastName": "Yang"
+    },
+    "accessLevel": "readWrite",
+    "source": "invite",
+    "archived": false,
+    "trashed": false,
+    "owner": {
+      "id": "5f3ea41afa79a50001c36f44",
+      "email": "yunxuanmichael.yang@utdallas.edu",
+      "firstName": "Michael",
+      "lastName": "Yang"
+    }
+  },
+  {
+    "id": "69b95b3258b3f873ccc09d82",
+    "name": "TAM2.0_dynamic",
+    "lastUpdated": "2026-08-30T05:40:00.573Z",
+    "lastUpdatedBy": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    },
+    "accessLevel": "readWrite",
+    "source": "invite",
+    "archived": false,
+    "trashed": false,
+    "owner": {
+      "id": "60c9a04072ccc770f881d311",
+      "email": "yanzhenhapsy@gmail.com",
+      "firstName": "Yanzhen",
+      "lastName": "Chen"
+    }
+  },
+  {
+    "id": "6985aac66be64232ef976c5b",
+    "name": "Review",
+    "lastUpdated": "2026-08-26T10:24:45.791Z",
     "lastUpdatedBy": {
       "id": "5b80d098c5f2313c78024bf3",
       "email": "wangshengzhu@ust.hk",
@@ -738,6 +796,121 @@
       "email": "wangshengzhu@ust.hk",
       "firstName": "Wangsheng",
       "lastName": "Zhu"
+    }
+  },
+  {
+    "id": "6a4ae27827ac77eca03dd730",
+    "name": "SimpleAgentModel",
+    "lastUpdated": "2026-08-10T06:38:51.044Z",
+    "lastUpdatedBy": {
+      "id": "5f3ea41afa79a50001c36f44",
+      "email": "yunxuanmichael.yang@utdallas.edu",
+      "firstName": "Michael",
+      "lastName": "Yang"
+    },
+    "accessLevel": "readWrite",
+    "source": "invite",
+    "archived": false,
+    "trashed": false,
+    "owner": {
+      "id": "5b8e938c2546f6120051abdc",
+      "email": "vmookerjee@gmail.com",
+      "firstName": "Vijay",
+      "lastName": "Mookerjee"
+    }
+  },
+  {
+    "id": "69cff781243e926489bca7ed",
+    "name": "Agent Coordination_Michael",
+    "lastUpdated": "2026-07-04T00:45:49.843Z",
+    "lastUpdatedBy": {
+      "id": "5f3ea41afa79a50001c36f44",
+      "email": "yunxuanmichael.yang@utdallas.edu",
+      "firstName": "Michael",
+      "lastName": "Yang"
+    },
+    "accessLevel": "readWrite",
+    "source": "invite",
+    "archived": false,
+    "trashed": false,
+    "owner": {
+      "id": "5f3ea41afa79a50001c36f44",
+      "email": "yunxuanmichael.yang@utdallas.edu",
+      "firstName": "Michael",
+      "lastName": "Yang"
+    }
+  },
+  {
+    "id": "6a27ae411b180286c4a435f9",
+    "name": "Agent Coordination_wWangsheng",
+    "lastUpdated": "2026-06-22T06:52:17.226Z",
+    "lastUpdatedBy": null,
+    "accessLevel": "readOnly",
+    "source": "token",
+    "archived": false,
+    "trashed": false
+  },
+  {
+    "id": "6a0ea23c978e6f743cda0248",
+    "name": "pet",
+    "lastUpdated": "2026-05-21T06:12:13.200Z",
+    "lastUpdatedBy": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    },
+    "accessLevel": "owner",
+    "source": "owner",
+    "archived": false,
+    "trashed": true,
+    "owner": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    }
+  },
+  {
+    "id": "69beddbedb26e6a49f696520",
+    "name": "Sell side curation",
+    "lastUpdated": "2026-03-21T20:04:59.304Z",
+    "lastUpdatedBy": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    },
+    "accessLevel": "owner",
+    "source": "owner",
+    "archived": false,
+    "trashed": true,
+    "owner": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    }
+  },
+  {
+    "id": "69aba9ce24abfd8621a012f5",
+    "name": "BalH&S in GEN-AI",
+    "lastUpdated": "2026-03-07T04:31:07.170Z",
+    "lastUpdatedBy": {
+      "id": "5b8e938c2546f6120051abdc",
+      "email": "vmookerjee@gmail.com",
+      "firstName": "Vijay",
+      "lastName": "Mookerjee"
+    },
+    "accessLevel": "readWrite",
+    "source": "invite",
+    "archived": false,
+    "trashed": true,
+    "owner": {
+      "id": "5b8e938c2546f6120051abdc",
+      "email": "vmookerjee@gmail.com",
+      "firstName": "Vijay",
+      "lastName": "Mookerjee"
     }
   }
 ]
