@@ -824,10 +824,16 @@
     "name": "Agent Coordination_wWangsheng",
     "lastUpdated": "2026-06-22T06:52:17.226Z",
     "lastUpdatedBy": null,
-    "accessLevel": "readOnly",
-    "source": "token",
-    "archived": true,
-    "trashed": false
+    "accessLevel": "owner",
+    "source": "owner",
+    "archived": false,
+    "trashed": false,
+    "owner": {
+      "id": "5b80d098c5f2313c78024bf3",
+      "email": "wangshengzhu@ust.hk",
+      "firstName": "Wangsheng",
+      "lastName": "Zhu"
+    }
   },
   {
     "id": "6a0ea23c978e6f743cda0248",
