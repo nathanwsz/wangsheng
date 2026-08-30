@@ -647,7 +647,7 @@
     },
     "accessLevel": "readWrite",
     "source": "invite",
-    "archived": false,
+    "archived": true,
     "trashed": false,
     "owner": {
       "id": "60c9a04072ccc770f881d311",
@@ -778,27 +778,6 @@
     }
   },
   {
-    "id": "6985aac66be64232ef976c5b",
-    "name": "Review",
-    "lastUpdated": "2026-08-26T10:24:45.791Z",
-    "lastUpdatedBy": {
-      "id": "5b80d098c5f2313c78024bf3",
-      "email": "wangshengzhu@ust.hk",
-      "firstName": "Wangsheng",
-      "lastName": "Zhu"
-    },
-    "accessLevel": "owner",
-    "source": "owner",
-    "archived": false,
-    "trashed": false,
-    "owner": {
-      "id": "5b80d098c5f2313c78024bf3",
-      "email": "wangshengzhu@ust.hk",
-      "firstName": "Wangsheng",
-      "lastName": "Zhu"
-    }
-  },
-  {
     "id": "6a4ae27827ac77eca03dd730",
     "name": "SimpleAgentModel",
     "lastUpdated": "2026-08-10T06:38:51.044Z",
@@ -810,7 +789,7 @@
     },
     "accessLevel": "readWrite",
     "source": "invite",
-    "archived": false,
+    "archived": true,
     "trashed": false,
     "owner": {
       "id": "5b8e938c2546f6120051abdc",
@@ -831,7 +810,7 @@
     },
     "accessLevel": "readWrite",
     "source": "invite",
-    "archived": false,
+    "archived": true,
     "trashed": false,
     "owner": {
       "id": "5f3ea41afa79a50001c36f44",
@@ -847,7 +826,7 @@
     "lastUpdatedBy": null,
     "accessLevel": "readOnly",
     "source": "token",
-    "archived": false,
+    "archived": true,
     "trashed": false
   },
   {
@@ -901,7 +880,7 @@
       "email": "vmookerjee@gmail.com",
       "firstName": "Vijay",
       "lastName": "Mookerjee"
-    },
+    },re
     "accessLevel": "readWrite",
     "source": "invite",
     "archived": false,
